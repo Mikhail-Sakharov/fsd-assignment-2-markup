@@ -1,5 +1,9 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const fs = require("fs");
+
+const uiKitPagesDir = path.resolve(__dirname, 'src', 'pug', 'ui-kit');
+const UI_KIT_PAGES = fs.readdirSync(uiKitPagesDir).map((file) => file.match(/.+(?=.pug)/)[0]);
 
 module.exports = {
   mode: 'development',
@@ -20,22 +24,14 @@ module.exports = {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      title: 'Index',
-      filename: 'index.html',
-      template: path.resolve(__dirname, 'src', 'pug', 'ui-kit', 'index.pug'),
+    ...UI_KIT_PAGES.map((page) => new HtmlWebpackPlugin({
+      title: page === 'index' ? 'UI-kit' : page,
+      filename: `${page}.html`,
+      template: path.resolve(__dirname, 'src', 'pug', 'ui-kit', `${page}.pug`),
       minify: {
         useShortDoctype: false
       }
-    }),
-    new HtmlWebpackPlugin({
-      title: 'Colors & Type',
-      filename: 'colors-and-type.html',
-      template: path.resolve(__dirname, 'src', 'pug', 'ui-kit', 'colors-and-type.pug'),
-      minify: {
-        useShortDoctype: false
-      }
-    })
+    }))
   ],
   devServer: {
     static: {
