@@ -1,0 +1,32 @@
+.colors-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 281px;
+  border: 1px solid blueviolet;
+}
+
+.colors-item__color {
+  width: 70px;
+  height: 70px;
+  background: #1F2041;
+  border-radius: 6px;
+}
+
+.colors-item__description {
+  width: 171px;
+}
+
+.colors-item__title {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 28px;
+}
+
+.colors-item__hex {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 28px;
+}

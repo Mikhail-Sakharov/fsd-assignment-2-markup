@@ -1,3 +1,7 @@
+- const colorsItems = [{color: '#1F2041', title: 'Dark Shade 100%', opacity: '100%'}, {color: '#1F2041', title: 'Dark Shade 75%', opacity: '75%'}, {color: '#1F2041', title: 'Dark Shade 50%', opacity: '50%'}, {color: '#1F2041', title: 'Dark Shade 25%', opacity: '25%'}, {color: '#1F2041', title: 'Dark Shade 5%', opacity: '5%'}, {color: '#BC9CFF', title: 'Purple', opacity: '100%'}, {color: '#6FCF97', title: 'Green', opacity: '100%'}]
+
+- const typesItems = [{type: 'h1', example: 'This one is the sub-section or widget title'}, {type: 'h2', example: 'Next one is the item title inside widgets'}, {type: 'h3', example: 'This is a label or CTA text'}, {type: 'Body', example: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.'}]
+
 doctype html
 html(lang="ru")
   head
@@ -6,4 +10,14 @@ html(lang="ru")
     title= htmlWebpackPlugin.options.title
   body
     include includes/header/header
-    h1 Application is working!
+    main
+      .container
+        section.colors
+          each colorsItem in colorsItems
+            .colors-item
+              .colors-item__color(style={'background-color': colorsItem.color, 'opacity': colorsItem.opacity})
+              .colors-item__description
+                p.colors-item__title= colorsItem.title
+                p.colors-item__hex= colorsItem.color
+        section.types
+          .types-item
