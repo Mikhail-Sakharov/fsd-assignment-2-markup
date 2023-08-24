@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const fs = require("fs");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const PUG_FILE_REG_EXP = /.+(?=.pug)/;
 
@@ -24,6 +25,16 @@ module.exports = {
       {
         test: /\.pug$/,
         use: 'pug-loader'
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader
+          },
+          'css-loader',
+          'sass-loader'
+        ]
       }
     ]
   },
@@ -35,7 +46,12 @@ module.exports = {
       minify: {
         useShortDoctype: false
       }
-    }))
+    })),
+    new MiniCssExtractPlugin({
+      filename: "[name].css",
+      chunkFilename: "[id].css",
+      ignoreOrder: false
+    })
   ],
   devServer: {
     static: {
