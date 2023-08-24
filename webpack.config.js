@@ -1,3 +1,4 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -10,7 +11,21 @@ module.exports = {
     filename: '[name].js',
   },
   module: {
-    rules: []
+    rules: [
+      {
+        test: /\.pug$/,
+        use: 'pug-loader'
+      }
+    ]
   },
-  plugins: []
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Colors & Type',
+      filename: 'colors-and-type.html',
+      template: path.resolve(__dirname, 'src', 'pug', 'ui-kit', 'colors-and-type.pug'),
+      minify: {
+        useShortDoctype: false
+      }
+    })
+  ]
 }

@@ -10,6 +10,8 @@
   "author": "Mikhail Sakharov",
   "license": "ISC",
   "devDependencies": {
+    "html-webpack-plugin": "^5.5.3",
+    "pug-loader": "^2.4.0",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
   }
