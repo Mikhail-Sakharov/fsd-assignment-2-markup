@@ -2,8 +2,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const fs = require("fs");
 
+const PUG_FILE_REG_EXP = /.+(?=.pug)/;
+
 const uiKitPagesDir = path.resolve(__dirname, 'src', 'pug', 'ui-kit');
-const UI_KIT_PAGES = fs.readdirSync(uiKitPagesDir).map((file) => file.match(/.+(?=.pug)/)[0]);
+const UI_KIT_PAGES = fs.readdirSync(uiKitPagesDir)
+  .filter((file) => PUG_FILE_REG_EXP.test(file))
+  .map((file) => file.match(PUG_FILE_REG_EXP)[0]);
 
 module.exports = {
   mode: 'development',
