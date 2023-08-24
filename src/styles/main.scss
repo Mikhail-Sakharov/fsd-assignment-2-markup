@@ -1,5 +1,6 @@
 @import url('../pug/ui-kit/includes/header/header.scss');
 @import url('../pug/ui-kit/includes/colors-item/colors-item.scss');
+@import url('../pug/ui-kit/includes/types-item/types-item.scss');
 
 * {
   box-sizing: border-box;
@@ -8,13 +9,14 @@
 }
 
 .container {
-  margin: 0 auto;
-  margin-top: 67px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 150px;
+  margin-top: 38px;
   width: 1132px;
-  border: 1px solid blueviolet;
 }
 
-.colors {
+.colors, .types {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

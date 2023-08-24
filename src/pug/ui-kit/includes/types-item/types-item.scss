@@ -1,0 +1,76 @@
+.types-item {
+  display: flex;
+  justify-content: space-between;
+  width: 436px;
+  height: 70px;
+}
+
+.types-item__type, .types-item__example {
+  font-family: 'Montserrat';
+}
+
+.types-item__type {
+  text-align: right;
+  width: 37px;
+  color: #1F2041;
+  opacity: 25%;
+}
+
+.types-item__example {
+  width: 369px;
+}
+
+.first-level-header {
+  align-self: flex-start;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.second-level-header {
+  align-self: flex-end;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.third-level-header {
+  align-self: center;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.body-text {
+  align-self: flex-start;
+  font-size: 14px;
+  line-height: 24px;
+  opacity: 75%;
+}
+
+.h1-type {
+  align-self: flex-start;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.h2-type {
+  align-self: center;
+  font-size: 19px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.h3-type {
+  align-self: center;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.body-type {
+  align-self: flex-start;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+}

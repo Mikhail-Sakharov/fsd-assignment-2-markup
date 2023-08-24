@@ -1,7 +1,5 @@
 - const colorsItems = [{color: '#1F2041', title: 'Dark Shade 100%', opacity: '100%'}, {color: '#1F2041', title: 'Dark Shade 75%', opacity: '75%'}, {color: '#1F2041', title: 'Dark Shade 50%', opacity: '50%'}, {color: '#1F2041', title: 'Dark Shade 25%', opacity: '25%'}, {color: '#1F2041', title: 'Dark Shade 5%', opacity: '5%'}, {color: '#BC9CFF', title: 'Purple', opacity: '100%'}, {color: '#6FCF97', title: 'Green', opacity: '100%'}]
 
-- const typesItems = [{type: 'h1', example: 'This one is the sub-section or widget title'}, {type: 'h2', example: 'Next one is the item title inside widgets'}, {type: 'h3', example: 'This is a label or CTA text'}, {type: 'Body', example: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.'}]
-
 doctype html
 html(lang="ru")
   head
@@ -21,3 +19,14 @@ html(lang="ru")
                 p.colors-item__hex= colorsItem.color
         section.types
           .types-item
+            p.types-item__type.h1-type h1
+            p.types-item__example.first-level-header This one is the sub-section or widget title
+          .types-item
+            p.types-item__type.h2-type h2
+            p.types-item__example.second-level-header Next one is the item title inside widgets
+          .types-item
+            p.types-item__type.h3-type h3
+            p.types-item__example.third-level-header This is a label or CTA text
+          .types-item
+            p.types-item__type.body-type Body
+            p.types-item__example.body-text This is the body text which is used for most of the design, like paragraphs, lists, etc.
