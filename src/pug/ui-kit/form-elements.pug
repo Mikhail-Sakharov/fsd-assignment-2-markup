@@ -6,9 +6,10 @@ html(lang="ru")
     title= htmlWebpackPlugin.options.title
   body
     include includes/header/header
-    h1 UI-kit
-    ul
-      li
-        a(href='./colors-and-type.html') Colors & Type
-      li
-        a(href='./form-elements.html') Form elements
+    main
+      .form-elements-container
+        .left-top-wrapper
+          include includes/text-field/text-field
+        .right-top-wrapper
+        .left-bottom-wrapper
+        .right-bottom-wrapper

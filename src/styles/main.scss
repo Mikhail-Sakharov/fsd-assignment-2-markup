@@ -1,6 +1,7 @@
 @import url('../pug/ui-kit/includes/header/header.scss');
 @import url('../pug/ui-kit/includes/colors-item/colors-item.scss');
 @import url('../pug/ui-kit/includes/types-item/types-item.scss');
+@import url('../pug/ui-kit/includes/text-field/text-field.scss');
 
 * {
   box-sizing: border-box;
@@ -8,12 +9,12 @@
   padding: 0;
 }
 
-.container {
+.colors-and-types-wrapper {
+  margin: 0 auto;
+  margin-top:4.2vh;
   display: flex;
   justify-content: space-between;
-  margin-left: 150px;
-  margin-top: 38px;
-  width: 1132px;
+  width: 1140px;
 }
 
 .colors, .types {
@@ -22,3 +23,20 @@
   justify-content: flex-start;
   gap: 20px;
 }
+
+.form-elements-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 1158px;
+  margin: 0 auto;
+}
+
+.left-top-wrapper {
+  width: 320px;
+}
+
+.right-top-wrapper {}
+
+.left-bottom-wrapper {}
+
+.right-bottom-wrapper {}

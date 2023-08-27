@@ -10,23 +10,24 @@ html(lang="ru")
     include includes/header/header
     main
       .container
-        section.colors
-          each colorsItem in colorsItems
-            .colors-item
-              .colors-item__color(style={'background-color': colorsItem.color, 'opacity': colorsItem.opacity})
-              .colors-item__description
-                p.colors-item__title= colorsItem.title
-                p.colors-item__hex= colorsItem.color
-        section.types
-          .types-item
-            p.types-item__type.h1-type h1
-            p.types-item__example.first-level-header This one is the sub-section or widget title
-          .types-item
-            p.types-item__type.h2-type h2
-            p.types-item__example.second-level-header Next one is the item title inside widgets
-          .types-item
-            p.types-item__type.h3-type h3
-            p.types-item__example.third-level-header This is a label or CTA text
-          .types-item
-            p.types-item__type.body-type Body
-            p.types-item__example.body-text This is the body text which is used for most of the design, like paragraphs, lists, etc.
+        .colors-and-types-wrapper
+          section.colors
+            each colorsItem in colorsItems
+              .colors-item
+                .colors-item__color(style={'background-color': colorsItem.color, 'opacity': colorsItem.opacity})
+                .colors-item__description
+                  p.colors-item__title= colorsItem.title
+                  p.colors-item__hex= colorsItem.color
+          section.types
+            .types-item
+              p.types-item__type.h1-type h1
+              p.types-item__example.first-level-header This one is the sub-section or widget title
+            .types-item
+              p.types-item__type.h2-type h2
+              p.types-item__example.second-level-header Next one is the item title inside widgets
+            .types-item
+              p.types-item__type.h3-type h3
+              p.types-item__example.third-level-header This is a label or CTA text
+            .types-item
+              p.types-item__type.body-type Body
+              p.types-item__example.body-text This is the body text which is used for most of the design, like paragraphs, lists, etc.

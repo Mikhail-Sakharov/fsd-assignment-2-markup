@@ -1,0 +1,43 @@
+.custom-input__label {
+  font-family: 'Montserrat';
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.custom-input__state {
+  font-family: 'Montserrat';
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgba(31, 32, 65, 0.5);
+  float: right;
+}
+
+.custom-input__wrapper {
+  height: 44px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+}
+
+.custom-input__wrapper:hover {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
+
+.custom-input__wrapper--focused {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
+
+.custom-input input {
+  margin-left: 4%;
+  margin-top: 13px;
+  width: 91%;
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-weight: 400;
+  border-style: none;
+}
+
+.custom-input label input:focus {
+  outline: none;
+}
