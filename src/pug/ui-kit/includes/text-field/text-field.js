@@ -4,7 +4,7 @@ const handleInputFocus = (_evt, inputWrapperElement) => {
   inputWrapperElement.classList.add('custom-input__wrapper--focused');
 };
 
-const handleInputBlur = (_evt, inputWrapperElement, inputElement) => {
+const handleInputBlur = (_evt, inputWrapperElement) => {
   inputWrapperElement.classList.remove('custom-input__wrapper--focused');
 };
 
