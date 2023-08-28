@@ -9,7 +9,15 @@ html(lang="ru")
     main
       .form-elements-container
         .left-top-wrapper
-          include includes/text-field/text-field
+          .left-top-wrapper__item
+            include includes/text-field/text-field
+          .left-top-wrapper__item
+            .custom-input
+              label
+                span.custom-input__label Text field
+                span.custom-input__state Hover / Focus
+                .custom-input__wrapper.custom-input__wrapper--focused
+                  input(type='text' name='text-field--focused' placeholder='Email' value='This is pretty awesome')
         .right-top-wrapper
         .left-bottom-wrapper
         .right-bottom-wrapper

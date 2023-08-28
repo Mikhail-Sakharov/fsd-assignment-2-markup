@@ -21,6 +21,7 @@
 }
 
 .custom-input__wrapper:hover {
+  cursor: text;
   border: 1px solid rgba(31, 32, 65, 0.5);
 }
 
@@ -36,6 +37,7 @@
   font-size: 14px;
   font-weight: 400;
   border-style: none;
+  color: rgba(31, 32, 65, 0.75);
 }
 
 .custom-input label input:focus {
