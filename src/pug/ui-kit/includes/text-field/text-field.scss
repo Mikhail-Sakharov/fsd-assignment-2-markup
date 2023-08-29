@@ -17,6 +17,8 @@
 }
 
 .custom-input__wrapper {
+  display: flex;
+  justify-content: center;
   height: 44px;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
@@ -32,9 +34,10 @@
 }
 
 .custom-input input {
-  margin-left: 4%;
-  margin-top: 13px;
-  width: 91%;
+  align-self: center;
+  width: 100%;
+  margin-left: 16px;
+  margin-right: 16px;
   font-family: 'Montserrat';
   font-size: 14px;
   font-weight: 400;
