@@ -9,19 +9,28 @@ html(lang="ru")
     main
       .form-elements-container
         .left-top-wrapper
-          .left-top-wrapper__item
+          .left-top-wrapper-item
             include includes/text-field/text-field
-          .left-top-wrapper__item
+          .left-top-wrapper-item
             .custom-input
               label
                 span.custom-input__label Text field
                 span.custom-input__state Hover / Focus
                 .custom-input__wrapper.custom-input__wrapper--focused
                   input(type='text' name='text-field--focused' placeholder='Email' value='This is pretty awesome')
-          .left-top-wrapper__item
+          .left-top-wrapper-item
             include includes/custom-select/custom-select
-          .left-top-wrapper__item
+          .left-top-wrapper-item--large
             include includes/masked-text-field/masked-text-field
+          .left-top-wrapper-item--large
+            .left-top-wrapper-item__inner-wrapper
+              .left-top-wrapper-item__inner-item
+                include includes/date-dropdown/date-dropdown
+              .left-top-wrapper-item__inner-item
+                include includes/date-dropdown/date-dropdown-selected
+          .left-top-wrapper-item--large
+            .left-top-wrapper-item__inner-wrapper--short
+                include includes/date-dropdown/filter-date-dropdown
         .right-top-wrapper
         .left-bottom-wrapper
         .right-bottom-wrapper

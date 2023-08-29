@@ -4,6 +4,7 @@
 @import url('../pug/ui-kit/includes/text-field/text-field.scss');
 @import url('../pug/ui-kit/includes/custom-select/custom-select.scss');
 @import url('../pug/ui-kit/includes/masked-text-field/masked-text-field.scss');
+@import url('../pug/ui-kit/includes/date-dropdown/date-dropdown.scss');
 
 * {
   box-sizing: border-box;
@@ -37,8 +38,25 @@
   width: 320px;
 }
 
-.left-top-wrapper__item {
+.left-top-wrapper-item {
   height: 85px;
+}
+
+.left-top-wrapper-item--large {
+  height: 105px;
+}
+
+.left-top-wrapper-item__inner-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-top-wrapper-item__inner-item {
+  width: 150px;
+}
+
+.left-top-wrapper-item__inner-wrapper--short {
+  width: 267px;
 }
 
 .right-top-wrapper {}
