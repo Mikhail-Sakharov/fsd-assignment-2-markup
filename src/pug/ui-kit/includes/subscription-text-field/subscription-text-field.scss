@@ -1,0 +1,39 @@
+.subscription-input__label {
+  font-family: 'Montserrat';
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 15px;
+  color: #1F2041;
+}
+
+.subscription-input__wrapper {
+  display: flex;
+  justify-content: center;
+  height: 44px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+}
+
+.subscription-input input {
+  align-self: center;
+  width: 100%;
+  margin-left: 16px;
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-weight: 400;
+  border-style: none;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.subscription-input input:focus {
+  outline: none;
+}
+
+.subscription-input__icon {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin-right: 16px;
+  margin-left: 16px;
+}
