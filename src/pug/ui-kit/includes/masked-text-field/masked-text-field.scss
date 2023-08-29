@@ -1,0 +1,29 @@
+.masked-input__label {
+  font-family: 'Montserrat';
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 15px;
+  color: #1F2041;
+}
+
+.masked-input__wrapper {
+  height: 44px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+}
+
+.masked-input input {
+  margin-left: 4%;
+  margin-top: 13px;
+  width: 91%;
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-weight: 400;
+  border-style: none;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.masked-input input:focus {
+  outline: none;
+}
