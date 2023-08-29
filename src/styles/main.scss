@@ -6,6 +6,7 @@
 @import url('../pug/ui-kit/includes/masked-text-field/masked-text-field.scss');
 @import url('../pug/ui-kit/includes/date-dropdown/date-dropdown.scss');
 @import url('../pug/ui-kit/includes/subscription-text-field/subscription-text-field.scss');
+@import url('../pug/ui-kit/includes/custom-checkbox/custom-checkbox.scss');
 
 * {
   box-sizing: border-box;
@@ -29,8 +30,8 @@
 }
 
 .form-elements-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
   width: 1158px;
   margin: 0 auto;
 }
@@ -60,7 +61,32 @@
   width: 267px;
 }
 
-.right-top-wrapper {}
+.right-top-wrapper {
+  width: 712px;
+}
+
+.right-top-wrapper-item {
+  display: flex;
+  justify-content: space-between;
+  background-color: antiquewhite;
+}
+
+.right-top-wrapper-item__left-side {
+  width: 260px;
+}
+
+.right-top-wrapper-item__left-side span {
+  font-family: 'Montserrat';
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 15px;
+  color: #1F2041;
+}
+
+.right-top-wrapper-item__right-side {
+  width: 320px;
+}
 
 .left-bottom-wrapper {}
 
