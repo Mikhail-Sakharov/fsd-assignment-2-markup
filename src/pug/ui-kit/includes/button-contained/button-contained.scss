@@ -13,7 +13,10 @@
   text-transform: uppercase;
 }
 
+.button-contained:hover {
+  opacity: 0.5;
+}
+
 .button-contained--hovered {
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   opacity: 0.5;
 }

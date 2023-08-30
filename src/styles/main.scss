@@ -10,6 +10,7 @@
 @import url('../pug/ui-kit/includes/range-slider/range-slider.scss');
 @import url('../pug/ui-kit/includes/button-contained/button-contained.scss');
 @import url('../pug/ui-kit/includes/button-outlined/button-outlined.scss');
+@import url('../pug/ui-kit/includes/button-text/button-text.scss');
 
 * {
   box-sizing: border-box;
@@ -109,7 +110,8 @@
 
 .right-top-wrapper-item__wrapper--short {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 20px;
   margin-top: 15px;
   width: 218px;
 }

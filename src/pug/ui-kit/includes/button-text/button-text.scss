@@ -1,0 +1,34 @@
+.button-text {
+  display: flex;
+  justify-content: center;
+}
+
+.button-text button {
+  align-self: center;
+  border-style: none;
+  color: #BC9CFF;
+  background-color: #ffffff;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+
+.button-text button:hover {
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.button-text--hovered button {
+  align-self: center;
+  border-style: none;
+  background-color: #ffffff;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: rgba(31, 32, 65, 0.5);
+}
