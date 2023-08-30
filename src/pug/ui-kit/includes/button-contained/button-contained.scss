@@ -12,3 +12,8 @@
   line-height: 15px;
   text-transform: uppercase;
 }
+
+.button-contained--hovered {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  opacity: 0.5;
+}
