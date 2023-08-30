@@ -1,12 +1,14 @@
 .custom-checkbox {
-  padding: 10px 0 0 0;
+  display: flex;
+  padding: 7px 0 0 0;
 }
 
 .custom-checkbox input {
   display: none;
 }
 
-.custom-checkbox label {
+.custom-checkbox__label {
+  padding-top: 4px;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
