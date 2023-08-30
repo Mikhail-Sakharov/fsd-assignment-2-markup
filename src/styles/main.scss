@@ -8,6 +8,7 @@
 @import url('../pug/ui-kit/includes/subscription-text-field/subscription-text-field.scss');
 @import url('../pug/ui-kit/includes/custom-checkbox/custom-checkbox.scss');
 @import url('../pug/ui-kit/includes/range-slider/range-slider.scss');
+@import url('../pug/ui-kit/includes/button-contained/button-contained.scss');
 
 * {
   box-sizing: border-box;
@@ -103,6 +104,13 @@
   margin-right: 55px;
   margin-top: 5px;
   float: right;
+}
+
+.right-top-wrapper-item__wrapper--short {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  width: 218px;
 }
 
 .left-bottom-wrapper {}
