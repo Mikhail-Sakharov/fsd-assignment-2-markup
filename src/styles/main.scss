@@ -13,6 +13,7 @@
 @import url('../pug/ui-kit/includes/button-text/button-text.scss');
 @import url('../pug/ui-kit/includes/button-icon-outlined/button-icon-outlined.scss');
 @import url('../pug/ui-kit/includes/pagination/pagination.scss');
+@import url('../pug/ui-kit/includes/custom-radio/custom-radio.scss');
 
 * {
   box-sizing: border-box;
@@ -80,20 +81,11 @@
   width: 260px;
 }
 
-.right-top-wrapper-item__left-side span {
-  font-family: 'Montserrat';
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  line-height: 15px;
-  color: #1F2041;
-}
-
 .right-top-wrapper-item__right-side {
   width: 320px;
 }
 
-.right-top-wrapper-item__title-primary {
+.title-primary {
   font-family: 'Montserrat';
   font-size: 12px;
   font-weight: 700;
@@ -102,7 +94,7 @@
   color: #1F2041;
 }
 
-.right-top-wrapper-item__title-secondary {
+.title-secondary {
   font-family: 'Montserrat';
   font-size: 12px;
   font-weight: 400;

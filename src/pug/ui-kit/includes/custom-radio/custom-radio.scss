@@ -1,0 +1,52 @@
+.custom-radio {
+  display: flex;
+  gap: 20px;
+}
+
+.custom-radio__block input {
+  display: none;
+}
+
+.custom-radio__block input + .custom-radio__button--outer::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+}
+
+.custom-radio__block input:checked + .custom-radio__button--outer::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #BC9CFF;
+}
+
+.custom-radio__block input:checked + .custom-radio__button--outer .custom-radio__button--inner::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 50%;
+  position: relative;
+  left: -28px;
+  margin-right: -14px;
+}
+
+.custom-radio__label {
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
