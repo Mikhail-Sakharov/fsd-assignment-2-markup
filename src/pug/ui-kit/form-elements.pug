@@ -1,3 +1,5 @@
+include includes/label-primary/label-primary
+
 doctype html
 html(lang="ru")
   head
@@ -35,33 +37,34 @@ html(lang="ru")
             .left-top-wrapper-item__inner-wrapper--short
               include includes/subscription-text-field/subscription-text-field
         .right-top-wrapper
-          .right-top-wrapper-item
-            .right-top-wrapper-item__left-side
-              span.title-primary Checkbox Buttons
+          .right-top-wrapper__left-side
+            .right-top-wrapper__item
+              +labelPrimary('Checkbox Buttons')
               include includes/custom-checkbox/custom-checkbox
               include includes/custom-checkbox/custom-checkbox-checked-pets
               include includes/custom-checkbox/custom-checkbox-checked-friends
-              span.title-primary Radio Buttons
+            .right-top-wrapper__item
+              +labelPrimary('Radio Buttons')
               include includes/custom-radio/custom-radio
-            .right-top-wrapper-item__right-side
-              span.title-primary Range Slider
-              span.title-secondary 5 000₽ - 10 000₽
-              include includes/range-slider/range-slider
-              span.title-primary Buttons
-              .right-top-wrapper-item__wrapper--short
-                include includes/button-contained/button-contained
-                include includes/button-contained/button-contained-hovered
-              .right-top-wrapper-item__wrapper--short
-                include includes/button-outlined/button-outlined
-                include includes/button-outlined/button-outlined-hovered
-              .right-top-wrapper-item__wrapper--short
-                include includes/button-text/button-text
-                include includes/button-text/button-text-hovered
-              .right-top-wrapper-item__wrapper
-                include includes/button-icon-outlined/button-icon-outlined
-              .right-top-wrapper-item__wrapper
-                span.title-primary Pagination
-                include includes/pagination/pagination
+          .right-top-wrapper__right-side
+            +labelPrimary('Range Slider')
+            span.title-secondary 5 000₽ - 10 000₽
+            include includes/range-slider/range-slider
+            +labelPrimary('Buttons')
+            .right-top-wrapper--short
+              include includes/button-contained/button-contained
+              include includes/button-contained/button-contained-hovered
+            .right-top-wrapper--short
+              include includes/button-outlined/button-outlined
+              include includes/button-outlined/button-outlined-hovered
+            .right-top-wrapper--short
+              include includes/button-text/button-text
+              include includes/button-text/button-text-hovered
+            .right-top-wrapper-item__wrapper
+              include includes/button-icon-outlined/button-icon-outlined
+            .right-top-wrapper-item__wrapper
+              +labelPrimary('Pagination')
+              include includes/pagination/pagination
       .form-elements-container
         .left-bottom-wrapper
         .right-bottom-wrapper

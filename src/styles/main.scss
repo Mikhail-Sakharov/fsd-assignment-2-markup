@@ -14,6 +14,7 @@
 @import url('../pug/ui-kit/includes/button-icon-outlined/button-icon-outlined.scss');
 @import url('../pug/ui-kit/includes/pagination/pagination.scss');
 @import url('../pug/ui-kit/includes/custom-radio/custom-radio.scss');
+@import url('../pug/ui-kit/includes/label-primary/label-primary.scss');
 
 * {
   box-sizing: border-box;
@@ -70,28 +71,19 @@
 
 .right-top-wrapper {
   width: 712px;
-}
-
-.right-top-wrapper-item {
   display: flex;
   justify-content: space-between;
 }
 
-.right-top-wrapper-item__left-side {
+.right-top-wrapper__left-side {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
   width: 260px;
 }
 
-.right-top-wrapper-item__right-side {
+.right-top-wrapper__right-side {
   width: 320px;
-}
-
-.title-primary {
-  font-family: 'Montserrat';
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  line-height: 15px;
-  color: #1F2041;
 }
 
 .title-secondary {
@@ -105,11 +97,7 @@
   float: right;
 }
 
-.right-top-wrapper-item__wrapper {
-  margin-top: 30px;
-}
-
-.right-top-wrapper-item__wrapper--short {
+.right-top-wrapper--short {
   display: flex;
   justify-content: flex-start;
   gap: 20px;
