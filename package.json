@@ -38,6 +38,7 @@
         "semi": "error",
         "comma-dangle": "error",
         "no-trailing-spaces": "error"
-    }
+    },
+    "ignorePatterns": "webpack.config.js"
   }
 }
