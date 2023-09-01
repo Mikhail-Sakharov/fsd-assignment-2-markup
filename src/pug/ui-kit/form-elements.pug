@@ -1,4 +1,6 @@
+//- Mixins
 include includes/label-primary/label-primary
+include includes/range-slider/range-slider
 
 doctype html
 html(lang="ru")
@@ -47,9 +49,7 @@ html(lang="ru")
               +labelPrimary('Radio Buttons')
               include includes/custom-radio/custom-radio
           .right-top-wrapper__right-side
-            +labelPrimary('Range Slider')
-            span.title-secondary 5 000₽ - 10 000₽
-            include includes/range-slider/range-slider
+            +rangeSlider('Range Slider', '5 000₽ - 10 000₽')
             +labelPrimary('Buttons')
             .right-top-wrapper--short
               include includes/button-contained/button-contained

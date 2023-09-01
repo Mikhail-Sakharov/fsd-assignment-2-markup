@@ -1,7 +1,33 @@
 .range-slider {
-  display: flex;
   width: 266px;
   height: 47px;
+}
+
+.range-slider__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 23px;
+}
+
+.range-slider__title {
+  color: #1F2041;
+  font-family: 'Montserrat';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.range-slider__value {
+  color: rgba(31, 32, 65, 0.50);
+  text-align: right;
+  font-family: 'Montserrat';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
 }
 
 .range-slider__track {
