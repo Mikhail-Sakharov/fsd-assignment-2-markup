@@ -1,5 +1,6 @@
-.custom-checkbox
-  input(type='checkbox' id='smoking')
-  label(for='smoking')
-  .custom-checkbox__label
-    label(for='smoking') Можно курить
+mixin customCheckbox(label, id, status)
+  .custom-checkbox
+    input(type='checkbox' id= id checked= status)
+    label(for= id)
+    .custom-checkbox__label
+      label(for= id)= label

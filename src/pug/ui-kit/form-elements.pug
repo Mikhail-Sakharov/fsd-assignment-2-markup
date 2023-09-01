@@ -1,6 +1,7 @@
 //- Mixins
 include includes/label-primary/label-primary
 include includes/range-slider/range-slider
+include includes/custom-checkbox/custom-checkbox
 
 doctype html
 html(lang="ru")
@@ -42,9 +43,9 @@ html(lang="ru")
           .right-top-wrapper__left-side
             .right-top-wrapper__item
               +labelPrimary('Checkbox Buttons')
-              include includes/custom-checkbox/custom-checkbox
-              include includes/custom-checkbox/custom-checkbox-checked-pets
-              include includes/custom-checkbox/custom-checkbox-checked-friends
+              +customCheckbox('Можно курить', 'smoking-allowed')
+              +customCheckbox('Можно с питомцами', 'pets-allowed', 'checked')
+              +customCheckbox('Можно пригласить гостей (до 10 человек)', 'party-allowed', 'checked')
             .right-top-wrapper__item
               +labelPrimary('Radio Buttons')
               include includes/custom-radio/custom-radio
