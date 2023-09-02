@@ -1,0 +1,7 @@
+mixin toggle(title, name, status)
+  .toggle
+    label
+      input(type='checkbox' name= name checked= status)
+      span.toggle__button--outer
+        span.toggle__button--inner
+      span.toggle__label= title

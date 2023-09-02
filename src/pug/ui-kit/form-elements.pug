@@ -3,6 +3,7 @@ include includes/label-primary/label-primary
 include includes/range-slider/range-slider
 include includes/custom-checkbox/custom-checkbox
 include includes/custom-radio/custom-radio
+include includes/toggle/toggle
 
 doctype html
 html(lang="ru")
@@ -52,6 +53,8 @@ html(lang="ru")
               +customRadio(['Мужчина', 'Женщина'], 'gender')
             .right-top-wrapper__item
               +labelPrimary('Toggle')
+              +toggle('Получать спецпредложения', 'toggle', 'true')
+              +toggle('Получать спецпредложения', 'toggle')
           .right-top-wrapper__right-side
             +rangeSlider('Range Slider', '5 000₽ - 10 000₽')
             +labelPrimary('Buttons')
