@@ -1,13 +1,10 @@
-.custom-radio
-  .custom-radio__block
-    label
-      input(type='radio' name='gender' checked)
-      span.custom-radio__button--outer
-        span.custom-radio__button--inner
-      span.custom-radio__label Мужчина
-  .custom-radio__block
-    label
-      input(type='radio' name='gender')
-      span.custom-radio__button--outer
-        span.custom-radio__button--inner
-      span.custom-radio__label Женщина
+mixin customRadio(blocks, name)
+  .custom-radio
+    each block, i in blocks
+      .custom-radio__block
+        label
+          - const isChecked = i === 0
+          input(type='radio' name= name checked= isChecked)
+          span.custom-radio__button--outer
+            span.custom-radio__button--inner
+          span.custom-radio__label= block

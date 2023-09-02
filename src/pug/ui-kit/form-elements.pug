@@ -2,6 +2,7 @@
 include includes/label-primary/label-primary
 include includes/range-slider/range-slider
 include includes/custom-checkbox/custom-checkbox
+include includes/custom-radio/custom-radio
 
 doctype html
 html(lang="ru")
@@ -48,7 +49,9 @@ html(lang="ru")
               +customCheckbox('Можно пригласить гостей (до 10 человек)', 'party-allowed', 'checked')
             .right-top-wrapper__item
               +labelPrimary('Radio Buttons')
-              include includes/custom-radio/custom-radio
+              +customRadio(['Мужчина', 'Женщина'], 'gender')
+            .right-top-wrapper__item
+              +labelPrimary('Toggle')
           .right-top-wrapper__right-side
             +rangeSlider('Range Slider', '5 000₽ - 10 000₽')
             +labelPrimary('Buttons')
