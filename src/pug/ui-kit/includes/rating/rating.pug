@@ -1,0 +1,7 @@
+mixin rating(rating, name)
+  .rating
+    - const values = [5, 4, 3, 2, 1]
+    each value in values
+      - const isChecked = value === rating
+      input(type='radio' name=name id=`${name}-${value}` value=value checked=isChecked)
+      label(for=`${name}-${value}`)

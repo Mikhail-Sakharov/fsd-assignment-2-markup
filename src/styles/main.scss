@@ -17,6 +17,7 @@
 @import url('../pug/ui-kit/includes/label-primary/label-primary.scss');
 @import url('../pug/ui-kit/includes/toggle/toggle.scss');
 @import url('../pug/ui-kit/includes/like-button/like-button.scss');
+@import url('../pug/ui-kit/includes/rating/rating.scss');
 
 * {
   box-sizing: border-box;
@@ -58,7 +59,7 @@
   height: 105px;
 }
 
-.left-top-wrapper-item__inner-wrapper {
+.flex-inner-wrapper {
   display: flex;
   justify-content: space-between;
 }
