@@ -1,0 +1,5 @@
+mixin likeButton(value, isLiked)
+  - const status = isLiked ? 'is-liked' : ''
+  button.like-button(class= status)
+    .like-button__icon
+    span.like-button__value= value

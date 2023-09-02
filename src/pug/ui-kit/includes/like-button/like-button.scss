@@ -1,0 +1,38 @@
+.like-button {
+  display: flex;
+  align-items: center;
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  background: #FFF;
+}
+
+.like-button.is-liked {
+  border: 1px solid #BC9CFF;
+}
+
+.like-button__icon {
+  width: 20px;
+  height: 20px;
+  background: url('./favorite_border.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.is-liked .like-button__icon {
+  background: url('./favorite.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.like-button__value {
+  color: rgba(31, 32, 65, 0.25);
+  font-family: 'Montserrat';
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.is-liked .like-button__value {
+  color: #BC9CFF;
+}

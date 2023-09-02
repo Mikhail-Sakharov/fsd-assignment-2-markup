@@ -4,6 +4,7 @@ include includes/range-slider/range-slider
 include includes/custom-checkbox/custom-checkbox
 include includes/custom-radio/custom-radio
 include includes/toggle/toggle
+include includes/like-button/like-button
 
 doctype html
 html(lang="ru")
@@ -55,6 +56,11 @@ html(lang="ru")
               +labelPrimary('Toggle')
               +toggle('Получать спецпредложения', 'toggle', 'true')
               +toggle('Получать спецпредложения', 'toggle')
+            .right-top-wrapper__item
+              +labelPrimary('like button')
+              .like-buttons-container
+                +likeButton('2', false)
+                +likeButton('12', true)
           .right-top-wrapper__right-side
             +rangeSlider('Range Slider', '5 000₽ - 10 000₽')
             +labelPrimary('Buttons')

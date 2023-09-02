@@ -16,6 +16,7 @@
 @import url('../pug/ui-kit/includes/custom-radio/custom-radio.scss');
 @import url('../pug/ui-kit/includes/label-primary/label-primary.scss');
 @import url('../pug/ui-kit/includes/toggle/toggle.scss');
+@import url('../pug/ui-kit/includes/like-button/like-button.scss');
 
 * {
   box-sizing: border-box;
@@ -108,6 +109,12 @@
 
 .toggle {
   margin-top: 14px;
+}
+
+.like-buttons-container {
+  display: flex;
+  justify-content: space-between;
+  width: 90px;
 }
 
 .left-bottom-wrapper {}
