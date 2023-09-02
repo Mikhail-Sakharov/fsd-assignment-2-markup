@@ -1,9 +1,9 @@
-mixin dropdown(title, label, name, items, disabledIndex)
+mixin dropdown(title, label, name, items, disabledIndex, isOpened)
   .dropdown
     .dropdown__header
       span.dropdown__primary-label=title
       span.dropdown__secondary-label=label
-    input(type='checkbox' name=name id=name)
+    input(type='checkbox' name=name id=name checked=isOpened)
     label(for=name)
       .dropdown__display
         - const outputs = items.filter((item) => item.value !== 0).map((itm) => `${itm.value} ${itm.title}`)

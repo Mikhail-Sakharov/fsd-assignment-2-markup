@@ -48,6 +48,10 @@
   margin: 0 auto;
 }
 
+.form-elements-container:nth-child(2) {
+  margin-top: 100px;
+}
+
 .left-top-wrapper {
   width: 320px;
 }
@@ -122,6 +126,17 @@
 
 .left-bottom-wrapper {
   width: 267px;
+}
+
+.left-bottom-wrapper {
+  width: 267px;
+}
+
+.left-bottom-wrapper__dropdown-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .right-bottom-wrapper {}

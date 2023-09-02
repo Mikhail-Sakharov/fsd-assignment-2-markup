@@ -87,6 +87,8 @@ html(lang="ru")
               include includes/pagination/pagination
       .form-elements-container
         .left-bottom-wrapper
-          - const items = [{title: 'спальни', value: 2}, {title: 'кровати', value: 2}, {title: 'ванные комнаты', value: 0}]
-          +dropdown('dropdown', 'default', 'room-dropdown', items, 2)
+          .left-bottom-wrapper__dropdown-wrapper
+            - const items = [{title: 'спальни', value: 2}, {title: 'кровати', value: 2}, {title: 'ванные комнаты', value: 0}]
+            +dropdown('dropdown', 'default', 'room-dropdown', items, 2)
+            +dropdown('dropdown', 'expanded', 'room-dropdown-expanded', items, 2, true)
         .right-bottom-wrapper
