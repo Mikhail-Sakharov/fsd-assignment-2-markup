@@ -1,0 +1,21 @@
+mixin dropdown(title, label, name, items, disabledIndex)
+  .dropdown
+    .dropdown__header
+      span.dropdown__primary-label=title
+      span.dropdown__secondary-label=label
+    input(type='checkbox' name=name id=name)
+    label(for=name)
+      .dropdown__display
+        - const outputs = items.filter((item) => item.value !== 0).map((itm) => `${itm.value} ${itm.title}`)
+        - const formattedOutput = outputs.join(', ').length >= 20 ? `${outputs.join(', ').slice(0, 21)}...` : outputs.join(', ')
+        span.dropdown__output=formattedOutput
+        span.dropdown__icon
+    .dropdown__list
+      each item, i in items
+        .dropdown__list-item
+          span.dropdown__primary-label=item.title
+          .dropdown__controls
+            - const isDisabled = i === disabledIndex
+            button(class=`${isDisabled ? 'disabled' : ''}`).dropdown__dec-button -
+            span.span.dropdown__primary-label=item.value
+            button.dropdown__inc-button +

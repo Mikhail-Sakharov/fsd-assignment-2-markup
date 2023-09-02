@@ -18,6 +18,7 @@
 @import url('../pug/ui-kit/includes/toggle/toggle.scss');
 @import url('../pug/ui-kit/includes/like-button/like-button.scss');
 @import url('../pug/ui-kit/includes/rating/rating.scss');
+@import url('../pug/ui-kit/includes/dropdown/dropdown.scss');
 
 * {
   box-sizing: border-box;
@@ -72,7 +73,8 @@
   width: 267px;
 }
 
-.right-top-wrapper {
+.right-top-wrapper,
+.right-bottom-wrapper {
   width: 712px;
   display: flex;
   justify-content: space-between;
@@ -118,6 +120,8 @@
   width: 90px;
 }
 
-.left-bottom-wrapper {}
+.left-bottom-wrapper {
+  width: 267px;
+}
 
 .right-bottom-wrapper {}

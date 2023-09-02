@@ -6,6 +6,7 @@ include includes/custom-radio/custom-radio
 include includes/toggle/toggle
 include includes/like-button/like-button
 include includes/rating/rating
+include includes/dropdown/dropdown
 
 doctype html
 html(lang="ru")
@@ -86,4 +87,6 @@ html(lang="ru")
               include includes/pagination/pagination
       .form-elements-container
         .left-bottom-wrapper
+          - const items = [{title: 'спальни', value: 2}, {title: 'кровати', value: 2}, {title: 'ванные комнаты', value: 0}]
+          +dropdown('dropdown', 'default', 'room-dropdown', items, 2)
         .right-bottom-wrapper
