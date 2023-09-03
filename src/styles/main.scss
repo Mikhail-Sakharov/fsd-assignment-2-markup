@@ -22,6 +22,7 @@
 @import url('../pug/ui-kit/includes/dropdown-guests/dropdown-guests.scss');
 @import url('../pug/ui-kit/includes/rich-checkbox-button/rich-checkbox-button.scss');
 @import url('../pug/ui-kit/includes/rich-checkbox-button/rich-checkbox-button-group.scss');
+@import url('../pug/ui-kit/includes/bullet-list/bullet-list.scss');
 
 * {
   box-sizing: border-box;
@@ -167,4 +168,12 @@
 
 .dropdown-guests:first-child .dropdown-guests__list-item:last-child {
   justify-content: flex-end;
+}
+
+.right-bottom-wrapper__bullet-list {
+  width: 320px;
+}
+
+.right-bottom-wrapper__bullet-list--inner {
+  width: 255px;
 }

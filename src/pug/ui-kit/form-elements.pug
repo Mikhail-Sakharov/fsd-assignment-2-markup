@@ -9,6 +9,7 @@ include includes/rating/rating
 include includes/dropdown/dropdown
 include includes/dropdown-guests/dropdown-guests
 include includes/rich-checkbox-button/rich-checkbox-button-group
+include includes/bullet-list/bullet-list
 
 doctype html
 html(lang="ru")
@@ -103,4 +104,9 @@ html(lang="ru")
               +dropdownGuests('dropdown', '', 'guests-dropdown-2', guestsItems2, 2, true)
             .right-bottom-wrapper__item
               +richCheckboxPuttonGroup('Rich Checkbox Buttons')
+              .right-bottom-wrapper__bullet-list
+                .right-bottom-wrapper__bullet-list--inner
+                  - const bulletListItems = ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']
+                  +labelPrimary('bullet list')
+                  +bulletList(bulletListItems)
           .right-bottom-wrapper__inner-wrapper

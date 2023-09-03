@@ -1,0 +1,8 @@
+mixin bulletList(items)
+  .bullet-list
+    .bullet-list__wrapper
+      ul.bullet-list__list
+        each item in items
+          li.bullet-list__item
+            .bullet-list__icon
+            span.bullet-list__label=item
