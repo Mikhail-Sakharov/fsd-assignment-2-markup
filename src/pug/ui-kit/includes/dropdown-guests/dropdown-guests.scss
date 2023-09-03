@@ -109,6 +109,12 @@ input:checked + label .dropdown-guests__display .dropdown-guests__icon::before {
 .dropdown-guests__list-item {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown-guests__list-item:last-child {
+  margin-top: 17px;
+  margin-bottom: 4px;
 }
 
 .dropdown-guests__controls {

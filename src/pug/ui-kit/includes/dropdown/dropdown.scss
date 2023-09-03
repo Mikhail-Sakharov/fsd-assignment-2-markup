@@ -109,6 +109,7 @@ input:checked + label .dropdown__display .dropdown__icon::before {
 .dropdown__list-item {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .dropdown__controls {

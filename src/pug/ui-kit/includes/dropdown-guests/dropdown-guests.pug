@@ -1,3 +1,5 @@
+include ../button-text/button-text
+
 mixin dropdownGuests(title, label, name, items, disabledIndex, isOpened)
   .dropdown-guests
     .dropdown-guests__header
@@ -33,3 +35,6 @@ mixin dropdownGuests(title, label, name, items, disabledIndex, isOpened)
             button(class=`${isDisabled ? 'disabled' : ''}`).dropdown-guests__dec-button -
             span.dropdown-guests__primary-label=item.value
             button.dropdown-guests__inc-button +
+      .dropdown-guests__list-item
+        +buttonText('очистить')
+        +buttonText('применить')
