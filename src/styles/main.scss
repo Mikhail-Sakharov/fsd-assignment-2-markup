@@ -97,6 +97,17 @@
 
 .right-top-wrapper__right-side {
   width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 40px;
+}
+
+.right-top-wrapper__buttons-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 30px;
 }
 
 .title-secondary {
@@ -114,7 +125,6 @@
   display: flex;
   justify-content: flex-start;
   gap: 20px;
-  margin-top: 30px;
   width: 218px;
 }
 

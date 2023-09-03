@@ -72,23 +72,27 @@ html(lang="ru")
                 +rating(4, 'random-name-first')
                 +rating(5, 'random-name-second')
           .right-top-wrapper__right-side
-            +rangeSlider('Range Slider', '5 000₽ - 10 000₽')
-            +labelPrimary('Buttons')
-            .right-top-wrapper--short
-              include includes/button-contained/button-contained
-              include includes/button-contained/button-contained-hovered
-            .right-top-wrapper--short
-              include includes/button-outlined/button-outlined
-              include includes/button-outlined/button-outlined-hovered
-            .right-top-wrapper--short
-              include includes/button-text/button-text
-              +buttonText('click me')
-              include includes/button-text/button-text-hovered
-            .right-top-wrapper-item__wrapper
-              include includes/button-icon-outlined/button-icon-outlined
-            .right-top-wrapper-item__wrapper
-              +labelPrimary('Pagination')
-              include includes/pagination/pagination
+            .right-top-wrapper__item
+              +rangeSlider('Range Slider', '5 000₽ - 10 000₽')
+            .right-top-wrapper__item
+              +labelPrimary('Buttons')
+              .right-top-wrapper__buttons-container
+                .right-top-wrapper--short
+                  include includes/button-contained/button-contained
+                  include includes/button-contained/button-contained-hovered
+                .right-top-wrapper--short
+                  include includes/button-outlined/button-outlined
+                  include includes/button-outlined/button-outlined-hovered
+                .right-top-wrapper--short
+                  include includes/button-text/button-text
+                  +buttonText('click me')
+                  include includes/button-text/button-text-hovered
+                .right-top-wrapper-item__wrapper
+                  include includes/button-icon-outlined/button-icon-outlined
+            .right-top-wrapper__item
+              .right-top-wrapper-item__wrapper
+                +labelPrimary('Pagination')
+                include includes/pagination/pagination
       .form-elements-container
         .left-bottom-wrapper
           .left-bottom-wrapper__dropdown-wrapper
