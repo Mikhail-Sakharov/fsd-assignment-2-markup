@@ -91,8 +91,8 @@ html(lang="ru")
         .left-bottom-wrapper
           .left-bottom-wrapper__dropdown-wrapper
             - const roomItems = [{title: 'спальни', value: 2}, {title: 'кровати', value: 2}, {title: 'ванные комнаты', value: 0}]
-            +dropdown('dropdown', 'default', 'room-dropdown', roomItems, 2)
             +dropdown('dropdown', 'expanded', 'room-dropdown-expanded', roomItems, 2, true)
+            +dropdown('dropdown', 'default', 'room-dropdown', roomItems, 2)
         .right-bottom-wrapper
           .right-bottom-wrapper__inner-wrapper
             .right-bottom-wrapper__item
