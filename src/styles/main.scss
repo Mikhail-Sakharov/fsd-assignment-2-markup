@@ -157,3 +157,11 @@
   display: flex;
   justify-content: space-between;
 }
+
+.dropdown-guests:first-child .dropdown-guests__clear-button {
+  display: none;
+}
+
+.dropdown-guests:first-child .dropdown-guests__list-item:last-child {
+  justify-content: flex-end;
+}

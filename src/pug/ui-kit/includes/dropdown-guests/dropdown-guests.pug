@@ -36,5 +36,6 @@ mixin dropdownGuests(title, label, name, items, disabledIndex, isOpened)
             span.dropdown-guests__primary-label=item.value
             button.dropdown-guests__inc-button +
       .dropdown-guests__list-item
-        +buttonText('очистить')
+        .dropdown-guests__clear-button
+          +buttonText('очистить')
         +buttonText('применить')
