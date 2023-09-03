@@ -17,5 +17,5 @@ mixin dropdown(title, label, name, items, disabledIndex, isOpened)
           .dropdown__controls
             - const isDisabled = i === disabledIndex
             button(class=`${isDisabled ? 'disabled' : ''}`).dropdown__dec-button -
-            span.span.dropdown__primary-label=item.value
+            span.dropdown__primary-label=item.value
             button.dropdown__inc-button +

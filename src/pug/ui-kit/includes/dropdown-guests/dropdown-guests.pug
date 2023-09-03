@@ -1,0 +1,35 @@
+mixin dropdownGuests(title, label, name, items, disabledIndex, isOpened)
+  .dropdown-guests
+    .dropdown-guests__header
+      span.dropdown-guests__primary-label=title
+      span.dropdown-guests__secondary-label=label
+    input(type='checkbox' name=name id=name checked=isOpened)
+    label(for=name)
+      .dropdown-guests__display
+        - const filteredOutputs = items.filter((item) => item.value !== 0)
+        - const isOutputsEmpty = filteredOutputs.length === 0
+        - const numberOfGuests = filteredOutputs.reduce((res, item) => res + item.value, 0)
+        - const getFormattedText = (guestsNumber) => {
+        -   switch (guestsNumber) {
+        -     case 1:
+        -       return 'гость';
+        -     case 2:
+        -     case 3:
+        -     case 4:
+        -       return 'гостя';
+        -     default:
+        -       return 'гостей';
+        -   }
+        - }
+        - const outputText = isOutputsEmpty ? 'Сколько гостей' : `${numberOfGuests} ${getFormattedText(numberOfGuests)}`
+        span.dropdown-guests__output=outputText
+        span.dropdown-guests__icon
+    .dropdown-guests__list
+      each item, i in items
+        .dropdown-guests__list-item
+          span.dropdown-guests__primary-label=item.title
+          .dropdown-guests__controls
+            - const isDisabled = i === disabledIndex || disabledIndex === -1
+            button(class=`${isDisabled ? 'disabled' : ''}`).dropdown-guests__dec-button -
+            span.dropdown-guests__primary-label=item.value
+            button.dropdown-guests__inc-button +

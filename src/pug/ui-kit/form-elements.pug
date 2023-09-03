@@ -7,6 +7,7 @@ include includes/toggle/toggle
 include includes/like-button/like-button
 include includes/rating/rating
 include includes/dropdown/dropdown
+include includes/dropdown-guests/dropdown-guests
 
 doctype html
 html(lang="ru")
@@ -88,7 +89,15 @@ html(lang="ru")
       .form-elements-container
         .left-bottom-wrapper
           .left-bottom-wrapper__dropdown-wrapper
-            - const items = [{title: 'спальни', value: 2}, {title: 'кровати', value: 2}, {title: 'ванные комнаты', value: 0}]
-            +dropdown('dropdown', 'default', 'room-dropdown', items, 2)
-            +dropdown('dropdown', 'expanded', 'room-dropdown-expanded', items, 2, true)
+            - const roomItems = [{title: 'спальни', value: 2}, {title: 'кровати', value: 2}, {title: 'ванные комнаты', value: 0}]
+            +dropdown('dropdown', 'default', 'room-dropdown', roomItems, 2)
+            +dropdown('dropdown', 'expanded', 'room-dropdown-expanded', roomItems, 2, true)
         .right-bottom-wrapper
+          .right-bottom-wrapper__inner-wrapper
+            .right-bottom-wrapper__item
+              - const guestsItems1 = [{title: 'взрослые', value: 0}, {title: 'дети', value: 0}, {title: 'младенцы', value: 0}]
+              - const guestsItems2 = [{title: 'взрослые', value: 2}, {title: 'дети', value: 1}, {title: 'младенцы', value: 0}]
+              +dropdownGuests('dropdown', '', 'guests-dropdown', guestsItems1, -1, true)
+              +dropdownGuests('dropdown', '', 'guests-dropdown-2', guestsItems2, 2, true)
+            .right-bottom-wrapper__item
+          .right-bottom-wrapper__inner-wrapper

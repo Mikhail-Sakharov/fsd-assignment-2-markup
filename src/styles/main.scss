@@ -19,6 +19,7 @@
 @import url('../pug/ui-kit/includes/like-button/like-button.scss');
 @import url('../pug/ui-kit/includes/rating/rating.scss');
 @import url('../pug/ui-kit/includes/dropdown/dropdown.scss');
+@import url('../pug/ui-kit/includes/dropdown-guests/dropdown-guests.scss');
 
 * {
   box-sizing: border-box;
@@ -139,4 +140,20 @@
   gap: 20px;
 }
 
-.right-bottom-wrapper {}
+.right-bottom-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 712px;
+}
+
+.right-bottom-wrapper__inner-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.right-bottom-wrapper__item {
+  display: flex;
+  justify-content: space-between;
+}
