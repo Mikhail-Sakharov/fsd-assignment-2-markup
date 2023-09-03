@@ -23,6 +23,7 @@
 @import url('../pug/ui-kit/includes/rich-checkbox-button/rich-checkbox-button.scss');
 @import url('../pug/ui-kit/includes/rich-checkbox-button/rich-checkbox-button-group.scss');
 @import url('../pug/ui-kit/includes/bullet-list/bullet-list.scss');
+@import url('../pug/ui-kit/includes/expandable-checkbox-list/expandable-checkbox-list.scss');
 
 * {
   box-sizing: border-box;
@@ -140,6 +141,9 @@
 
 .left-bottom-wrapper {
   width: 267px;
+  display: flex;
+  flex-direction: column;
+  gap: 160px;
 }
 
 .left-bottom-wrapper {
@@ -150,6 +154,12 @@
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
+  gap: 20px;
+}
+
+.left-bottom-wrapper__checkbox-list-wrapper {
+  display: flex;
+  flex-direction: column;
   gap: 20px;
 }
 

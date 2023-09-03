@@ -10,6 +10,40 @@ include includes/dropdown/dropdown
 include includes/dropdown-guests/dropdown-guests
 include includes/rich-checkbox-button/rich-checkbox-button-group
 include includes/bullet-list/bullet-list
+include includes/expandable-checkbox-list/expandable-checkbox-list
+
+- const checkboxListItems = [
+-   {
+-     title: 'Завтрак',
+-     name: 'breakfast',
+-     isChecked: false
+-   },
+-   {
+-     title: 'Письменный стол',
+-     name: 'desk',
+-     isChecked: true
+-   },
+-   {
+-     title: 'Стул для кормления',
+-     name: 'feeding-chair',
+-     isChecked: true
+-   },
+-   {
+-     title: 'Кроватка',
+-     name: 'crib',
+-     isChecked: true
+-   },
+-   {
+-     title: 'Телевизор',
+-     name: 'tv',
+-     isChecked: false
+-   },
+-   {
+-     title: 'Шампунь',
+-     name: 'shampoo',
+-     isChecked: false
+-   },
+- ];
 
 doctype html
 html(lang="ru")
@@ -99,6 +133,9 @@ html(lang="ru")
             - const roomItems = [{title: 'спальни', value: 2}, {title: 'кровати', value: 2}, {title: 'ванные комнаты', value: 0}]
             +dropdown('dropdown', 'expanded', 'room-dropdown-expanded', roomItems, 2, true)
             +dropdown('dropdown', 'default', 'room-dropdown', roomItems, 2)
+          .left-bottom-wrapper__checkbox-list-wrapper
+            +expandableCheckboxList('expandable checkbox list', 'collapsed', checkboxListItems, false)
+            +expandableCheckboxList('expandable checkbox list', 'expanded', checkboxListItems, true)
         .right-bottom-wrapper
           .right-bottom-wrapper__inner-wrapper
             .right-bottom-wrapper__item
