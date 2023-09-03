@@ -8,7 +8,7 @@ include includes/like-button/like-button
 include includes/rating/rating
 include includes/dropdown/dropdown
 include includes/dropdown-guests/dropdown-guests
-include includes/rich-checkbox-button/rich-checkbox-button
+include includes/rich-checkbox-button/rich-checkbox-button-group
 
 doctype html
 html(lang="ru")
@@ -102,6 +102,5 @@ html(lang="ru")
               +dropdownGuests('dropdown', '', 'guests-dropdown', guestsItems1, -1, true)
               +dropdownGuests('dropdown', '', 'guests-dropdown-2', guestsItems2, 2, true)
             .right-bottom-wrapper__item
-              +richCheckboxPutton('Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', 'wide-corridor', true)
-              +richCheckboxPutton('Помощник для инвалидов', 'На 1 этаже вас встретит специалист  и проводит до номера.', 'accessebility', false)
+              +richCheckboxPuttonGroup('Rich Checkbox Buttons')
           .right-bottom-wrapper__inner-wrapper

@@ -1,0 +1,13 @@
+.rich-checkbox-button-group__container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rich-checkbox-button-group__item:first-child {
+  width: 221px;
+}
+
+.rich-checkbox-button-group__item:last-child {
+  width: 260px;
+}

@@ -1,0 +1,11 @@
+include rich-checkbox-button
+include ../label-primary/label-primary
+
+mixin richCheckboxPuttonGroup(title)
+  .rich-checkbox-button-group
+    +labelPrimary(title)
+    .rich-checkbox-button-group__container
+      .rich-checkbox-button-group__item
+        +richCheckboxPutton('Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', 'wide-corridor', false)
+      .rich-checkbox-button-group__item
+        +richCheckboxPutton('Помощник для инвалидов', 'На 1 этаже вас встретит специалист  и проводит до номера.', 'accessebility', false)
