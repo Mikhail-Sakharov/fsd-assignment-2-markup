@@ -20,6 +20,7 @@
 @import url('../pug/ui-kit/includes/rating/rating.scss');
 @import url('../pug/ui-kit/includes/dropdown/dropdown.scss');
 @import url('../pug/ui-kit/includes/dropdown-guests/dropdown-guests.scss');
+@import url('../pug/ui-kit/includes/rich-checkbox-button/rich-checkbox-button.scss');
 
 * {
   box-sizing: border-box;
@@ -151,6 +152,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 256px;
 }
 
 .right-bottom-wrapper__item {

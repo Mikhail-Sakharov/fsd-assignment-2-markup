@@ -1,0 +1,12 @@
+mixin richCheckboxPutton(title, description, name, isChecked)
+  .rich-checkbox-button
+    label
+      .rich-checkbox-button__input
+        input(type='checkbox' name=name id=name checked=isChecked)
+        div.rich-checkbox-button__input-border
+          div.rich-checkbox-button__checkmark-outer
+            div.rich-checkbox-button__checkmark-inner
+      .rich-checkbox-button__label
+        span.rich-checkbox-button__title=title
+    .rich-checkbox-button__description
+      span=description

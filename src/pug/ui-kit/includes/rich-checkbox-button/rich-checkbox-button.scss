@@ -1,0 +1,85 @@
+.rich-checkbox-button label {
+  display: flex;
+}
+
+.rich-checkbox-button__input input {
+  display: none;
+}
+
+.rich-checkbox-button__input input + .rich-checkbox-button__input-border::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+}
+
+.rich-checkbox-button__input input:checked + .rich-checkbox-button__input-border::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 1px solid #BC9CFF;
+}
+
+.rich-checkbox-button__checkmark-outer {
+  width: 0;
+  height: 0;
+}
+
+.rich-checkbox-button__checkmark-inner {
+  width: 0;
+  height: 0;
+}
+
+.rich-checkbox-button__input input:checked + .rich-checkbox-button__input-border .rich-checkbox-button__checkmark-outer::before {
+  content: '';
+  display: block;
+  position: relative;
+  top: -21px;
+  left: 8px;
+  width: 6px;
+  height: 8px;
+  transform: rotate(45deg);
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+
+.rich-checkbox-button__input input:checked + .rich-checkbox-button__input-border .rich-checkbox-button__checkmark-inner::before {
+  content: '';
+  display: block;
+  position: relative;
+  top: -32px;
+  left: 8px;
+  width: 6px;
+  height: 8px;
+  transform: rotate(45deg);
+  background-color: #FFFFFF;
+}
+
+.rich-checkbox-button__label {
+  margin-left: 10px;
+}
+
+.rich-checkbox-button__title {
+  color: rgba(31, 32, 65, 0.75);
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.rich-checkbox-button__description {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 32px;
+
+  color: rgba(31, 32, 65, 0.50);
+  font-family: 'Montserrat';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+}
