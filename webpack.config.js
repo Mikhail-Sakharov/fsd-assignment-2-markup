@@ -18,7 +18,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: '[name].js',
-    clean: true
+    clean: true,
+    assetModuleFilename: '[name][ext]'
   },
   module: {
     rules: [
@@ -35,6 +36,10 @@ module.exports = {
           'css-loader',
           'sass-loader'
         ]
+      },
+      {
+        test: /\.jpg$/,
+        type: 'asset/resource'
       }
     ]
   },
