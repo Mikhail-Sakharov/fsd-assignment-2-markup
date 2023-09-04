@@ -1,2 +1,3 @@
-.button-outlined
-  button click me
+mixin buttonOutlined(title, isHovered)
+  .button-outlined(class=`${isHovered ? 'button-outlined--hovered' : ''}`)
+    button=title

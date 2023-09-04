@@ -11,6 +11,10 @@ include includes/dropdown-guests/dropdown-guests
 include includes/rich-checkbox-button/rich-checkbox-button-group
 include includes/bullet-list/bullet-list
 include includes/expandable-checkbox-list/expandable-checkbox-list
+include includes/button-icon-contained/button-icon-contained
+include includes/button-text/button-text
+include includes/button-outlined/button-outlined
+include includes/button-contained/button-contained
 
 - const checkboxListItems = [
 -   {
@@ -112,17 +116,16 @@ html(lang="ru")
               +labelPrimary('Buttons')
               .right-top-wrapper__buttons-container
                 .right-top-wrapper--short
-                  include includes/button-contained/button-contained
-                  include includes/button-contained/button-contained-hovered
+                  +buttonContained('click me')
+                  +buttonContained('click me', true)
                 .right-top-wrapper--short
-                  include includes/button-outlined/button-outlined
-                  include includes/button-outlined/button-outlined-hovered
+                  +buttonOutlined('click me')
+                  +buttonOutlined('click me', true)
                 .right-top-wrapper--short
-                  include includes/button-text/button-text
                   +buttonText('click me')
-                  include includes/button-text/button-text-hovered
+                  +buttonText('click me', true)
                 .right-top-wrapper-item__wrapper
-                  include includes/button-icon-outlined/button-icon-outlined
+                  +buttonIconContained('перейти к оплате')
             .right-top-wrapper__item
               .right-top-wrapper-item__wrapper
                 +labelPrimary('Pagination')
@@ -133,13 +136,14 @@ html(lang="ru")
             - const roomItems = [{title: 'спальни', value: 2}, {title: 'кровати', value: 2}, {title: 'ванные комнаты', value: 0}]
             +dropdown('dropdown', 'expanded', 'room-dropdown-expanded', roomItems, 2, true)
             +dropdown('dropdown', 'default', 'room-dropdown', roomItems, 2)
-          .left-bottom-wrapper__checkbox-list-wrapper
-            +expandableCheckboxList('expandable checkbox list', 'collapsed', checkboxListItems, false)
-            +expandableCheckboxList('expandable checkbox list', 'expanded', checkboxListItems, true)
-          .left-bottom-wrapper__checkbox-list-wrapper
-            include includes/feature-comfort/feature-comfort
-            include includes/feature-convenience/feature-convenience
-            include includes/feature-cosiness/feature-cosiness
+          .left-bottom-wrapper__inner-wrapper
+            .left-bottom-wrapper__checkbox-list-wrapper
+              +expandableCheckboxList('expandable checkbox list', 'collapsed', checkboxListItems, false)
+              +expandableCheckboxList('expandable checkbox list', 'expanded', checkboxListItems, true)
+            .left-bottom-wrapper__features-wrapper
+              include includes/feature-comfort/feature-comfort
+              include includes/feature-convenience/feature-convenience
+              include includes/feature-cosiness/feature-cosiness
         .right-bottom-wrapper
           .right-bottom-wrapper__inner-wrapper
             .right-bottom-wrapper__item

@@ -11,7 +11,7 @@
 @import url('../pug/ui-kit/includes/button-contained/button-contained.scss');
 @import url('../pug/ui-kit/includes/button-outlined/button-outlined.scss');
 @import url('../pug/ui-kit/includes/button-text/button-text.scss');
-@import url('../pug/ui-kit/includes/button-icon-outlined/button-icon-outlined.scss');
+@import url('../pug/ui-kit/includes/button-icon-contained/button-icon-contained.scss');
 @import url('../pug/ui-kit/includes/pagination/pagination.scss');
 @import url('../pug/ui-kit/includes/custom-radio/custom-radio.scss');
 @import url('../pug/ui-kit/includes/label-primary/label-primary.scss');
@@ -150,10 +150,6 @@
   gap: 160px;
 }
 
-.left-bottom-wrapper {
-  width: 267px;
-}
-
 .left-bottom-wrapper__dropdown-wrapper {
   display: flex;
   flex-direction: column-reverse;
@@ -161,7 +157,19 @@
   gap: 20px;
 }
 
+.left-bottom-wrapper__inner-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
 .left-bottom-wrapper__checkbox-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.left-bottom-wrapper__features-wrapper {
   display: flex;
   flex-direction: column;
   gap: 20px;
