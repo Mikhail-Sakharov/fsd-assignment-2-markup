@@ -7,6 +7,12 @@
 }
 
 .custom-select__label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.custom-text-field__label--primary {
   font-family: 'Montserrat';
   font-size: 12px;
   font-weight: 700;

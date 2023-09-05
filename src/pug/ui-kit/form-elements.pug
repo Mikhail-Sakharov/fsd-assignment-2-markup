@@ -16,6 +16,7 @@ include includes/button-text/button-text
 include includes/button-outlined/button-outlined
 include includes/button-contained/button-contained
 include includes/custom-text-field/custom-text-field
+include includes/custom-select/custom-select
 
 - const checkboxListItems = [
 -   {
@@ -66,18 +67,18 @@ html(lang="ru")
           .left-top-wrapper-item
             +customTextField('Text field', 'Hover / Focus', 'This is pretty awesome', 'Email', '', true)
           .left-top-wrapper-item
-            include includes/custom-select/custom-select
+            +customSelect('Dropdown', 'Сколько гостей', 'Выберите количество гостей')
           .left-top-wrapper-item--large
             include includes/masked-text-field/masked-text-field
           .left-top-wrapper-item--large
             .flex-inner-wrapper
               .left-top-wrapper-item__inner-item
-                include includes/date-dropdown/date-dropdown
+                +customSelect('Date dropdown', 'ДД.ММ.ГГГГ', 'Выберите дату')
               .left-top-wrapper-item__inner-item
-                include includes/date-dropdown/date-dropdown-selected
+                +customSelect('Date dropdown', '30.08.2023', 'Выберите дату')
           .left-top-wrapper-item--large
             .left-top-wrapper-item__inner-wrapper--short
-              include includes/date-dropdown/filter-date-dropdown
+              +customSelect('Filter date dropdown', '19 авг - 23 авг', 'Выберите даты')
           .left-top-wrapper-item--large
             .left-top-wrapper-item__inner-wrapper--short
               include includes/subscription-text-field/subscription-text-field
