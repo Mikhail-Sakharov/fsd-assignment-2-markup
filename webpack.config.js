@@ -19,7 +19,7 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
     filename: '[name].js',
     clean: true,
-    assetModuleFilename: '[name][ext]'
+    assetModuleFilename: 'assets/[name][ext]'
   },
   module: {
     rules: [
