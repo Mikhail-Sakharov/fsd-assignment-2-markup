@@ -1,6 +1,10 @@
-mixin customCheckbox(label, id, status)
+mixin customCheckbox(title, name, isChecked)
   .custom-checkbox
-    input(type='checkbox' id= id checked= status)
-    label(for= id)
-    .custom-checkbox__label
-      label(for= id)= label
+    label
+      .custom-checkbox__input
+        input(type='checkbox' name=name id=name checked=isChecked)
+        div.custom-checkbox__input-border
+          div.custom-checkbox__checkmark-outer
+            div.custom-checkbox__checkmark-inner
+      .custom-checkbox__label
+        span.custom-checkbox__title=title

@@ -29,7 +29,7 @@
   color: rgba(31, 32, 65, 0.5);
 }
 
-.pagination__page:hover {
+.pagination__page:not(.pagination__page--current):hover {
   cursor: pointer;
 }
 
