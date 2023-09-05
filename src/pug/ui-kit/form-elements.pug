@@ -15,6 +15,7 @@ include includes/button-icon-contained/button-icon-contained
 include includes/button-text/button-text
 include includes/button-outlined/button-outlined
 include includes/button-contained/button-contained
+include includes/custom-text-field/custom-text-field
 
 - const checkboxListItems = [
 -   {
@@ -61,14 +62,9 @@ html(lang="ru")
       .form-elements-container
         .left-top-wrapper
           .left-top-wrapper-item
-            include includes/text-field/text-field
+            +customTextField('Text field', 'Default', '', 'Email', '', false)
           .left-top-wrapper-item
-            .custom-input
-              label
-                span.custom-input__label Text field
-                span.custom-input__state Hover / Focus
-                .custom-input__wrapper.custom-input__wrapper--focused
-                  input(type='text' name='text-field--focused' placeholder='Email' value='This is pretty awesome')
+            +customTextField('Text field', 'Hover / Focus', 'This is pretty awesome', 'Email', '', true)
           .left-top-wrapper-item
             include includes/custom-select/custom-select
           .left-top-wrapper-item--large
