@@ -253,13 +253,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 40px;
 }
 
-.card__wrapper {
+.cards__wrapper {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-end;
+  gap: 40px;
 }
 
 .cards__item {
