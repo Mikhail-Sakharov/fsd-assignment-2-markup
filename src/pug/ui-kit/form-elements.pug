@@ -1,4 +1,5 @@
 //- Mixins
+include includes/header/header
 include includes/label-primary/label-primary
 include includes/range-slider/range-slider
 include includes/custom-checkbox/custom-checkbox
@@ -59,7 +60,7 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title=htmlWebpackPlugin.options.title
   body
-    include includes/header/header
+    +header()
     main
       .form-elements-container
         .left-top-wrapper

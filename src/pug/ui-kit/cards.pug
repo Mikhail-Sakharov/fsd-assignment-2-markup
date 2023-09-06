@@ -1,3 +1,5 @@
+include includes/header/header
+
 doctype html
 html(lang="ru")
   head
@@ -5,7 +7,7 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title=htmlWebpackPlugin.options.title
   body
-    include includes/header/header
+    +header('#F4F4F6')
     main
       .cards
         .cards__container

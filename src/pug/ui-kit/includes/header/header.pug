@@ -1,3 +1,4 @@
-header
-  .logo
-    include logo.svg
+mixin header(backgroundColor)
+  header.header(style=`background-color: ${backgroundColor || '#FFFFFF'}`)
+    .header__logo
+      include logo.svg

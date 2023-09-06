@@ -1,3 +1,5 @@
+include includes/header/header
+
 - const colorsItems = [{color: '#1F2041', title: 'Dark Shade 100%', opacity: '100%'}, {color: '#1F2041', title: 'Dark Shade 75%', opacity: '75%'}, {color: '#1F2041', title: 'Dark Shade 50%', opacity: '50%'}, {color: '#1F2041', title: 'Dark Shade 25%', opacity: '25%'}, {color: '#1F2041', title: 'Dark Shade 5%', opacity: '5%'}, {color: '#BC9CFF', title: 'Purple', opacity: '100%'}, {color: '#6FCF97', title: 'Green', opacity: '100%'}]
 
 doctype html
@@ -7,7 +9,7 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title=htmlWebpackPlugin.options.title
   body
-    include includes/header/header
+    +header()
     main
       .container
         .colors-and-types-wrapper
