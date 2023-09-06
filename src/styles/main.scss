@@ -247,7 +247,6 @@
 
 .cards {
   background-color: #F4F4F6;
-  height: 1000px;
 }
 
 .cards__container {
@@ -270,4 +269,8 @@
   border: 1px solid rgba(0, 0, 0, 0.12);
   background: #FFFFFF;
   box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.20);
+}
+
+.cards__footer {
+  height: 140px;
 }
