@@ -26,6 +26,9 @@
 @import url('../pug/ui-kit/includes/feature-convenience/feature-convenience.scss');
 @import url('../pug/ui-kit/includes/feature-cosiness/feature-cosiness.scss');
 @import url('../pug/ui-kit/includes/review/review.scss');
+@import url('../pug/ui-kit/includes/main-title/main-title.scss');
+
+@import url('../pug/ui-kit/cards/search-card/search-card.scss');
 
 * {
   box-sizing: border-box;
@@ -257,4 +260,11 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-end;
+}
+
+.cards__item {
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #FFFFFF;
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.20);
 }

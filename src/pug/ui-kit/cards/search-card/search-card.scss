@@ -1,0 +1,27 @@
+.search-card {
+  width: 380px;
+  height: 374px;
+  flex-shrink: 0;
+  padding: 40px 30px 30px 30px;
+}
+
+.search-card__dates-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.search-card__check-in-date,
+.search-card__check-out-date {
+  width: 100%;
+}
+
+.search-card__guests-input-wrapper {
+  margin-top: 20px;
+}
+
+.search-card__search-button {
+  margin-top: 30px;
+}
