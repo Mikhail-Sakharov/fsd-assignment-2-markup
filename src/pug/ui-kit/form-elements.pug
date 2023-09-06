@@ -69,7 +69,7 @@ html(lang="ru")
           .left-top-wrapper-item
             +customSelect('Dropdown', 'Сколько гостей', 'Выберите количество гостей')
           .left-top-wrapper-item--large
-            include includes/masked-text-field/masked-text-field
+            +customTextField('masked text field', '', '', 'ДД.ММ.ГГГГ', '', false)
           .left-top-wrapper-item--large
             .flex-inner-wrapper
               .left-top-wrapper-item__inner-item
