@@ -17,6 +17,7 @@ include includes/button-outlined/button-outlined
 include includes/button-contained/button-contained
 include includes/custom-text-field/custom-text-field
 include includes/custom-select/custom-select
+include includes/subscription-text-field/subscription-text-field
 
 - const checkboxListItems = [
 -   {
@@ -81,7 +82,7 @@ html(lang="ru")
               +customSelect('Filter date dropdown', '19 авг - 23 авг', 'Выберите даты')
           .left-top-wrapper-item--large
             .left-top-wrapper-item__inner-wrapper--short
-              include includes/subscription-text-field/subscription-text-field
+              +subscriptionInput('Subscription text field', 'subscription-text-field', 'Email')
         .right-top-wrapper
           .right-top-wrapper__left-side
             .right-top-wrapper__item

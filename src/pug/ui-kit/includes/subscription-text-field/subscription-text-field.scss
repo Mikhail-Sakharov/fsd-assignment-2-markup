@@ -1,4 +1,10 @@
 .subscription-input__label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.subscription-input__label--primary {
   font-family: 'Montserrat';
   font-size: 12px;
   font-weight: 700;
@@ -10,13 +16,13 @@
 .subscription-input__wrapper {
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 44px;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
 }
 
 .subscription-input input {
-  align-self: center;
   width: 100%;
   margin-left: 16px;
   font-family: 'Montserrat';
@@ -31,9 +37,13 @@
 }
 
 .subscription-input__icon {
+  cursor: pointer;
   display: flex;
   justify-content: center;
-  align-self: center;
   margin-right: 16px;
   margin-left: 16px;
+}
+
+.subscription-input--focused {
+  border: 1px solid rgba(31, 32, 65, 0.5);
 }

@@ -1,7 +1,8 @@
-.subscription-input
-  label
-    span.subscription-input__label Subscription text field
+mixin subscriptionInput(titleLabel, name, placeholder)
+  .subscription-input
+    .subscription-input__label
+      span.subscription-input__label--primary=titleLabel
     .subscription-input__wrapper
-      input(type='text' name='subscription-text-field' placeholder='Email')
+      input(type='text' name=name placeholder=placeholder)
       .subscription-input__icon
         include arrow_forward.svg
