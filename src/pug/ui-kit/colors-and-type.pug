@@ -5,7 +5,7 @@ html(lang="ru")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title= htmlWebpackPlugin.options.title
+    title=htmlWebpackPlugin.options.title
   body
     include includes/header/header
     main
@@ -16,8 +16,8 @@ html(lang="ru")
               .colors-item
                 .colors-item__color(style={'background-color': colorsItem.color, 'opacity': colorsItem.opacity})
                 .colors-item__description
-                  p.colors-item__title= colorsItem.title
-                  p.colors-item__hex= colorsItem.color
+                  p.colors-item__title=colorsItem.title
+                  p.colors-item__hex=colorsItem.color
           section.types
             .types-item
               p.types-item__type.h1-type h1

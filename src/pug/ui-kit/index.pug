@@ -3,12 +3,15 @@ html(lang="ru")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title= htmlWebpackPlugin.options.title
+    title=htmlWebpackPlugin.options.title
   body
     include includes/header/header
-    h1 UI-kit
-    ul
-      li
-        a(href='./colors-and-type.html') Colors & Type
-      li
-        a(href='./form-elements.html') Form elements
+    .site-map
+      h1.site-map__title UI-kit
+      ul.site-map__list
+        li
+          a(href='./colors-and-type.html') Colors & Type
+        li
+          a(href='./form-elements.html') Form elements
+        li
+          a(href='./cards.html') Cards

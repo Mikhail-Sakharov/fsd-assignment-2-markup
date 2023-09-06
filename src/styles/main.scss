@@ -33,6 +33,35 @@
   padding: 0;
 }
 
+.site-map {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.site-map__title {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 50px;
+  color: #1F2041;
+}
+
+.site-map__list {
+  list-style: none;
+  line-height: 50px;
+}
+
+.site-map__list li {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  color: #1F2041;
+}
+
 .colors-and-types-wrapper {
   margin: 0 auto;
   margin-top:4.2vh;
@@ -210,4 +239,22 @@
 
 .form-elements-footer {
   height: 130px;
+}
+
+.cards {
+  background-color: #F4F4F6;
+  height: 1000px;
+}
+
+.cards__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
