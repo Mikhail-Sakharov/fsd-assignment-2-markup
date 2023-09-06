@@ -1,0 +1,38 @@
+include ../../includes/main-title/main-title
+include ../../includes/custom-text-field/custom-text-field
+include ../../includes/custom-radio/custom-radio
+include ../../includes/label-primary/label-primary
+include ../../includes/toggle/toggle
+include ../../includes/button-icon-contained/button-icon-contained
+include ../../includes/button-outlined/button-outlined
+
+.register-card
+  .register-card__blocks
+    .register-card__title
+      +mainTitle('Регистрация аккаунта')
+    .register-card__name-gender-block
+      .register-card__user-first-name
+        +customTextField('', '', '', 'Имя', '', false)
+      .register-card__user-last-name
+        +customTextField('', '', '', 'Фамилия', '', false)
+      .register-card__gender
+        +customRadio(['Мужчина', 'Женщина'], 'gender')
+    .register-card__birth-date-block
+      .register-card__birth-date
+        +customTextField('дата рождения', '', '', 'ДД.ММ.ГГГГ', '', false)
+    .register-card__credentials-block
+      +labelPrimary('данные для входа в сервис')
+      .register-card__credentials
+        .register-card__email
+          +customTextField('', '', '', 'Email', '', false)
+        .register-card__password
+          +customTextField('', '', '', 'Пароль', '', false)
+      .register-card__special-offer
+        +toggle('Получать спецпредложения', 'toggle')
+    .register-card__register-button-block
+      .register-card__register-button
+        +buttonIconContained('создать аккаунт')
+  .register-card__log-in
+    span.register-card__already-registered Уже есть аккаунт на Toxin
+    .register-card__log-in-button
+      +buttonOutlined('войти')

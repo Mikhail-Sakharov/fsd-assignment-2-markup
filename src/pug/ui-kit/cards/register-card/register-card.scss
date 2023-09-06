@@ -1,0 +1,60 @@
+.register-card {
+  width: 380px;
+  padding: 40px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 30px;
+}
+
+.register-card__blocks {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.register-card__name-gender-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.register-card__credentials-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 5px;
+}
+
+.register-card__credentials {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.register-card__special-offer .toggle {
+  margin-top: 5px;
+}
+
+.register-card__credentials-block .label-primary {
+  margin-bottom: 0;
+}
+
+.register-card__log-in {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.register-card__already-registered {
+  color: #000;
+  text-align: center;
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
