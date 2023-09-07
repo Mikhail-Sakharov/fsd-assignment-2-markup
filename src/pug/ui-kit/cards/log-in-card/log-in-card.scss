@@ -1,0 +1,37 @@
+.log-in-card {
+  width: 380px;
+  padding: 40px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 30px;
+}
+
+.log-in-card__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.log-in-card__credentials {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.log-in-card__create-account {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.log-in-card__not-registered-yet {
+  color: #000;
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
