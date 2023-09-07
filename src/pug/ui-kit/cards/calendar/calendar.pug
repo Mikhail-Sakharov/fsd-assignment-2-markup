@@ -1,0 +1,25 @@
+include ../../includes/button-text/button-text
+
+- const weekdays = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
+- const days = [29, 30, 31, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 1];
+- const outsideDays = [0, 1, 2, 34];
+- const currentDayIndex = 10;
+- const startDayIndex = 21;
+- const finishDayIndex = 25;
+
+.calendar
+  .calendar__header
+    .calendar__left-arrow
+    .calendar__title Август 2019
+    .calendar__right-arrow
+  .calendar__weekday-names
+    each weekday in weekdays
+      .calendar__weekday
+        span.calendar__weekday-name=weekday
+  .calendar__days
+    each day, i in days
+      .calendar__day(class=`${i === currentDayIndex ? 'calendar__day--current' : ''}` class=`${i === startDayIndex ? 'calendar__day--start' : ''}` class=`${i === finishDayIndex ? 'calendar__day--finish' : ''}` class=`${outsideDays.includes(i) ? 'calendar__day--outside-period' : ''}`)
+        span.calendar__day-number=day
+  .calendar__controls
+    +buttonText('очистить')
+    +buttonText('применить')
