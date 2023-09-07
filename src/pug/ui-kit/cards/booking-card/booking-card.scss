@@ -1,0 +1,142 @@
+.booking-card {
+  width: 380px;
+  padding: 40px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.booking-card__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.booking-card__number {
+  color: #1F2041;
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.booking-card__room-number {
+  color: #1F2041;
+  font-family: 'Montserrat';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.booking-card__room-type {
+  margin-left: 8px;
+  color: #BC9CFF;
+  font-family: 'Montserrat';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.booking-card__price-amount {
+  color: rgba(31, 32, 65, 0.50);
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.booking-card__price-label {
+  color: rgba(31, 32, 65, 0.50);
+  font-family: 'Montserrat';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.booking-card__dates-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.booking-card__check-in-date,
+.booking-card__check-out-date {
+  width: 100%;
+}
+
+.booking-card__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.booking-card__calculation-total,
+.booking-card__service-fees,
+.booking-card__extra-fees {
+  display: flex;
+  justify-content: space-between;
+
+  color: rgba(31, 32, 65, 0.75);
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.booking-card__detail-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.booking-card__service-fees .booking-card__detail-wrapper span:first-child,
+.booking-card__extra-fees .booking-card__detail-wrapper span:first-child {
+  width: 214px;
+}
+
+.booking-card__service-fees .booking-card__detail-wrapper span:nth-child(2)::after,
+.booking-card__extra-fees .booking-card__detail-wrapper span:nth-child(2)::after {
+  content: 'i';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+
+  color: rgba(31, 32, 65, 0.25);
+  font-family: 'Montserrat';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 14px;
+}
+
+.booking-card__total-price {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+
+  color: #1F2041;
+  font-family: 'Montserrat';
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.booking-card__total-price span:nth-child(2) {
+  flex: auto;
+  border-bottom: 1px dotted rgba(31, 32, 65, 0.25);
+  margin-bottom: 4px;
+}
