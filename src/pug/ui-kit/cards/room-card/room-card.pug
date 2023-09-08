@@ -1,19 +1,22 @@
 include ../../includes/rating/rating
+include ../../includes/slider/slider
 
-.room-card
-  .room-card__slider
-    include ../../includes/slider/slider
-  .room-card__details
-    .room-card__header
-      .room-card__room
-        span.room-card__number №&nbsp;
-        span.room-card__room-number 888
-        span.room-card__room-type люкс
-      .room-card__price
-        span.room-card__price-amount 9 990₽
-        span.room-card__price-label в сутки
-    .room-card__rating
-      +rating(5, 'room-rating')
-      .room-card__reviews-count
-        span 145
-        span Отзывов
+mixin roomCard(imgUrl, roomNumber, isLux, rating, reviewsCount, ratingName)
+  .room-card
+    .room-card__slider
+      +slider(imgUrl)
+    .room-card__details
+      .room-card__header
+        .room-card__room
+          span.room-card__number №&nbsp;
+          span.room-card__room-number=roomNumber
+          if isLux
+            span.room-card__room-type люкс
+        .room-card__price
+          span.room-card__price-amount 9 990₽
+          span.room-card__price-label в сутки
+      .room-card__rating
+        +rating(rating, ratingName, true)
+        .room-card__reviews-count
+          span=reviewsCount
+          span Отзывов

@@ -1,4 +1,5 @@
 include includes/header/header
+include cards/room-card/room-card
 
 doctype html
 html(lang="ru")
@@ -25,6 +26,7 @@ html(lang="ru")
             .cards__item
               include cards/calendar/calendar
             .cards__item
-              include cards/room-card/room-card
+              +roomCard('./assets/1.jpg', 888, true, 5, 145, 'room-888')
             .cards__item
+              +roomCard('./assets/2.jpg', 840, false, 4, 65, 'room-840')
         .cards__footer
