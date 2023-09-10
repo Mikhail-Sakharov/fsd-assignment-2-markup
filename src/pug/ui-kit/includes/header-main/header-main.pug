@@ -1,0 +1,36 @@
+include ../button-contained/button-contained
+include ../button-outlined/button-outlined
+
+mixin headerMain(isLoggedIn, userName)
+  header.header-main
+    .header-main__container
+      .header-main__logo
+        include logo-main.svg
+      nav.header-main__nav
+        ul.header-main__menu
+          li.header-main__menu-item
+            span.header-main__menu-label--primary О нас
+          li.header-main__menu-item
+            label
+              span.header-main__menu-label Услуги
+              input(type='checkbox' name='manu-item-services')
+              .header-main__menu-icon
+          li.header-main__menu-item
+            span.header-main__menu-label Вакансии
+          li.header-main__menu-item
+            span.header-main__menu-label Новости
+          li.header-main__menu-item
+            label
+              span.header-main__menu-label Соглашения
+              input(type='checkbox' name='menu-item-agreements')
+              .header-main__menu-icon
+        .header-main__account
+          if isLoggedIn && userName
+            .header-main__user-name
+              span=userName
+          else
+            .header-main__log-in-button
+              +buttonOutlined('войти')
+            .header-main__register-button
+              +buttonContained('зарегистрироваться')
+  

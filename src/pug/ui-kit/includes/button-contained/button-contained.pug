@@ -1,3 +1,4 @@
 mixin buttonContained(title, isHovered)
   .button-contained(class=`${isHovered ? 'button-contained--hovered' : ''}`)
-    button=title
+    button
+      span=title

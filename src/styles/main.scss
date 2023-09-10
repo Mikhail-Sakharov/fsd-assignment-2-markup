@@ -1,4 +1,5 @@
 @import url('../pug/ui-kit/includes/header/header.scss');
+@import url('../pug/ui-kit/includes/header-main/header-main.scss');
 @import url('../pug/ui-kit/includes/colors-item/colors-item.scss');
 @import url('../pug/ui-kit/includes/types-item/types-item.scss');
 @import url('../pug/ui-kit/includes/custom-text-field/custom-text-field.scss');
@@ -278,4 +279,21 @@
 
 .cards__footer {
   height: 140px;
+}
+
+.headers-and-footers__footer {
+  height: 140px;
+  background-color: #F4F4F6;
+}
+
+.headers-and-footers {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background-color: #F4F4F6;
+}
+
+.headers-and-footers__item {
+  background: #FFFFFF;
+  box-shadow: 0px 10px 20px 0px rgba(31, 32, 65, 0.05);
 }

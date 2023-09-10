@@ -1,0 +1,18 @@
+include includes/header/header
+include includes/header-main/header-main
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title=htmlWebpackPlugin.options.title
+  body
+    +header('#F4F4F6')
+    main
+      ul.headers-and-footers
+        li.headers-and-footers__item
+          +headerMain()
+        li.headers-and-footers__item
+          +headerMain(true, 'Юлий Цезарь')
+      .headers-and-footers__footer
