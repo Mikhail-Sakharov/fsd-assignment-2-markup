@@ -115,11 +115,15 @@ html(lang="ru")
               +labelPrimary('Buttons')
               .right-top-wrapper__buttons-container
                 .right-top-wrapper--short
-                  +buttonContained('click me')
-                  +buttonContained('click me', true)
+                  .right-top-wrapper__button-container
+                    +buttonContained('click me')
+                  .right-top-wrapper__button-container
+                    +buttonContained('click me', true)
                 .right-top-wrapper--short
-                  +buttonOutlined('click me')
-                  +buttonOutlined('click me', true)
+                  .right-top-wrapper__button-container
+                    +buttonOutlined('click me')
+                  .right-top-wrapper__button-container
+                    +buttonOutlined('click me', true)
                 .right-top-wrapper--short
                   +buttonText('click me')
                   +buttonText('click me', true)
