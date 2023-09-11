@@ -14,7 +14,17 @@
 .footer-main__nav article {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 17px;
+}
+
+.footer-main__nav article:nth-child(2),
+.footer-main__nav article:nth-child(3),
+.footer-main__nav article:nth-child(4) {
+  width: 160px;
+}
+
+.footer-main__nav article:first-child {
+  gap: 12px;
 }
 
 .footer-main__general,
@@ -32,6 +42,7 @@
 }
 
 .footer-main__article-title {
+  margin-top: 5px;
   color: #1F2041;
   font-family: 'Montserrat';
   font-size: 12px;
@@ -55,7 +66,7 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 }
 
 .footer-main__copyright {
