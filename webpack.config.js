@@ -6,7 +6,13 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const PUG_FILE_REG_EXP = /.+(?=.pug)/;
 
 const uiKitPagesDir = path.resolve(__dirname, 'src', 'pug', 'ui-kit');
+const pagesDir = path.resolve(__dirname, 'src', 'pug', 'pages');
+
 const UI_KIT_PAGES = fs.readdirSync(uiKitPagesDir)
+  .filter((file) => PUG_FILE_REG_EXP.test(file))
+  .map((file) => file.match(PUG_FILE_REG_EXP)[0]);
+
+const PAGES = fs.readdirSync(pagesDir)
   .filter((file) => PUG_FILE_REG_EXP.test(file))
   .map((file) => file.match(PUG_FILE_REG_EXP)[0]);
 
@@ -48,6 +54,14 @@ module.exports = {
       title: page === 'index' ? 'UI-kit' : page,
       filename: `${page}.html`,
       template: path.resolve(__dirname, 'src', 'pug', 'ui-kit', `${page}.pug`),
+      minify: {
+        useShortDoctype: false
+      }
+    })),
+    ...PAGES.map((page) => new HtmlWebpackPlugin({
+      title: page,
+      filename: `${page}.html`,
+      template: path.resolve(__dirname, 'src', 'pug', 'pages', `${page}.pug`),
       minify: {
         useShortDoctype: false
       }
