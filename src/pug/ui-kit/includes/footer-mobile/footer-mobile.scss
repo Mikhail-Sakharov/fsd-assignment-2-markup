@@ -1,0 +1,50 @@
+.footer-mobile {
+  padding: 120px 0 120px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-mobile__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-mobile__copyright p {
+  color: rgba(31, 32, 65, 0.75);
+  text-align: center;
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.footer-mobile__socials {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-mobile__icon {
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer-mobile__socials .twitter {
+  background-image: url('./twitter-icon.svg');
+}
+
+.footer-mobile__socials .facebook {
+  background-image: url('./facebook-icon.svg');
+}
+
+.footer-mobile__socials .instagram {
+  background-image: url('./instagram-icon.svg');
+}
