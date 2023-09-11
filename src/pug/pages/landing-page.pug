@@ -1,0 +1,18 @@
+include ../ui-kit/includes/header-main/header-main
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title=htmlWebpackPlugin.options.title
+  body
+    .landing-page__header
+      +headerMain()
+    main.landing-page__background
+      form.landing-page__search-form
+        include ../ui-kit/cards/search-card/search-card
+      p.landing-page__slogan Лучшие номера для вашей работы, отдыха и просто вдохновения
+      img(src='./assets/landing-bg-3.jpg', alt='background')
+    .landing-page__footer
+      include ../ui-kit/includes/footer-main/footer-main

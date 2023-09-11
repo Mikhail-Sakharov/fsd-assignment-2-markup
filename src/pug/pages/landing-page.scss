@@ -1,0 +1,39 @@
+.landing-page__header .header-main {
+  position: absolute;
+  width: 100%;
+  background: #FFFFFF;
+  box-shadow: 0px 10px 20px 0px rgba(31, 32, 65, 0.05);
+}
+
+.landing-page__background img {
+  width: 100%;
+}
+
+.landing-page__background .landing-page__search-form {
+  position: absolute;
+  margin-top: 140px;
+  margin-left: 140px;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.20);
+}
+
+.landing-page__slogan {
+  position: absolute;
+  width: 297px;
+  left: 1010px;
+  top: 831px;
+
+  color: rgba(31, 32, 65, 0.75);
+  text-align: right;
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.landing-page__footer .footer-main__nav {
+  margin: 95px 0 100px 0;
+}
