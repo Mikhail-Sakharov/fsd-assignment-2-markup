@@ -312,3 +312,14 @@
   width: 768px;
   align-self: center;
 }
+
+@media (min-width: 1900px) {
+  .header-main__container {
+    width: 1560px;
+  }
+
+  .landing-page__slogan {
+    right: 200px;
+    bottom: -200px;
+  }
+}
