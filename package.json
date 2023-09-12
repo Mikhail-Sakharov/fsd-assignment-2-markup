@@ -24,21 +24,30 @@
   },
   "eslintConfig": {
     "parserOptions": {
-			"sourceType": "module"
-		},
+      "sourceType": "module"
+    },
     "env": {
       "browser": true,
       "es2021": true
     },
     "extends": "eslint:recommended",
     "rules": {
-        "quotes": ["error", "single"],
-        "indent": ["error", 2],
-        "no-console": "error",
-        "semi": "error",
-        "comma-dangle": "error",
-        "no-trailing-spaces": "error"
+      "quotes": [
+        "error",
+        "single"
+      ],
+      "indent": [
+        "error",
+        2
+      ],
+      "no-console": "error",
+      "semi": "error",
+      "comma-dangle": "error",
+      "no-trailing-spaces": "error"
     },
     "ignorePatterns": "webpack.config.js"
+  },
+  "dependencies": {
+    "nouislider": "^15.7.1"
   }
 }
