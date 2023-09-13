@@ -48,6 +48,7 @@
     "ignorePatterns": "webpack.config.js"
   },
   "dependencies": {
+    "flatpickr": "^4.6.13",
     "nouislider": "^15.7.1"
   }
 }
