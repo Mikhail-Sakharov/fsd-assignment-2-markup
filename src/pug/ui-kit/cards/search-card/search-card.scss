@@ -3,6 +3,11 @@
   height: 374px;
   flex-shrink: 0;
   padding: 40px 30px 30px 30px;
+
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #FFFFFF;
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.20);
 }
 
 .search-card__dates-wrapper {
