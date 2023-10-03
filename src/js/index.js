@@ -8,4 +8,4 @@ import '../pug/pages/landing-bg-3.jpg';
 import '../pug/ui-kit/includes/custom-text-field/custom-text-field';
 import '../pug/ui-kit/includes/subscription-text-field/subscription-text-field';
 import '../pug/ui-kit/includes/range-slider/range-slider';
-import '../pug/ui-kit/cards/calendar/flatpickr';
+import '../pug/pages/landing-page';

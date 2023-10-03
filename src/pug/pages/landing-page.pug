@@ -10,7 +10,7 @@ html(lang="ru")
     .landing-page__header
       +headerMain()
     main.landing-page__background
-      form.landing-page__search-form
+      form.landing-page__search-form(action='#' method='GET')
         include ../ui-kit/cards/search-card/search-card
       img(src='./assets/landing-bg-3.jpg', alt='background')
       p.landing-page__slogan Лучшие номера для вашей работы, отдыха и просто вдохновения
