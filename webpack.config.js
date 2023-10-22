@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const fs = require("fs");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const PUG_FILE_REG_EXP = /.+(?=.pug)/;
 
@@ -72,6 +73,7 @@ module.exports = {
   plugins: [
     ...UI_KIT_PAGES.map((page) => new HtmlWebpackPlugin({
       title: page === 'index' ? 'UI-kit' : page,
+      favicon: 'src/img/favicon-32x32.png',
       filename: `${page}.html`,
       template: path.resolve(__dirname, 'src', 'pug', 'ui-kit', `${page}.pug`),
       minify: {
@@ -80,6 +82,7 @@ module.exports = {
     })),
     ...PAGES.map((page) => new HtmlWebpackPlugin({
       title: page,
+      favicon: 'src/img/favicon-32x32.png',
       filename: `${page}.html`,
       template: path.resolve(__dirname, 'src', 'pug', 'pages', `${page}.pug`),
       minify: {
@@ -87,9 +90,14 @@ module.exports = {
       }
     })),
     new MiniCssExtractPlugin({
-      filename: "[name].css",
-      chunkFilename: "[id].css",
+      filename: '[name].css',
+      chunkFilename: '[id].css',
       ignoreOrder: false
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {from: 'src/fonts', to: 'fonts'}
+      ],
     })
   ],
   devServer: {
