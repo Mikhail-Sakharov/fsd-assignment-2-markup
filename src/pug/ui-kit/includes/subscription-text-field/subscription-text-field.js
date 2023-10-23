@@ -1,3 +1,5 @@
+import './subscription-text-field.scss';
+
 const subscriptionInputElements = document.querySelectorAll('.subscription-input');
 
 const handleInputFocus = (_evt, inputWrapperElement) => {

@@ -1,3 +1,5 @@
+import './custom-text-field.scss';
+
 const customInputElements = document.querySelectorAll('.custom-text-field');
 
 const handleInputFocus = (_evt, inputWrapperElement) => {

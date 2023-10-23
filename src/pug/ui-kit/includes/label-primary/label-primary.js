@@ -1,0 +1,1 @@
+import './label-primary.scss';
