@@ -1,10 +1,10 @@
-mixin customRadio(blocks, name)
+mixin customRadio(labels, name, checkedIndex)
   .custom-radio
-    each block, i in blocks
+    each label, i in labels
       .custom-radio__block
         label
-          - const isChecked = i === 0
-          input(type='radio' name= name checked= isChecked)
+          - const isChecked = i === checkedIndex
+          input.custom-radio__input(type='radio' name=name value=label checked=isChecked)
           span.custom-radio__button--outer
             span.custom-radio__button--inner
-          span.custom-radio__label= block
+          span.custom-radio__label=label

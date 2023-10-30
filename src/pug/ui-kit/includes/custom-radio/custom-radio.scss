@@ -1,45 +1,70 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .custom-radio {
   display: flex;
   gap: 20px;
 }
 
-.custom-radio__block input {
-  display: none;
+.custom-radio__input {
+  @extend .visually-hidden;
 }
 
-.custom-radio__block input + .custom-radio__button--outer::before {
-  content: '';
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 10px;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  border: 1px solid rgba(31, 32, 65, 0.25);
+.custom-radio__input {
+  + .custom-radio__button--outer {
+    &::before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 10px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 1px solid rgba(31, 32, 65, 0.25);
+    }
+  }
 }
 
-.custom-radio__block input:checked + .custom-radio__button--outer::before {
-  content: '';
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 10px;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  border: 1px solid #BC9CFF;
+.custom-radio__input:checked {
+  + .custom-radio__button--outer {
+    &::before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 10px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 1px solid #BC9CFF;
+    }
+  }
 }
 
-.custom-radio__block input:checked + .custom-radio__button--outer .custom-radio__button--inner::before {
-  content: '';
-  display: inline-block;
-  vertical-align: middle;
-  width: 12px;
-  height: 12px;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  border-radius: 50%;
-  position: relative;
-  left: -26px;
-  margin-right: -12px;
+.custom-radio__input:checked {
+  + .custom-radio__button--outer {
+    .custom-radio__button--inner {
+      &::before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        width: 12px;
+        height: 12px;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        border-radius: 50%;
+        position: relative;
+        left: -26px;
+        margin-right: -12px;
+      }
+    }
+  }
 }
 
 .custom-radio__label {
