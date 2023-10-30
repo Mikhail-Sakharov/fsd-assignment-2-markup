@@ -22,18 +22,28 @@
   border-radius: 4px;
 }
 
-.subscription-input input {
-  width: 100%;
-  margin-left: 14px;
-  font-family: 'Montserrat';
-  font-size: 14px;
-  font-weight: 400;
-  border-style: none;
-  color: rgba(31, 32, 65, 0.75);
+.subscription-input__wrapper--focused {
+  border: 1px solid rgba(31, 32, 65, 0.5);
 }
 
-.subscription-input input:focus {
-  outline: none;
+.subscription-input {
+  input {
+    width: 100%;
+    margin-left: 14px;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 400;
+    border-style: none;
+    color: rgba(31, 32, 65, 0.75);
+  }
+}
+
+.subscription-input {
+  input {
+    &:focus {
+      outline: none;
+    }
+  }
 }
 
 .subscription-input__icon {
@@ -42,8 +52,4 @@
   justify-content: center;
   margin-right: 12px;
   margin-left: 12px;
-}
-
-.subscription-input--focused {
-  border: 1px solid rgba(31, 32, 65, 0.5);
 }

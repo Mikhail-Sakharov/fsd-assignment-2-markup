@@ -2,24 +2,24 @@ import './subscription-text-field.scss';
 
 const subscriptionInputElements = document.querySelectorAll('.subscription-input');
 
-const handleInputFocus = (_evt, inputWrapperElement) => {
-  inputWrapperElement.classList.add('subscription-input--focused');
+const handleInputFocus = (inputWrapperElement) => {
+  inputWrapperElement.classList.add('subscription-input__wrapper--focused');
 };
 
-const handleInputBlur = (_evt, inputWrapperElement) => {
-  inputWrapperElement.classList.remove('subscription-input--focused');
+const handleInputBlur = (inputWrapperElement) => {
+  inputWrapperElement.classList.remove('subscription-input__wrapper--focused');
 };
 
 subscriptionInputElements.forEach((subscriptionInputElement) => {
-  const subscriptionInputElementDisplay = subscriptionInputElement.querySelector('.subscription-input__wrapper');
-  const inputElement = subscriptionInputElementDisplay.querySelector('input');
+  const subscriptionInputWrapperElement = subscriptionInputElement.querySelector('.subscription-input__wrapper');
+  const inputElement = subscriptionInputWrapperElement.querySelector('input');
 
-  inputElement.addEventListener('focus', (evt) => handleInputFocus(evt, subscriptionInputElementDisplay));
+  inputElement.addEventListener('focus', () => handleInputFocus(subscriptionInputWrapperElement));
 });
 
 subscriptionInputElements.forEach((subscriptionInputElement) => {
-  const subscriptionInputElementDisplay = subscriptionInputElement.querySelector('.subscription-input__wrapper');
-  const inputElement = subscriptionInputElementDisplay.querySelector('input');
+  const subscriptionInputWrapperElement = subscriptionInputElement.querySelector('.subscription-input__wrapper');
+  const inputElement = subscriptionInputWrapperElement.querySelector('input');
 
-  inputElement.addEventListener('blur', (evt) => handleInputBlur(evt, subscriptionInputElementDisplay));
+  inputElement.addEventListener('blur', () => handleInputBlur(subscriptionInputWrapperElement));
 });
