@@ -14,6 +14,13 @@
   gap: 20px;
 }
 
+.custom-radio {
+  &:has(:focus-visible) {
+    outline: 2px solid #BC9CFF;
+    border-radius: 4px;
+  }
+}
+
 .custom-radio__input {
   @extend .visually-hidden;
 }
