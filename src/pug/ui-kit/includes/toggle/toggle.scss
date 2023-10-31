@@ -13,6 +13,8 @@
   @extend .visually-hidden;
 }
 
+/* unchecked & unfocused */
+
 .toggle__button--outer {
   &::before {
     content: '';
@@ -38,6 +40,17 @@
     left: -36px;
     margin-right: -14px;
     transition: 0.1s;
+  }
+}
+
+/* unchecked/checked & focused */
+
+.toggle__input:focus,
+.toggle__input:checked:focus {
+  + .toggle__button--outer {
+    &::before {
+      outline: 2px solid #BC9CFF;
+    }
   }
 }
 
