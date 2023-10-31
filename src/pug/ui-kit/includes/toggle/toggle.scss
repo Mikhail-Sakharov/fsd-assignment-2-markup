@@ -45,8 +45,8 @@
 
 /* unchecked/checked & focused */
 
-.toggle__input:focus,
-.toggle__input:checked:focus {
+.toggle__input:focus-visible,
+.toggle__input:checked:focus-visible {
   + .toggle__button--outer {
     &::before {
       outline: 2px solid #BC9CFF;
