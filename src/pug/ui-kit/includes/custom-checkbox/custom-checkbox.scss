@@ -46,12 +46,14 @@
     &:focus {
       + .custom-checkbox__input-border {
         &::before {
-          content: '';
-          display: inline-block;
-          width: 18px;
-          height: 18px;
-          border-radius: 4px;
-          border: 2px solid #BC9CFF;
+          outline: none;
+        }
+      }
+    }
+    &:focus-visible {
+      + .custom-checkbox__input-border {
+        &::before {
+          outline: 2px solid #BC9CFF;
         }
       }
     }
@@ -81,12 +83,14 @@
       &:focus {
         + .custom-checkbox__input-border {
           &::before {
-            content: '';
-            display: inline-block;
-            width: 18px;
-            height: 18px;
-            border-radius: 4px;
-            border: 2px solid #BC9CFF;
+            outline: none;
+          }
+        }
+      }
+      &:focus-visible {
+        + .custom-checkbox__input-border {
+          &::before {
+            outline: 2px solid #BC9CFF;
           }
         }
       }
