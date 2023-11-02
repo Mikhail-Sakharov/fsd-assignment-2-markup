@@ -8,11 +8,16 @@
   font-size: 12px;
   line-height: 15px;
   text-transform: uppercase;
-}
 
-.button-text:hover {
-  color: rgba(31, 32, 65, 0.5);
-  cursor: pointer;
+  &:hover {
+    color: rgba(31, 32, 65, 0.5);
+    cursor: pointer;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #BC9CFF;
+    border-radius: 4px;
+  }
 }
 
 .button-text--hovered {
