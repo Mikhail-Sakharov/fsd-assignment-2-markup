@@ -1,3 +1,13 @@
+.pagination-font-styles {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  display: flex;
+  color: rgba(31, 32, 65, 0.5);
+}
+
 .pagination {
   width: fit-content;
 }
@@ -12,35 +22,55 @@
 
 .pagination__page,
 .pagination__boundary {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.pagination__boundary {
+  @extend .pagination-font-styles;
+}
+
+.pagination__page-button {
   display: flex;
   justify-content: center;
   align-items: center;
 
-  width: 40px;
-  height: 40px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
+  background-color: transparent;
+  border-style: none;
 
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 15px;
-  display: flex;
-  color: rgba(31, 32, 65, 0.5);
-}
-
-.pagination__page:not(.pagination__page--current):hover {
-  cursor: pointer;
-}
-
-.pagination__page:not(.pagination__page--current):not(.pagination__page--next):not(.pagination__page--prev):hover {
-  border: 1px solid rgba(31, 32, 65, 0.5);
+  @extend .pagination-font-styles;
 }
 
 .pagination__page--current {
-  color: #FFFFFF;
-  font-weight: 700;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  .pagination__page-button {
+    color: #FFFFFF;
+    font-weight: 700;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  }
+}
+
+.pagination__page {
+  &:not(.pagination__page--current) {
+    *:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.pagination__page {
+  &:not(.pagination__page--current) {
+    &:not(.pagination__page--next) {
+      &:not(.pagination__page--prev) {
+        &:hover {
+          border: 1px solid rgba(31, 32, 65, 0.5);
+        }
+      }
+    }
+  }
 }
 
 .pagination__page--next,
@@ -48,19 +78,18 @@
   background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 }
 
-.pagination__page--next:hover,
-.pagination__page--prev:hover {
-  opacity: 0.5;
+.pagination__page--next,
+.pagination__page--prev {
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .pagination__label {
   margin-top: 7px;
 
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
+  @extend .pagination-font-styles;
   font-size: 14px;
   line-height: 24px;
-  color: rgba(31, 32, 65, 0.75);
   text-align: center;
 }

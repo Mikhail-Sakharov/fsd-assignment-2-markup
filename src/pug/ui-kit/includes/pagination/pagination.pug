@@ -1,29 +1,43 @@
-mixin pagination(pagesCount, activePage)
+mixin pagination(pagesCount, activePage, totalPagesCount)
+  - const startPages = [1, 2, 3];
+  - const endPages = [pagesCount - 2, pagesCount - 1, pagesCount];
+  - const paginationLabelPagesCount = totalPagesCount <= 100 ? totalPagesCount : '100+';
   .pagination
     ul.pagination__list
       if activePage > 1
         li.pagination__page.pagination__page--prev
-          include arrow_backward.svg
+          button.pagination__page-button
+            include arrow_backward.svg
       if activePage <= 3
-        li.pagination__page(class=`${activePage === 1 ? 'pagination__page--current' : ''}`) 1
-        li.pagination__page(class=`${activePage === 2 ? 'pagination__page--current' : ''}`) 2
-        li.pagination__page(class=`${activePage === 3 ? 'pagination__page--current' : ''}`) 3
-        li.pagination__boundary ...
-        li.pagination__page=pagesCount
+        each page in startPages
+          li.pagination__page(class=`${activePage === page ? 'pagination__page--current' : ''}`)
+            button.pagination__page-button=page
+        li.pagination__boundary
+          button.pagination__page-button ...
+        li.pagination__page
+          button.pagination__page-button=pagesCount
       if (activePage > 3 && activePage <= pagesCount - 3)
-        li.pagination__page 1
-        li.pagination__boundary ...
-        li.pagination__page.pagination__page--current=activePage
-        li.pagination__boundary ...
-        li.pagination__page=pagesCount
+        li.pagination__page
+          button.pagination__page-button 1
+        li.pagination__boundary
+          button.pagination__page-button ...
+        li.pagination__page.pagination__page--current
+          button.pagination__page-button=activePage
+        li.pagination__boundary
+          button.pagination__page-button ...
+        li.pagination__page
+          button.pagination__page-button=pagesCount
       if activePage > pagesCount - 3
-        li.pagination__page 1
-        li.pagination__boundary ...
-        li.pagination__page(class=`${activePage === pagesCount - 2 ? 'pagination__page--current' : ''}`)=pagesCount - 2
-        li.pagination__page(class=`${activePage === pagesCount - 1 ? 'pagination__page--current' : ''}`)=pagesCount - 1
-        li.pagination__page(class=`${activePage === pagesCount ? 'pagination__page--current' : ''}`)=pagesCount
+        li.pagination__page
+          button.pagination__page-button 1
+        li.pagination__boundary
+          button.pagination__page-button ...
+        each page in endPages
+          li.pagination__page(class=`${activePage === page ? 'pagination__page--current' : ''}`)
+            button.pagination__page-button=page
       if activePage < pagesCount
         li.pagination__page.pagination__page--next
-          include arrow_forward.svg
+          button.pagination__page-button
+            include arrow_forward.svg
     .pagination__label
-      span=`1 – ${pagesCount} из 100+ вариантов аренды`
+      span=`1 – ${pagesCount} из ${paginationLabelPagesCount} вариантов аренды`
