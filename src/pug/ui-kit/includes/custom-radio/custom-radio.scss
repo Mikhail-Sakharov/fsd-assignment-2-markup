@@ -9,6 +9,10 @@
   overflow: hidden;
 }
 
+.custom-radio * {
+  cursor: pointer;
+}
+
 .custom-radio {
   display: flex;
   gap: 20px;

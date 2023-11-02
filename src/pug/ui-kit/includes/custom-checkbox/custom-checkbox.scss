@@ -9,6 +9,10 @@
   overflow: hidden;
 }
 
+.custom-checkbox * {
+  cursor: pointer;
+}
+
 .custom-checkbox {
   label {
     display: flex;

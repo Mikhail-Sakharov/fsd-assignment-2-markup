@@ -9,6 +9,10 @@
   overflow: hidden;
 }
 
+.toggle * {
+  cursor: pointer;
+}
+
 .toggle__input {
   @extend .visually-hidden;
 }

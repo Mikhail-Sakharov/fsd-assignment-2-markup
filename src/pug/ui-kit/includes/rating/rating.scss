@@ -1,27 +1,75 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .rating {
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
 }
 
-.rating input {
-  display: none;
+.rating {
+  &:has(:focus-visible) {
+    outline: 2px solid #BC9CFF;
+    border-radius: 4px;
+  }
 }
 
-.rating label::before {
-  content: '';
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  background-image: url('./star_border.svg');
-  background-repeat: no-repeat;
-  background-position: center;
+.rating {
+  input {
+    @extend .visually-hidden;
+  }  
 }
 
-.rating input:checked + label::before {
-  background-image: url('./star.svg');
+.rating {
+  label {
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background-image: url('./star_border.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &:hover {
+      transform: scale(1.2);
+      transition: 0.1s;
+    }
+    cursor: pointer;
+    transition: 0.1s;
+  }
 }
 
-.rating input:checked ~ input + label::before {
-  background-image: url('./star.svg');
+.rating {
+  input {
+    &:checked {
+      + label {
+        &::before {
+          background-image: url('./star.svg');
+        }
+      }
+    }
+  }
+}
+
+.rating {
+  input {
+    &:checked {
+      ~ input {
+        + label {
+          &::before {
+            background-image: url('./star.svg');
+          }
+        }
+      }
+    }
+  }
 }

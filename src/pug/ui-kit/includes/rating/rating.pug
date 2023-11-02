@@ -4,4 +4,4 @@ mixin rating(rating, name, isDisabled)
     each value in values
       - const isChecked = value === rating
       input(type='radio' name=name id=`${name}-${value}` value=value checked=isChecked disabled=isDisabled)
-      label(for=`${name}-${value}`)
+      label(for=`${name}-${value}` style=`${isDisabled ? 'transition: none; transform: none; cursor: default' : ''}`)
