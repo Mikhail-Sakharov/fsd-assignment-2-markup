@@ -1,4 +1,3 @@
 mixin buttonContained(title, isHovered)
-  .button-contained(class=`${isHovered ? 'button-contained--hovered' : ''}`)
-    button
-      span=title
+  button.button-contained(class=`${isHovered ? 'button-contained--hovered' : ''}`)
+    span.button-contained__text=title
