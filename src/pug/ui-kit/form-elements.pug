@@ -19,6 +19,7 @@ include includes/button-contained/button-contained
 include includes/custom-text-field/custom-text-field
 include includes/custom-select/custom-select
 include includes/subscription-text-field/subscription-text-field
+include includes/pagination/pagination
 
 - const checkboxListItems = [
 -   {
@@ -132,7 +133,7 @@ html(lang="ru")
             .right-top-wrapper__item
               .right-top-wrapper-item__wrapper
                 +labelPrimary('Pagination')
-                include includes/pagination/pagination
+                +pagination(15, 1)
       .form-elements-container
         .left-bottom-wrapper
           .left-bottom-wrapper__dropdown-wrapper

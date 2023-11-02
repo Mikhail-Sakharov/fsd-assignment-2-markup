@@ -1,13 +1,29 @@
-.pagination
-  ul.pagination__list
-    //- li.pagination__page.pagination__page--prev
-    //-   include arrow_backward.svg
-    li.pagination__page.pagination__page--current 1
-    li.pagination__page 2
-    li.pagination__page 3
-    li.pagination__boundary ...
-    li.pagination__page 15
-    li.pagination__page.pagination__page--next
-      include arrow_forward.svg
-  .pagination__label
-    span 1 – 12 из 100+ вариантов аренды
+mixin pagination(pagesCount, activePage)
+  .pagination
+    ul.pagination__list
+      if activePage > 1
+        li.pagination__page.pagination__page--prev
+          include arrow_backward.svg
+      if activePage <= 3
+        li.pagination__page(class=`${activePage === 1 ? 'pagination__page--current' : ''}`) 1
+        li.pagination__page(class=`${activePage === 2 ? 'pagination__page--current' : ''}`) 2
+        li.pagination__page(class=`${activePage === 3 ? 'pagination__page--current' : ''}`) 3
+        li.pagination__boundary ...
+        li.pagination__page=pagesCount
+      if (activePage > 3 && activePage <= pagesCount - 3)
+        li.pagination__page 1
+        li.pagination__boundary ...
+        li.pagination__page.pagination__page--current=activePage
+        li.pagination__boundary ...
+        li.pagination__page=pagesCount
+      if activePage > pagesCount - 3
+        li.pagination__page 1
+        li.pagination__boundary ...
+        li.pagination__page(class=`${activePage === pagesCount - 2 ? 'pagination__page--current' : ''}`)=pagesCount - 2
+        li.pagination__page(class=`${activePage === pagesCount - 1 ? 'pagination__page--current' : ''}`)=pagesCount - 1
+        li.pagination__page(class=`${activePage === pagesCount ? 'pagination__page--current' : ''}`)=pagesCount
+      if activePage < pagesCount
+        li.pagination__page.pagination__page--next
+          include arrow_forward.svg
+    .pagination__label
+      span=`1 – ${pagesCount} из 100+ вариантов аренды`
