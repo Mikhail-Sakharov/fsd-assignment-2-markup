@@ -11,7 +11,7 @@
 
 .dropdown-guests__primary-label {
   color:#1F2041;
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', Arial, sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 700;
@@ -22,7 +22,7 @@
 .dropdown-guests__secondary-label {
   color: rgba(31, 32, 65, 0.50);
   text-align: right;
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', Arial, sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -76,7 +76,7 @@ input:checked + label .dropdown-guests__display .dropdown-guests__icon::before {
 
 .dropdown-guests__output {
   color: rgba(31, 32, 65, 0.75);
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', Arial, sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -136,7 +136,7 @@ input:checked + label .dropdown-guests__display .dropdown-guests__icon::before {
   border-radius: 50%;
   background-color: #FFFFFF;
 
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
