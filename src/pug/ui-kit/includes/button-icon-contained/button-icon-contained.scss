@@ -4,21 +4,23 @@
   height: 44px;
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   border-radius: 22px;
+}
 
+.button-icon-contained__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.button-icon-contained span:first-child {
-  display: inline-block;
-  width: 44px;
-  height: 44px;
-}
-
 .button-icon-contained:hover {
   opacity: 0.5;
   cursor: pointer;
+}
+
+.button-icon-contained__empty-block {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
 }
 
 .button-icon-contained__text {
@@ -32,7 +34,7 @@
   align-self: center;
 }
 
-.button-icon-contained__text + span::before {
+.button-icon-contained__icon {
   content: '';
   display: inline-block;
   width: 44px;
