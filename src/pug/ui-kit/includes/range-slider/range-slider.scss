@@ -1,6 +1,10 @@
 .range-slider {
   width: 266px;
   height: 47px;
+  &:has(:focus-visible) {
+    outline: 2px solid #BC9CFF;
+    border-radius: 4px;
+  }
 }
 
 .range-slider__header {
@@ -179,6 +183,9 @@
    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
    border: 2px solid #FFFFFF;
    border-radius: 50%;
+   &:focus-visible {
+    outline: 2px solid #BC9CFF;
+   }
  }
  .noUi-active {
    box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #DDD, 0 3px 6px -3px #BBB;
