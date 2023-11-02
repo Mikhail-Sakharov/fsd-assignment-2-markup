@@ -2,7 +2,7 @@
   width: 266px;
   height: 47px;
   &:has(:focus-visible) {
-    outline: 2px solid #BC9CFF;
+    outline: 3px solid #6bd0bf;
     border-radius: 4px;
   }
 }
@@ -163,7 +163,7 @@
    border: 2px solid #FFFFFF;
    border-radius: 50%;
    &:focus-visible {
-    outline: 2px solid #BC9CFF;
+    outline: 3px solid #6bd0bf;
    }
  }
  .noUi-active {

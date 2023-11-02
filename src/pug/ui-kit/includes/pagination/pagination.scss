@@ -28,6 +28,10 @@
 }
 
 .pagination__boundary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   @extend .pagination-font-styles;
 }
 
@@ -43,6 +47,10 @@
   border-style: none;
 
   @extend .pagination-font-styles;
+
+  &:focus-visible {
+    outline: 3px solid #6bd0bf;
+  }
 }
 
 .pagination__page--current {

@@ -53,7 +53,7 @@
 .toggle__input:checked:focus-visible {
   + .toggle__button--outer {
     &::before {
-      outline: 2px solid #BC9CFF;
+      outline: 3px solid #6bd0bf;
     }
   }
 }

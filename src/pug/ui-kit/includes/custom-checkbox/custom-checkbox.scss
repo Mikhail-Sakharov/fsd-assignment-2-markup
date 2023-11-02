@@ -57,7 +57,7 @@
     &:focus-visible {
       + .custom-checkbox__input-border {
         &::before {
-          outline: 2px solid #BC9CFF;
+          outline: 3px solid #6bd0bf;
         }
       }
     }
@@ -94,7 +94,7 @@
       &:focus-visible {
         + .custom-checkbox__input-border {
           &::before {
-            outline: 2px solid #BC9CFF;
+            outline: 3px solid #6bd0bf;
           }
         }
       }

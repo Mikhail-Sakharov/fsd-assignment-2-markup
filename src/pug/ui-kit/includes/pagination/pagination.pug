@@ -12,26 +12,22 @@ mixin pagination(pagesCount, activePage, totalPagesCount)
         each page in startPages
           li.pagination__page(class=`${activePage === page ? 'pagination__page--current' : ''}`)
             button.pagination__page-button=page
-        li.pagination__boundary
-          button.pagination__page-button ...
+        li.pagination__boundary ...
         li.pagination__page
           button.pagination__page-button=pagesCount
       if (activePage > 3 && activePage <= pagesCount - 3)
         li.pagination__page
           button.pagination__page-button 1
-        li.pagination__boundary
-          button.pagination__page-button ...
+        li.pagination__boundary ...
         li.pagination__page.pagination__page--current
           button.pagination__page-button=activePage
-        li.pagination__boundary
-          button.pagination__page-button ...
+        li.pagination__boundary ...
         li.pagination__page
           button.pagination__page-button=pagesCount
       if activePage > pagesCount - 3
         li.pagination__page
           button.pagination__page-button 1
-        li.pagination__boundary
-          button.pagination__page-button ...
+        li.pagination__boundary ...
         each page in endPages
           li.pagination__page(class=`${activePage === page ? 'pagination__page--current' : ''}`)
             button.pagination__page-button=page
