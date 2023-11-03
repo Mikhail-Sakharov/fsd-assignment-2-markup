@@ -1,10 +1,10 @@
-.subscription-input__label {
+.subscription-input__header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 5px;
 }
 
-.subscription-input__label--primary {
+.subscription-input__label-primary {
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 12px;
   font-weight: 700;
@@ -20,29 +20,27 @@
   height: 44px;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
+
+  &:has(:focus-visible) {
+    outline: 3px solid #6bd0bf;
+  }
 }
 
 .subscription-input__wrapper--focused {
   border: 1px solid rgba(31, 32, 65, 0.5);
 }
 
-.subscription-input {
-  input {
-    width: 100%;
-    margin-left: 14px;
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    border-style: none;
-    color: rgba(31, 32, 65, 0.75);
-  }
-}
+.subscription-input__input {
+  width: 100%;
+  margin-left: 14px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  border-style: none;
+  color: rgba(31, 32, 65, 0.75);
 
-.subscription-input {
-  input {
-    &:focus {
-      outline: none;
-    }
+  &:focus {
+    outline: none;
   }
 }
 

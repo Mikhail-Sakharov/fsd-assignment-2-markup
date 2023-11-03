@@ -1,8 +1,9 @@
 mixin subscriptionInput(titleLabel, name, placeholder)
   .subscription-input
-    .subscription-input__label
-      span.subscription-input__label--primary=titleLabel
-    .subscription-input__wrapper
-      input(type='text' name=name placeholder=placeholder)
-      .subscription-input__icon
-        include arrow_forward.svg
+    label.subscription-input__label
+      .subscription-input__header
+        span.subscription-input__label-primary=titleLabel
+      .subscription-input__wrapper
+        input.subscription-input__input(type='text' name=name placeholder=placeholder)
+        .subscription-input__icon
+          include arrow_forward.svg
