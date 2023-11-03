@@ -66,13 +66,37 @@ html(lang="ru")
       .form-elements-container
         .left-top-wrapper
           .left-top-wrapper-item
-            +customTextField('Text field', 'Default', '', 'Email', '', false)
+            +customTextField({
+              type: 'email',
+              name: 'Email',
+              value: '',
+              placeholder: 'Email',
+              titleLabel: 'Text field',
+              statusLabel: 'Default',
+              isHovered: false
+            })
           .left-top-wrapper-item
-            +customTextField('Text field', 'Hover / Focus', 'This is pretty awesome', 'Email', '', true)
+            +customTextField({
+              type: 'email',
+              name: 'Email',
+              value: 'This is pretty awesome',
+              placeholder: 'Email',
+              titleLabel: 'Text field',
+              statusLabel: 'Hover / Focus',
+              isHovered: true
+            })
           .left-top-wrapper-item
             +customSelect('Dropdown', 'Сколько гостей', 'Выберите количество гостей')
           .left-top-wrapper-item--large
-            +customTextField('masked text field', '', '', 'ДД.ММ.ГГГГ', '', false)
+            +customTextField({
+              type: 'text',
+              name: 'Date',
+              value: '',
+              placeholder: 'ДД.ММ.ГГГГ',
+              titleLabel: 'masked text field',
+              statusLabel: '',
+              isHovered: false
+            })
           .left-top-wrapper-item--large
             .flex-inner-wrapper
               .left-top-wrapper-item__inner-item

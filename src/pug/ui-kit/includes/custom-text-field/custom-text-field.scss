@@ -1,27 +1,29 @@
-.custom-text-field__label {
+.custom-text-field-font-styles {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-style: normal;
+  line-height: normal;
+}
+
+.custom-text-field__header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 5px;
 }
 
-.custom-text-field__label--primary {
+.custom-text-field__label-primary {
+  @extend .custom-text-field-font-styles;
   color: #1F2041;
-  font-family: 'Montserrat', Arial, sans-serif;
   font-size: 12px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
   text-transform: uppercase;
 }
 
-.custom-text-field__label--secondary {
+.custom-text-field__label-secondary {
+  @extend .custom-text-field-font-styles;
   color: rgba(31, 32, 65, 0.50);
   text-align: right;
-  font-family: 'Montserrat', Arial, sans-serif;
   font-size: 12px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
   text-transform: uppercase;
 }
 
@@ -33,20 +35,16 @@
   height: 44px;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
-}
 
-.custom-text-field__display {
   &:hover {
     border: 1px solid rgba(31, 32, 65, 0.5);
   }
-}
 
-.custom-text-field__display--focused {
-  border: 1px solid rgba(31, 32, 65, 0.5);
-}
+  &:has(:focus-visible) {
+    outline: 3px solid #6bd0bf;
+  }
 
-.custom-text-field__display {
-  input {
+  .custom-text-field__input {
     border-style: none;
     outline: none;
 
@@ -54,11 +52,17 @@
     margin-left: 15px;
     margin-right: 15px;
 
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-style: normal;
+    @extend .custom-text-field-font-styles;
     font-weight: 400;
     font-size: 14px;
-    line-height: 24px;
     color: rgba(31, 32, 65, 0.75);
   }
+}
+
+.custom-text-field__display--focused {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
+
+.custom-text-field__display--outlined {
+  outline: 3px solid #6bd0bf;
 }

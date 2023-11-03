@@ -1,8 +1,9 @@
-mixin customTextField(titleLabel, statusLabel, value, placeholder, name, isHovered)
+mixin customTextField({type, name, value, placeholder, titleLabel, statusLabel, isHovered})
   .custom-text-field
-    if (titleLabel || statusLabel)
-      .custom-text-field__label
-        .custom-text-field__label--primary=titleLabel
-        .custom-text-field__label--secondary=statusLabel
-    .custom-text-field__display(class=`${isHovered ? 'custom-text-field__display--focused' : ''}`)
-      input(type='text' name=name placeholder=placeholder value=value)
+    label.custom-text-field__label
+      if (titleLabel || statusLabel)
+        .custom-text-field__header
+          .custom-text-field__label-primary=titleLabel
+          .custom-text-field__label-secondary=statusLabel
+      .custom-text-field__display(class=`${isHovered ? 'custom-text-field__display--focused' : ''}`)
+        input.custom-text-field__input(type=type name=name placeholder=placeholder value=value)
