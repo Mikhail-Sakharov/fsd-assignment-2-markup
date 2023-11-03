@@ -162,8 +162,22 @@ html(lang="ru")
         .left-bottom-wrapper
           .left-bottom-wrapper__dropdown-wrapper
             - const roomItems = [{title: 'спальни', value: 2}, {title: 'кровати', value: 2}, {title: 'ванные комнаты', value: 0}]
-            +dropdown('dropdown', 'expanded', 'room-dropdown-expanded', roomItems, 2, true)
-            +dropdown('dropdown', 'default', 'room-dropdown', roomItems, 2)
+            +dropdown({
+              title: 'dropdown',
+              label: 'expanded',
+              name: 'room-dropdown-expanded',
+              items: roomItems,
+              isOpened: true,
+              zIndex: 2
+            })
+            +dropdown({
+              title: 'dropdown',
+              label: 'default',
+              name: 'room-dropdown',
+              items: roomItems,
+              isOpened: false,
+              zIndex: 1
+            })
           .left-bottom-wrapper__inner-wrapper
             .left-bottom-wrapper__checkbox-list-wrapper
               +expandableCheckboxList('expandable checkbox list', 'collapsed', checkboxListItems, false)

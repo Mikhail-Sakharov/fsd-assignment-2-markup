@@ -1,3 +1,14 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .dropdown {
   display: flex;
   flex-direction: column;
@@ -30,6 +41,67 @@
   text-transform: uppercase;
 }
 
+.dropdown__input {
+  @extend .visually-hidden;
+
+  &:not(:checked) ~ .dropdown__list {
+    @extend .visually-hidden;
+  }
+
+  &:checked {
+    + .dropdown__label {
+      .dropdown__display {
+        .dropdown__icon {
+          &::before {
+            content: '';
+            display: block;
+            width: 44px;
+            height: 44px;
+            background-image: url('./hide.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+        }
+      }
+
+      + .dropdown__list {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        width: 267px;
+        background-color: #FFFFFF;
+      
+        position: absolute;
+        margin-top: 64px;
+        padding: 7px;
+      
+        border-left: 1px solid rgba(31, 32, 65, 0.25);
+        border-bottom: 1px solid rgba(31, 32, 65, 0.25);
+        border-right: 1px solid rgba(31, 32, 65, 0.25);
+        border-radius: 0 0 4px 4px;
+      }
+    }
+  }
+
+  &:focus-visible {
+    + .dropdown__label {
+      .dropdown__display {
+        outline: 3px solid #6bd0bf;
+      }
+    }
+  }
+}
+
+.dropdown__label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 .dropdown__display {
   display: flex;
   justify-content: space-between;
@@ -38,40 +110,18 @@
   height: 44px;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px 4px 0 0;
-}
 
-.dropdown label:hover {
-  cursor: pointer;
-}
-
-.dropdown input {
-  display: none;
-}
-
-.dropdown label {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.dropdown__display .dropdown__icon::before {
-  content: '';
-  display: block;
-  width: 44px;
-  height: 44px;
-  background-image: url('./expand_more.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-input:checked + label .dropdown__display .dropdown__icon::before {
-  content: '';
-  display: block;
-  width: 44px;
-  height: 44px;
-  background-image: url('./hide.svg');
-  background-repeat: no-repeat;
-  background-position: center;
+  .dropdown__icon {
+    &::before {
+      content: '';
+      display: block;
+      width: 44px;
+      height: 44px;
+      background-image: url('./expand_more.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
 }
 
 .dropdown__output {
@@ -85,27 +135,6 @@ input:checked + label .dropdown__display .dropdown__icon::before {
   margin-left: 16px;
 }
 
-.dropdown__list {
-  display: none;
-}
-
-.dropdown input:checked + label + .dropdown__list {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-  width: 267px;
-  background-color: #FFFFFF;
-
-  position: absolute;
-  margin-top: 64px;
-  padding: 7px;
-
-  border-left: 1px solid rgba(31, 32, 65, 0.25);
-  border-bottom: 1px solid rgba(31, 32, 65, 0.25);
-  border-right: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 0 0 4px 4px;
-}
-
 .dropdown__list-item {
   display: flex;
   justify-content: space-between;
@@ -117,10 +146,15 @@ input:checked + label .dropdown__display .dropdown__icon::before {
   justify-content: space-between;
   align-items: center;
   width: 92px;
+
+  button {
+    &:focus-visible {
+      outline: 3px solid #6bd0bf;
+    }
+  }
 }
 
-.dropdown__inc-button,
-.dropdown__dec-button {
+.dropdown__button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -139,11 +173,10 @@ input:checked + label .dropdown__display .dropdown__icon::before {
   color: rgba(31, 32, 65, 0.25);
 }
 
-.dropdown__inc-button:not(.disabled),
-.dropdown__dec-button:not(.disabled) {
+.dropdown__button:not(.dropdown__button--disabled) {
   cursor: pointer;
 }
 
-.disabled {
+.dropdown__button--disabled {
   border: 1px solid rgba(31, 32, 65, 0.05);
 }
