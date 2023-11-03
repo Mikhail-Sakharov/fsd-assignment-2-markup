@@ -10,6 +10,10 @@
   &:hover {
     border: 1px solid rgba(31, 32, 65, 0.5);
   }
+
+  &:has(:focus-visible) {
+    outline: 3px solid #6bd0bf;
+  }
 }
 
 .custom-select__wrapper--focused {
@@ -22,7 +26,7 @@
   margin-bottom: 5px;
 }
 
-.custom-text-field__label--primary {
+.custom-text-field__label-primary {
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 12px;
   font-weight: 700;
