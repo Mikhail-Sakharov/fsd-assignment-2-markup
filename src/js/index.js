@@ -21,7 +21,7 @@ import '../pug/ui-kit/includes/like-button/like-button';
 import '../pug/ui-kit/includes/rating/rating';
 import '../pug/ui-kit/includes/dropdown/dropdown';
 import '../pug/ui-kit/includes/dropdown-guests/dropdown-guests';
-import '../pug/ui-kit/includes/rich-checkbox-button/rich-checkbox-button-group';
+import '../pug/ui-kit/includes/rich-checkbox-button-group/rich-checkbox-button-group';
 import '../pug/ui-kit/includes/bullet-list/bullet-list';
 import '../pug/ui-kit/includes/expandable-checkbox-list/expandable-checkbox-list';
 import '../pug/ui-kit/includes/feature-comfort/feature-comfort';
