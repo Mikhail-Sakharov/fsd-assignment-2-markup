@@ -164,18 +164,18 @@ html(lang="ru")
             - const roomItems = [{title: 'спальни', value: 2}, {title: 'кровати', value: 2}, {title: 'ванные комнаты', value: 0}]
             +dropdown({
               title: 'dropdown',
-              label: 'expanded',
+              label: 'default',
               name: 'room-dropdown-expanded',
               items: roomItems,
-              isOpened: true,
+              isOpened: false,
               zIndex: 2
             })
             +dropdown({
               title: 'dropdown',
-              label: 'default',
+              label: 'expanded',
               name: 'room-dropdown',
               items: roomItems,
-              isOpened: false,
+              isOpened: true,
               zIndex: 1
             })
           .left-bottom-wrapper__inner-wrapper
