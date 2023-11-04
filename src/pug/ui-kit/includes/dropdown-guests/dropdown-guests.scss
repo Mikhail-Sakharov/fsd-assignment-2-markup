@@ -1,3 +1,14 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .dropdown-guests {
   display: flex;
   flex-direction: column;
@@ -30,6 +41,67 @@
   text-transform: uppercase;
 }
 
+.dropdown-guests__input {
+  @extend .visually-hidden;
+
+  &:not(:checked) ~ .dropdown-guests__list {
+    @extend .visually-hidden;
+  }
+
+  &:checked {
+    + .dropdown-guests__label {
+      .dropdown-guests__display {
+        .dropdown-guests__icon {
+          &::before {
+            content: '';
+            display: block;
+            width: 44px;
+            height: 44px;
+            background-image: url('./hide.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+        }
+      }
+
+      + .dropdown-guests__list {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        width: 320px;
+        background-color: #FFFFFF;
+      
+        position: absolute;
+        margin-top: 64px;
+        padding: 7px;
+      
+        border-left: 1px solid rgba(31, 32, 65, 0.25);
+        border-bottom: 1px solid rgba(31, 32, 65, 0.25);
+        border-right: 1px solid rgba(31, 32, 65, 0.25);
+        border-radius: 0 0 4px 4px;
+      }
+    }
+  }
+
+  &:focus-visible {
+    + .dropdown-guests__label {
+      .dropdown-guests__display {
+        outline: 3px solid #6bd0bf;
+      }
+    }
+  }
+}
+
+.dropdown-guests__label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 .dropdown-guests__display {
   display: flex;
   justify-content: space-between;
@@ -38,40 +110,6 @@
   height: 44px;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px 4px 0 0;
-}
-
-.dropdown-guests label:hover {
-  cursor: pointer;
-}
-
-.dropdown-guests input {
-  display: none;
-}
-
-.dropdown-guests label {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.dropdown-guests__display .dropdown-guests__icon::before {
-  content: '';
-  display: block;
-  width: 44px;
-  height: 44px;
-  background-image: url('./expand_more.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-input:checked + label .dropdown-guests__display .dropdown-guests__icon::before {
-  content: '';
-  display: block;
-  width: 44px;
-  height: 44px;
-  background-image: url('./hide.svg');
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .dropdown-guests__output {
@@ -85,25 +123,16 @@ input:checked + label .dropdown-guests__display .dropdown-guests__icon::before {
   margin-left: 16px;
 }
 
-.dropdown-guests__list {
-  display: none;
-}
-
-.dropdown-guests input:checked + label + .dropdown-guests__list {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-  width: 320px;
-  background-color: #FFFFFF;
-
-  position: absolute;
-  margin-top: 64px;
-  padding: 7px;
-
-  border-left: 1px solid rgba(31, 32, 65, 0.25);
-  border-bottom: 1px solid rgba(31, 32, 65, 0.25);
-  border-right: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 0 0 4px 4px;
+.dropdown-guests__icon {
+  &::before {
+    content: '';
+    display: block;
+    width: 44px;
+    height: 44px;
+    background-image: url('./expand_more.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 .dropdown-guests__list-item {
@@ -122,10 +151,15 @@ input:checked + label .dropdown-guests__display .dropdown-guests__icon::before {
   justify-content: space-between;
   align-items: center;
   width: 92px;
+
+  button {
+    &:focus-visible {
+      outline: 3px solid #6bd0bf;
+    }
+  }
 }
 
-.dropdown-guests__inc-button,
-.dropdown-guests__dec-button {
+.dropdown-guests__button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -144,11 +178,11 @@ input:checked + label .dropdown-guests__display .dropdown-guests__icon::before {
   color: rgba(31, 32, 65, 0.25);
 }
 
-.dropdown-guests__inc-button:not(.disabled),
-.dropdown-guests__dec-button:not(.disabled) {
+.dropdown-guests__button:not(.dropdown-guests__button--disabled),
+.dropdown-guests__button:not(.dropdown-guests__button--disabled) {
   cursor: pointer;
 }
 
-.disabled {
+.dropdown-guests__button--disabled {
   border: 1px solid rgba(31, 32, 65, 0.05);
 }

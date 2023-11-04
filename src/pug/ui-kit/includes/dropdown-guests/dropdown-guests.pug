@@ -5,8 +5,8 @@ mixin dropdownGuests(title, label, name, items, disabledIndex, isOpened)
     .dropdown-guests__header
       span.dropdown-guests__primary-label=title
       span.dropdown-guests__secondary-label=label
-    input(type='checkbox' name=name id=name checked=isOpened)
-    label(for=name)
+    input.dropdown-guests__input(type='checkbox' name=name id=name checked=isOpened)
+    label.dropdown-guests__label(for=name)
       .dropdown-guests__display
         - const filteredOutputs = items.filter((item) => item.value !== 0)
         - const isOutputsEmpty = filteredOutputs.length === 0
@@ -31,10 +31,10 @@ mixin dropdownGuests(title, label, name, items, disabledIndex, isOpened)
         .dropdown-guests__list-item
           span.dropdown-guests__primary-label=item.title
           .dropdown-guests__controls
-            - const isDisabled = i === disabledIndex || disabledIndex === -1
-            button(class=`${isDisabled ? 'disabled' : ''}`).dropdown-guests__dec-button -
+            - const isDisabled = item.value === 0
+            button.dropdown-guests__button(class=`${isDisabled ? 'dropdown-guests__button--disabled' : ''}`) -
             span.dropdown-guests__primary-label=item.value
-            button.dropdown-guests__inc-button +
+            button.dropdown-guests__button +
       .dropdown-guests__list-item
         .dropdown-guests__clear-button
           +buttonText('очистить')
