@@ -2,8 +2,8 @@ include ../custom-checkbox/custom-checkbox
 
 mixin expandableCheckboxList(title, name, items, isOpened)
   .expandable-checkbox-list
-    input(type='checkbox' name=`expandable-checkbox-list-${name}` id=`expandable-checkbox-list-${name}` checked=isOpened)
-    label(for=`expandable-checkbox-list-${name}`)
+    input.expandable-checkbox-list__input(type='checkbox' name=`expandable-checkbox-list-${name}` id=`expandable-checkbox-list-${name}` checked=isOpened)
+    label.expandable-checkbox-list__label(for=`expandable-checkbox-list-${name}`)
       .expandable-checkbox-list__header
         span.expandable-checkbox-list__title=title
         span.expandable-checkbox-list__icon

@@ -1,8 +1,52 @@
-.expandable-checkbox-list input {
-  display: none;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
-.expandable-checkbox-list input + label {
+.expandable-checkbox-list__input {
+  @extend .visually-hidden;
+
+  &:not(:checked) ~ .expandable-checkbox-list__list {
+    @extend .visually-hidden;
+  }
+
+  &:focus-visible {
+    + .expandable-checkbox-list__label {
+      .expandable-checkbox-list__header {
+        outline: 3px solid #6bd0bf;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  &:checked {
+    + .expandable-checkbox-list__label {
+      .expandable-checkbox-list__icon {
+        &::before {
+          content: '';
+          display: block;
+          width: 44px;
+          height: 44px;
+          background-image: url('./hide.svg');
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+
+      + .expandable-checkbox-list__list {
+        display: block;
+      }
+    }
+  }
+}
+
+.expandable-checkbox-list__label {
   cursor: pointer;
 }
 
@@ -23,30 +67,14 @@
   text-transform: uppercase;
 }
 
-.expandable-checkbox-list input + label .expandable-checkbox-list__icon::before {
-  content: '';
-  display: block;
-  width: 44px;
-  height: 44px;
-  background-image: url('./expand_more.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.expandable-checkbox-list input:checked + label .expandable-checkbox-list__icon::before {
-  content: '';
-  display: block;
-  width: 44px;
-  height: 44px;
-  background-image: url('./hide.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.expandable-checkbox-list__list {
-  display: none;
-}
-
-.expandable-checkbox-list input:checked + label + .expandable-checkbox-list__list {
-  display: block;
+.expandable-checkbox-list__icon {
+  &::before {
+    content: '';
+    display: block;
+    width: 44px;
+    height: 44px;
+    background-image: url('./expand_more.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
