@@ -69,7 +69,7 @@
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 0;
   text-decoration: none;
 
   &:focus-visible {
@@ -101,15 +101,5 @@
 .footer-main__socials {
   display: flex;
   align-items: center;
-  gap: 20px;
-}
-
-.footer-main__icon {
-  width: 24px;
-  height: 24px;
-
-  &:focus-visible {
-    outline: 3px solid #6bd0bf;
-    border-radius: 3px;
-  }
+  gap: 22px;
 }

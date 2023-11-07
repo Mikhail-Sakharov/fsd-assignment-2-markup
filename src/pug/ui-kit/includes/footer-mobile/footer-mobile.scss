@@ -13,7 +13,16 @@
   align-items: center;
 }
 
-.footer-mobile__copyright p {
+.footer-mobile__link {
+  line-height: 0;
+
+  &:focus-visible {
+    outline: 3px solid #6bd0bf;
+    border-radius: 3px;
+  }
+}
+
+.footer-mobile__copyright {
   color: rgba(31, 32, 65, 0.75);
   text-align: center;
   font-family: 'Montserrat', Arial, sans-serif;
@@ -27,24 +36,5 @@
   margin-top: 5px;
   display: flex;
   align-items: center;
-  gap: 20px;
-}
-
-.footer-mobile__icon {
-  width: 24px;
-  height: 24px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.footer-mobile__socials .twitter {
-  background-image: url('./twitter-icon.svg');
-}
-
-.footer-mobile__socials .facebook {
-  background-image: url('./facebook-icon.svg');
-}
-
-.footer-mobile__socials .instagram {
-  background-image: url('./instagram-icon.svg');
+  gap: 22px;
 }
