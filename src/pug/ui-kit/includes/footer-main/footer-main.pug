@@ -3,61 +3,51 @@ include ../subscription-text-field/subscription-text-field
 .footer-main
   .footer-main__container
     .footer-main__nav
-      article.footer-main__general
+      .footer-main__nav-item.footer-main__general
         .footer-main__logo
-          include logo-main.svg
+          a.footer-main__link(href='/mock-address/change-me')
+            include logo-main.svg
         p.footer-main__text.
           Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
-      article.footer-main__navigation
-        p.footer-main__article-title навигация
+      .footer-main__nav-item.footer-main__navigation
+        h3.footer-main__title навигация
         ul.footer-main__article-nav
           li.footer-main__article-item
-            a(href='#')
-              span О нас
+            a.footer-main__link(href='/mock-address/change-me') О нас
           li.footer-main__article-item
-            a(href='#')
-              span Новости
+            a.footer-main__link(href='/mock-address/change-me') Новости
           li.footer-main__article-item
-            a(href='#')
-              span Служба поддержки
+            a.footer-main__link(href='/mock-address/change-me') Служба поддержки
           li.footer-main__article-item
-            a(href='#')
-              span Услуги
-      article.footer-main__about
-        p.footer-main__article-title о нас
+            a.footer-main__link(href='/mock-address/change-me') Услуги
+      .footer-main__nav-item.footer-main__about
+        h3.footer-main__title о нас
         ul.footer-main__article-nav
           li.footer-main__article-item
-            a(href='#')
-              span О сервисе
+            a.footer-main__link(href='/mock-address/change-me') О сервисе
           li.footer-main__article-item
-            a(href='#')
-              span Наша команда
+            a.footer-main__link(href='/mock-address/change-me') Наша команда
           li.footer-main__article-item
-            a(href='#')
-              span Вакансии
+            a.footer-main__link(href='/mock-address/change-me') Вакансии
           li.footer-main__article-item
-            a(href='#')
-              span Инвесторы
-      article.footer-main__support
-        p.footer-main__article-title Служба поддержки
+            a.footer-main__link(href='/mock-address/change-me') Инвесторы
+      .footer-main__nav-item.footer-main__support
+        h3.footer-main__title Служба поддержки
         ul.footer-main__article-nav
           li.footer-main__article-item
-            a(href='#')
-              span Соглашения
+            a.footer-main__link(href='/mock-address/change-me') Соглашения
           li.footer-main__article-item
-            a(href='#')
-              span Сообщества
+            a.footer-main__link(href='/mock-address/change-me') Сообщества
           li.footer-main__article-item
-            a(href='#')
-              span Связь с нами
-      article.footer-main__subscription
-        p.footer-main__article-title Подписка
+            a.footer-main__link(href='/mock-address/change-me') Связь с нами
+      .footer-main__nav-item.footer-main__subscription
+        h3.footer-main__title Подписка
         p.footer-main__text Получайте специальные предложения и новости сервиса
         +subscriptionInput('', 'subscription-text-field', 'Email')
   .footer-main__copyright
     .footer-main__copyright-container
       p.footer-main__text Copyright © 2018 Toxin отель. Все права защищены.
       .footer-main__socials
-        .footer-main__icon.twitter
-        .footer-main__icon.facebook
-        .footer-main__icon.instagram
+        a.footer-main__icon.twitter-icon(href='/mock-address/change-me')
+        a.footer-main__icon.facebook-icon(href='/mock-address/change-me')
+        a.footer-main__icon.instagram-icon(href='/mock-address/change-me')
