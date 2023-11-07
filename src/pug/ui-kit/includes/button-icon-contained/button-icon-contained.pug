@@ -1,5 +1,5 @@
-mixin buttonIconContained(title)
-  button.button-icon-contained
+mixin buttonIconContained(title, type)
+  button.button-icon-contained(type=type)
     span.button-icon-contained__wrapper
       span.button-icon-contained__empty-block
       span.button-icon-contained__text=title
