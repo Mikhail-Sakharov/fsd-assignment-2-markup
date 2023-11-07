@@ -1,6 +1,6 @@
-.booking-card {
+.booking-card__form {
   width: 380px;
-  padding: 40px 30px 30px 30px;
+  padding: 40px 30px 25px 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -49,7 +49,7 @@
 .booking-card__price {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: flex-end;
   gap: 5px;
 }
 
@@ -84,6 +84,7 @@
 }
 
 .booking-card__details {
+  margin-top: 3px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -147,8 +148,14 @@
   line-height: normal;
 }
 
-.booking-card__total-price span:nth-child(2) {
+.booking-card__total-price-dotted-line {
   flex: auto;
   border-bottom: 1px dotted rgba(31, 32, 65, 0.25);
-  margin-bottom: 4px;
+  margin-bottom: 7px;
+}
+
+.booking-card__button {
+  .button-icon-contained {
+    margin: -2px;
+  }
 }

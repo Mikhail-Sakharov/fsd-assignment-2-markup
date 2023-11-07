@@ -2,38 +2,39 @@ include ../../includes/custom-select/custom-select
 include ../../includes/button-icon-contained/button-icon-contained
 
 .booking-card
-  .booking-card__header
-    .booking-card__room
-      span.booking-card__number №&nbsp;
-      span.booking-card__room-number 888
-      span.booking-card__room-type люкс
-    .booking-card__price
-      span.booking-card__price-amount 9 990₽
-      span.booking-card__price-label в сутки
-  .booking-card__dates-wrapper
-    .booking-card__check-in-date
-      +customSelect('прибытие', '19.08.2019', 'Выберите дату')
-    .booking-card__check-out-date
-      +customSelect('выезд', '23.08.2019', 'Выберите дату')
-  .booking-card__guests-input-wrapper
-    +customSelect('гости', '3 гостя', 'Выберите количество гостей')
-  .booking-card__details
-    .booking-card__calculation-total
-      span 9 990₽ х 4 суток
-      span 39 960₽
-    .booking-card__service-fees
-      .booking-card__detail-wrapper
-        span Сбор за услуги: скидка 2 179₽
-        span.booking-card__info-icon
-      span 0₽
-    .booking-card__extra-fees
-      .booking-card__detail-wrapper
-        span Сбор за дополнительные услуги
-        span.booking-card__info-icon
-      span 300₽
-  .booking-card__total-price
-    span Итого
-    span
-    span 38 081₽
-  .booking-card__button
-    +buttonIconContained('забронировать')
+  form.booking-card__form(method='get')
+    .booking-card__header
+      .booking-card__room
+        span.booking-card__number №&nbsp;
+        span.booking-card__room-number 888
+        span.booking-card__room-type люкс
+      .booking-card__price
+        span.booking-card__price-amount 9 990₽
+        span.booking-card__price-label в сутки
+    .booking-card__dates-wrapper
+      .booking-card__check-in-date
+        +customSelect('прибытие', '19.08.2019', 'Выберите дату')
+      .booking-card__check-out-date
+        +customSelect('выезд', '23.08.2019', 'Выберите дату')
+    .booking-card__guests-input-wrapper
+      +customSelect('гости', '3 гостя', 'Выберите количество гостей')
+    .booking-card__details
+      .booking-card__calculation-total
+        span.booking-card__text 9 990₽ х 4 суток
+        span.booking-card__text 39 960₽
+      .booking-card__service-fees
+        .booking-card__detail-wrapper
+          span.booking-card__text Сбор за услуги: скидка 2 179₽
+          span.booking-card__info-icon
+        span.booking-card__text 0₽
+      .booking-card__extra-fees
+        .booking-card__detail-wrapper
+          span.booking-card__text Сбор за дополнительные услуги
+          span.booking-card__info-icon
+        span.booking-card__text 300₽
+    .booking-card__total-price
+      span.booking-card__total-price-label Итого
+      span.booking-card__total-price-dotted-line
+      span.booking-card__total-price-sum 38 081₽
+    .booking-card__button
+      +buttonIconContained('забронировать', 'submit')
