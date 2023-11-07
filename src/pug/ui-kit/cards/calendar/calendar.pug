@@ -18,7 +18,13 @@ include ../../includes/button-text/button-text
         span.calendar__weekday-name=weekday
   .calendar__days
     each day, i in days
-      .calendar__day(class=`${i === currentDayIndex ? 'calendar__day--current' : ''}` class=`${i === startDayIndex ? 'calendar__day--start' : ''}` class=`${i === finishDayIndex ? 'calendar__day--finish' : ''}` class=`${outsideDays.includes(i) ? 'calendar__day--outside-period' : ''}`)
+      button.calendar__day(
+        class=`${i === currentDayIndex ? 'calendar__day--current' : ''}`
+        class=`${i === startDayIndex ? 'calendar__day--start' : ''}`
+        class=`${i === finishDayIndex ? 'calendar__day--finish' : ''}`
+        class=`${outsideDays.includes(i) ? 'calendar__day--outside-period' : ''}`
+        disabled=i < currentDayIndex
+      )
         span.calendar__day-number=day
   .calendar__controls
     +buttonText('очистить')

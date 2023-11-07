@@ -75,6 +75,8 @@
 }
 
 .calendar__day {
+  border-style: none;
+  background-color: transparent;
   border-radius: 50%;
   color: rgba(31, 32, 65, 0.50);
   text-align: center;
@@ -83,6 +85,10 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+
+  &:focus-visible {
+    outline: 3px solid #6bd0bf;
+  }
 }
 
 .calendar__day--outside-period {
