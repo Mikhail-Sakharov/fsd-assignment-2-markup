@@ -12,14 +12,14 @@
   box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.20);
 }
 
-.register-card__blocks {
+.register-card__form {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 20px;
 }
 
-.register-card__name-gender-block {
+.register-card__name-gender {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -31,6 +31,12 @@
   flex-direction: column;
   justify-content: flex-start;
   gap: 5px;
+
+  .label-primary {
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+  }
 }
 
 .register-card__credentials {
@@ -40,12 +46,14 @@
   gap: 10px;
 }
 
-.register-card__special-offer .toggle {
-  margin-top: 5px;
+.register-card__special-offer {
+  .toggle {
+    margin-top: 3px;
+  }
 }
 
-.register-card__credentials-block .label-primary {
-  margin-bottom: 0;
+.register-card__register-button {
+  display: flex;
 }
 
 .register-card__log-in {
