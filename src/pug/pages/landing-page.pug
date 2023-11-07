@@ -1,4 +1,7 @@
 include ../ui-kit/includes/header-main/header-main
+include ../ui-kit/cards/search-card/search-card
+include ../ui-kit/includes/main-page-slider/main-page-slider
+include ../ui-kit/includes/footer-main/footer-main
 
 doctype html
 html(lang="ru")
@@ -7,11 +10,9 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title=htmlWebpackPlugin.options.title
   body
-    .landing-page__header
-      +headerMain()
-    main.landing-page__background
-      form.landing-page__search-form(action='#' method='GET')
-        include ../ui-kit/cards/search-card/search-card
-      include ../ui-kit/includes/main-page-slider/main-page-slider
-    .landing-page__footer
-      include ../ui-kit/includes/footer-main/footer-main
+    +headerMain()
+    main.landing-page__main
+      section.landing-page__search-form
+        +searchCard()
+      +mainPageSlider()
+    +footerMain()

@@ -1,4 +1,4 @@
-.landing-page__header .header-main {
+.header-main {
   position: absolute;
   width: 100%;
   background: #FFFFFF;
@@ -6,15 +6,13 @@
   z-index: 1;
 }
 
-.landing-page__background img {
-  width: 100%;
-}
-
-.landing-page__background .landing-page__search-form {
-  position: absolute;
-  margin-top: 140px;
-  margin-left: 140px;
-  z-index: 1;
+.landing-page__main {
+  .landing-page__search-form {
+    position: absolute;
+    margin-top: 140px;
+    margin-left: 140px;
+    z-index: 1;
+  }
 }
 
 .landing-page__slogan {
@@ -30,8 +28,4 @@
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
-}
-
-.landing-page__footer .footer-main__nav {
-  margin: 95px 0 100px 0;
 }

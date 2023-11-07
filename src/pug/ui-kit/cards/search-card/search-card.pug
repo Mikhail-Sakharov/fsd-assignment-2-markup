@@ -2,16 +2,17 @@ include ../../includes/main-title/main-title
 include ../../includes/custom-select/custom-select
 include ../../includes/button-icon-contained/button-icon-contained
 
-.search-card
-  form.search-card__form(method='get')
-    .search-card__title
-      +mainTitle('Найдём номера под ваши пожелания')
-    .search-card__dates-wrapper
-      .search-card__check-in-date
-        +customSelect('прибытие', 'ДД.ММ.ГГГГ', 'Выберите дату')
-      .search-card__check-out-date
-        +customSelect('выезд', 'ДД.ММ.ГГГГ', 'Выберите дату')
-    .search-card__guests-input-wrapper
-      +customSelect('гости', 'Сколько гостей', 'Выберите количество гостей')
-    .search-card__search-button
-      +buttonIconContained('подобрать номер', 'submit')
+mixin searchCard()
+  .search-card
+    form.search-card__form(method='get')
+      .search-card__title
+        +mainTitle('Найдём номера под ваши пожелания')
+      .search-card__dates-wrapper
+        .search-card__check-in-date
+          +customSelect('прибытие', 'ДД.ММ.ГГГГ', 'Выберите дату')
+        .search-card__check-out-date
+          +customSelect('выезд', 'ДД.ММ.ГГГГ', 'Выберите дату')
+      .search-card__guests-input-wrapper
+        +customSelect('гости', 'Сколько гостей', 'Выберите количество гостей')
+      .search-card__search-button
+        +buttonIconContained('подобрать номер', 'submit')
