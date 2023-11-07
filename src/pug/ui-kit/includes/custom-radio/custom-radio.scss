@@ -31,54 +31,45 @@
 
 .custom-radio__input {
   + .custom-radio__button--outer {
-    &::before {
-      content: '';
-      display: inline-block;
-      vertical-align: middle;
-      margin-right: 10px;
-      width: 18px;
-      height: 18px;
-      border-radius: 50%;
-      border: 1px solid rgba(31, 32, 65, 0.25);
-    }
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid rgba(31, 32, 65, 0.25);
   }
 }
 
 .custom-radio__input:checked {
   + .custom-radio__button--outer {
-    &::before {
-      content: '';
-      display: inline-block;
-      vertical-align: middle;
-      margin-right: 10px;
-      width: 18px;
-      height: 18px;
-      border-radius: 50%;
-      border: 1px solid #BC9CFF;
-    }
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #BC9CFF;
   }
 }
 
 .custom-radio__input:checked {
   + .custom-radio__button--outer {
     .custom-radio__button--inner {
-      &::before {
-        content: '';
+        position: absolute;
+        margin-left: 3px;
+        margin-top: 3px;
+
         display: inline-block;
-        vertical-align: middle;
         width: 12px;
         height: 12px;
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
         border-radius: 50%;
-        position: relative;
-        left: -26px;
-        margin-right: -12px;
-      }
     }
   }
 }
 
-.custom-radio__label {
+.custom-radio__text {
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 14px;
   font-style: normal;

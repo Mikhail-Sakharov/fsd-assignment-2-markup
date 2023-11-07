@@ -2,9 +2,9 @@ mixin customRadio(labels, name, checkedIndex)
   .custom-radio
     each label, i in labels
       .custom-radio__block
-        label
+        label.custom-radio__label
           - const isChecked = i === checkedIndex
           input.custom-radio__input(type='radio' name=name value=label checked=isChecked)
           span.custom-radio__button--outer
             span.custom-radio__button--inner
-          span.custom-radio__label=label
+          span.custom-radio__text=label
