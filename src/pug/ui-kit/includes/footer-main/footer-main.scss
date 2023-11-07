@@ -21,6 +21,17 @@
   gap: 12px;
 }
 
+.footer-main__logo {
+  .footer-main__link {
+    outline: none;
+  }
+
+  &:has(:focus-visible) {
+    outline: 3px solid #6bd0bf;
+    border-radius: 3px;
+  }
+}
+
 .footer-main__navigation,
 .footer-main__about,
 .footer-main__support {
@@ -52,7 +63,7 @@
   text-transform: uppercase;
 }
 
-.footer-main__link {
+.footer-main__link:not(.footer-main__logo .footer-main__link) {
   color: rgba(31, 32, 65, 0.50);
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 14px;
@@ -60,9 +71,14 @@
   font-weight: 400;
   line-height: normal;
   text-decoration: none;
+
+  &:focus-visible {
+    outline: 3px solid #6bd0bf;
+    border-radius: 3px;
+  }
 }
 
-.footer-main__article-nav {
+.footer-main__list {
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -91,18 +107,9 @@
 .footer-main__icon {
   width: 24px;
   height: 24px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
 
-.twitter-icon {
-  background-image: url('./twitter-icon.svg');
-}
-
-.facebook-icon {
-  background-image: url('./facebook-icon.svg');
-}
-
-.instagram-icon {
-  background-image: url('./instagram-icon.svg');
+  &:focus-visible {
+    outline: 3px solid #6bd0bf;
+    border-radius: 3px;
+  }
 }
