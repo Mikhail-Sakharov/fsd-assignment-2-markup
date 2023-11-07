@@ -1,5 +1,5 @@
 import './landing-page.scss';
-import '../ui-kit/includes/main-page-slider/main-page-slider';
+import '../../ui-kit/includes/main-page-slider/main-page-slider';
 import {createSMGDatePicker, CalendarMode, Localization} from 'smg-date-picker';
 import 'smg-date-picker/dist/style.css';
 

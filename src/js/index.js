@@ -58,4 +58,4 @@ import '../pug/ui-kit/includes/main-page-slider/landing-bg-3.jpg';
 
 // импорты страниц
 
-import '../pug/pages/landing-page';
+import '../pug/pages/landing-page/landing-page';

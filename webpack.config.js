@@ -13,9 +13,7 @@ const UI_KIT_PAGES = fs.readdirSync(uiKitPagesDir)
   .filter((file) => PUG_FILE_REG_EXP.test(file))
   .map((file) => file.match(PUG_FILE_REG_EXP)[0]);
 
-const PAGES = fs.readdirSync(pagesDir)
-  .filter((file) => PUG_FILE_REG_EXP.test(file))
-  .map((file) => file.match(PUG_FILE_REG_EXP)[0]);
+const PAGES = fs.readdirSync(pagesDir);
 
 module.exports = {
   mode: 'development',
@@ -84,7 +82,7 @@ module.exports = {
       title: page,
       favicon: 'src/img/favicon-32x32.png',
       filename: `${page}.html`,
-      template: path.resolve(__dirname, 'src', 'pug', 'pages', `${page}.pug`),
+      template: path.resolve(__dirname, 'src', 'pug', 'pages', `${page}`, `${page}.pug`),
       minify: {
         useShortDoctype: false
       }

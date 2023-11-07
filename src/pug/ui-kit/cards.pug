@@ -1,4 +1,9 @@
 include includes/header/header
+include cards/search-card/search-card
+include cards/register-card/register-card
+include cards/booking-card/booking-card
+include cards/log-in-card/log-in-card
+include cards/calendar/calendar
 include cards/room-card/room-card
 
 doctype html
@@ -14,17 +19,17 @@ html(lang="ru")
         .cards__container
           .cards__wrapper
             .cards__item
-              include cards/search-card/search-card
+              +searchCard()
             .cards__item
-              include cards/register-card/register-card
+              +registerCard()
           .cards__wrapper
             .cards__item
-              include cards/booking-card/booking-card
+              +bookingCard()
             .cards__item
-              include cards/log-in-card/log-in-card
+              +logInCard()
           .cards__wrapper
             .cards__item
-              include cards/calendar/calendar
+              +calendar()
             .cards__item
               +roomCard('./assets/1.jpg', 888, true, 5, 145, 'room-888')
             .cards__item

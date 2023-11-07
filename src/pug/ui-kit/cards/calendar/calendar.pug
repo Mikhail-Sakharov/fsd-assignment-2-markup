@@ -7,25 +7,26 @@ include ../../includes/button-text/button-text
 - const startDayIndex = 21;
 - const finishDayIndex = 25;
 
-.calendar
-  .calendar__header
-    .calendar__left-arrow
-    .calendar__title Август 2019
-    .calendar__right-arrow
-  .calendar__weekday-names
-    each weekday in weekdays
-      .calendar__weekday
-        span.calendar__weekday-name=weekday
-  .calendar__days
-    each day, i in days
-      button.calendar__day(
-        class=`${i === currentDayIndex ? 'calendar__day--current' : ''}`
-        class=`${i === startDayIndex ? 'calendar__day--start' : ''}`
-        class=`${i === finishDayIndex ? 'calendar__day--finish' : ''}`
-        class=`${outsideDays.includes(i) ? 'calendar__day--outside-period' : ''}`
-        disabled=i < currentDayIndex
-      )
-        span.calendar__day-number=day
-  .calendar__controls
-    +buttonText('очистить')
-    +buttonText('применить')
+mixin calendar()
+  .calendar
+    .calendar__header
+      .calendar__left-arrow
+      .calendar__title Август 2019
+      .calendar__right-arrow
+    .calendar__weekday-names
+      each weekday in weekdays
+        .calendar__weekday
+          span.calendar__weekday-name=weekday
+    .calendar__days
+      each day, i in days
+        button.calendar__day(
+          class=`${i === currentDayIndex ? 'calendar__day--current' : ''}`
+          class=`${i === startDayIndex ? 'calendar__day--start' : ''}`
+          class=`${i === finishDayIndex ? 'calendar__day--finish' : ''}`
+          class=`${outsideDays.includes(i) ? 'calendar__day--outside-period' : ''}`
+          disabled=i < currentDayIndex
+        )
+          span.calendar__day-number=day
+    .calendar__controls
+      +buttonText('очистить')
+      +buttonText('применить')

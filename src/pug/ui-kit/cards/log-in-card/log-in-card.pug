@@ -3,34 +3,35 @@ include ../../includes/custom-text-field/custom-text-field
 include ../../includes/button-outlined/button-outlined
 include ../../includes/button-icon-contained/button-icon-contained
 
-.log-in-card
-  form.log-in-card__form(method='get')
-    .log-in-card__title
-      +mainTitle('Войти')
-    .log-in-card__credentials
-      .log-in-card__email
+mixin logInCard()
+  .log-in-card
+    form.log-in-card__form(method='get')
+      .log-in-card__title
+        +mainTitle('Войти')
+      .log-in-card__credentials
+        .log-in-card__email
+            +customTextField({
+            type: 'email',
+            name: 'email',
+            value: '',
+            placeholder: 'Email',
+            titleLabel: '',
+            statusLabel: '',
+            isHovered: false
+          })
+        .log-in-card__password
           +customTextField({
-          type: 'email',
-          name: 'email',
-          value: '',
-          placeholder: 'Email',
-          titleLabel: '',
-          statusLabel: '',
-          isHovered: false
-        })
-      .log-in-card__password
-        +customTextField({
-          type: 'password',
-          name: 'password',
-          value: '',
-          placeholder: 'Пароль',
-          titleLabel: '',
-          statusLabel: '',
-          isHovered: false
-        })
-    .log-in-card__log-in-button
-      +buttonIconContained('войти')
-  .log-in-card__create-account
-    span.log-in-card__not-registered-yet Нет аккаунта на Toxin?
-    .log-in-card__register-button
-      +buttonOutlined('создать', 'submit')
+            type: 'password',
+            name: 'password',
+            value: '',
+            placeholder: 'Пароль',
+            titleLabel: '',
+            statusLabel: '',
+            isHovered: false
+          })
+      .log-in-card__log-in-button
+        +buttonIconContained('войти')
+    .log-in-card__create-account
+      span.log-in-card__not-registered-yet Нет аккаунта на Toxin?
+      .log-in-card__register-button
+        +buttonOutlined('создать', 'submit')

@@ -1,5 +1,7 @@
 include includes/header/header
 include includes/header-main/header-main
+include includes/footer-main/footer-main
+include includes/footer-mobile/footer-mobile
 
 doctype html
 html(lang="ru")
@@ -16,7 +18,7 @@ html(lang="ru")
         li.headers-and-footers__item
           +headerMain(true, 'Юлий Цезарь')
         li.headers-and-footers__item
-          include includes/footer-main/footer-main
+          +footerMain()
         li.headers-and-footers__item
-          include includes/footer-mobile/footer-mobile
+          +footerMobile()
       .headers-and-footers__footer
