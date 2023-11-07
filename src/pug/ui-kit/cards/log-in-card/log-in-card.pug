@@ -9,9 +9,25 @@ include ../../includes/button-icon-contained/button-icon-contained
       +mainTitle('Войти')
     .log-in-card__credentials
       .log-in-card__email
-          +customTextField('', '', '', 'Email', '', false)
+          +customTextField({
+          type: 'email',
+          name: 'email',
+          value: '',
+          placeholder: 'Email',
+          titleLabel: '',
+          statusLabel: '',
+          isHovered: false
+        })
       .log-in-card__password
-        +customTextField('', '', '', 'Пароль', '', false)
+        +customTextField({
+          type: 'password',
+          name: 'password',
+          value: '',
+          placeholder: 'Пароль',
+          titleLabel: '',
+          statusLabel: '',
+          isHovered: false
+        })
     .log-in-card__log-in-button
       +buttonIconContained('войти')
   .log-in-card__create-account

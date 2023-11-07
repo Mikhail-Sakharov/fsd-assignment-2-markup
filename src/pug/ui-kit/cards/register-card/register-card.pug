@@ -12,21 +12,61 @@ include ../../includes/button-outlined/button-outlined
       +mainTitle('Регистрация аккаунта')
     .register-card__name-gender-block
       .register-card__user-first-name
-        +customTextField('', '', '', 'Имя', '', false)
+        +customTextField({
+          type: 'text',
+          name: 'first-name',
+          value: '',
+          placeholder: 'Имя',
+          titleLabel: '',
+          statusLabel: '',
+          isHovered: false
+        })
       .register-card__user-last-name
-        +customTextField('', '', '', 'Фамилия', '', false)
+        +customTextField({
+          type: 'text',
+          name: 'last-name',
+          value: '',
+          placeholder: 'Фамилия',
+          titleLabel: '',
+          statusLabel: '',
+          isHovered: false
+        })
       .register-card__gender
-        +customRadio(['Мужчина', 'Женщина'], 'gender')
+        +customRadio(['Мужчина', 'Женщина'], 'gender', 0)
     .register-card__birth-date-block
       .register-card__birth-date
-        +customTextField('дата рождения', '', '', 'ДД.ММ.ГГГГ', '', false)
+        +customTextField({
+          type: 'text',
+          name: 'birth-date',
+          value: '',
+          placeholder: 'ДД.ММ.ГГГГ',
+          titleLabel: '',
+          statusLabel: '',
+          isHovered: false
+        })
     .register-card__credentials-block
       +labelPrimary('данные для входа в сервис')
       .register-card__credentials
         .register-card__email
-          +customTextField('', '', '', 'Email', '', false)
+          +customTextField({
+          type: 'email',
+          name: 'email',
+          value: '',
+          placeholder: 'Email',
+          titleLabel: '',
+          statusLabel: '',
+          isHovered: false
+        })
         .register-card__password
-          +customTextField('', '', '', 'Пароль', '', false)
+          +customTextField({
+          type: 'password',
+          name: 'password',
+          value: '',
+          placeholder: 'Пароль',
+          titleLabel: '',
+          statusLabel: '',
+          isHovered: false
+        })
       .register-card__special-offer
         +toggle('Получать спецпредложения', 'toggle')
     .register-card__register-button-block
