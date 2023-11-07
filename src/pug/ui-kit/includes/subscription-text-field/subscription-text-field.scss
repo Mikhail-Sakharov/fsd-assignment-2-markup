@@ -44,6 +44,16 @@
   }
 }
 
+.subscription-input__button {
+  border-style: none;
+  background-color: transparent;
+  
+  &:focus-visible {
+    outline: 3px solid #6bd0bf;
+    border-radius: 3px;
+  }
+}
+
 .subscription-input__icon {
   cursor: pointer;
   display: flex;
