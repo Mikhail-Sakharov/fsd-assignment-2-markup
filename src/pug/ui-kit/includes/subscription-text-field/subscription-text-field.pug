@@ -1,10 +1,7 @@
-mixin subscriptionInput(titleLabel, name, placeholder)
+mixin subscriptionInput(name, placeholder)
   form.subscription-input(method='get')
     label.subscription-input__label
-      .subscription-input__header
-        span.subscription-input__label-primary=titleLabel
-      .subscription-input__wrapper
-        input.subscription-input__input(type='text' name=name placeholder=placeholder)
-        button.subscription-input__button(type='submit')
-          span.subscription-input__icon
-            include arrow_forward.svg
+      input.subscription-input__input(type='text' name=name placeholder=placeholder)
+    button.subscription-input__button(type='submit')
+      span.subscription-input__icon
+        include arrow_forward.svg

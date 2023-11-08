@@ -30,7 +30,7 @@ mixin headerMain({isLoggedIn, userName, isFirstMenuItemActive, isHeaderOnPage})
             label.header-main__label
               span.header-main__text Соглашения
               input.header-main__input(type='checkbox' name='menu-item-agreements')
-              .header-main__menu-icon
+              span.header-main__menu-icon
         .header-main__account
           if isLoggedIn && userName
             span.header-main__user-name=userName
