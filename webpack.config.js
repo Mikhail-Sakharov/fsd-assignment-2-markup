@@ -71,7 +71,7 @@ module.exports = {
   plugins: [
     ...UI_KIT_PAGES.map((page) => new HtmlWebpackPlugin({
       title: page === 'index' ? 'UI-kit' : page,
-      favicon: 'src/img/favicon-32x32.png',
+      favicon: 'src/img/favicon/favicon-32x32.png',
       filename: `${page}.html`,
       template: path.resolve(__dirname, 'src', 'pug', 'ui-kit', `${page}.pug`),
       minify: {
@@ -80,7 +80,7 @@ module.exports = {
     })),
     ...PAGES.map((page) => new HtmlWebpackPlugin({
       title: page,
-      favicon: 'src/img/favicon-32x32.png',
+      favicon: 'src/img/favicon/favicon-32x32.png',
       filename: `${page}.html`,
       template: path.resolve(__dirname, 'src', 'pug', 'pages', `${page}`, `${page}.pug`),
       minify: {
