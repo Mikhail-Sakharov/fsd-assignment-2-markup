@@ -2,6 +2,7 @@ include includes/header/header
 include includes/header-main/header-main
 include includes/footer-main/footer-main
 include includes/footer-mobile/footer-mobile
+include includes/sprite/sprite
 
 doctype html
 html(lang="ru")
@@ -10,6 +11,7 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title=htmlWebpackPlugin.options.title
   body
+    +sprite()
     +header('#F4F4F6')
     main
       ul.headers-and-footers

@@ -1,4 +1,5 @@
 include ../subscription-text-field/subscription-text-field
+include ../svg-icon/svg-icon
 
 mixin footerMain()
   footer.footer-main
@@ -7,7 +8,7 @@ mixin footerMain()
         .footer-main__nav-item.footer-main__general
           .footer-main__logo
             a.footer-main__link(href='/mock-address/change-me')
-              include logo-main.svg
+              +svgIcon({name: 'logo', width: 106, height: 40})
           p.footer-main__text.
             Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
         .footer-main__nav-item.footer-main__navigation
@@ -50,8 +51,8 @@ mixin footerMain()
         p.footer-main__text Copyright © 2018 Toxin отель. Все права защищены.
         .footer-main__socials
           a.footer-main__link(href='/mock-address/change-me')
-            include ./twitter-icon.svg
+            +svgIcon({name: 'twitter', width: 24, height: 20})
           a.footer-main__link(href='/mock-address/change-me')
-            include ./facebook-icon.svg
+            +svgIcon({name: 'facebook', width: 22, height: 22})
           a.footer-main__link(href='/mock-address/change-me')
-            include ./instagram-icon.svg
+            +svgIcon({name: 'instagram', width: 22, height: 22})

@@ -1,13 +1,15 @@
+include ../svg-icon/svg-icon
+
 mixin footerMobile()
   .footer-mobile
     .footer-mobile__logo
       a.footer-mobile__link(href='/mock-address/change-me')
-        include logo-main.svg
+        +svgIcon({name: 'logo', width: 106, height: 40})
     p.footer-mobile__copyright Copyright © 2018 Toxin отель. Все права защищены.
     .footer-mobile__socials
       a.footer-mobile__link(href='/mock-address/change-me')
-        include ./twitter-icon.svg
+        +svgIcon({name: 'twitter', width: 24, height: 20})
       a.footer-mobile__link(href='/mock-address/change-me')
-        include ./facebook-icon.svg
+        +svgIcon({name: 'facebook', width: 22, height: 22})
       a.footer-mobile__link(href='/mock-address/change-me')
-        include ./instagram-icon.svg
+        +svgIcon({name: 'instagram', width: 22, height: 22})
