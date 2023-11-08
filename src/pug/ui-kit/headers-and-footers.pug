@@ -14,9 +14,19 @@ html(lang="ru")
     main
       ul.headers-and-footers
         li.headers-and-footers__item
-          +headerMain(false, null, true)
+          +headerMain({
+            isLoggedIn: false,
+            userName: null,
+            isFirstMenuItemActive: true,
+            isHeaderOnPage: false
+          })
         li.headers-and-footers__item
-          +headerMain(true, 'Юлий Цезарь')
+          +headerMain({
+            isLoggedIn: true,
+            userName: 'Юлий Цезарь',
+            isFirstMenuItemActive: false,
+            isHeaderOnPage: false
+          })
         li.headers-and-footers__item
           +footerMain()
         li.headers-and-footers__item

@@ -10,7 +10,12 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title=htmlWebpackPlugin.options.title
   body
-    +headerMain()
+    +headerMain({
+      isLoggedIn: false,
+      userName: null,
+      isFirstMenuItemActive: false,
+      isHeaderOnPage: true
+    })
     main.landing-page__main
       section.landing-page__search-form
         +searchCard()

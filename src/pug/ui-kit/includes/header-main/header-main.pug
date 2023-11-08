@@ -1,8 +1,8 @@
 include ../button-contained/button-contained
 include ../button-outlined/button-outlined
 
-mixin headerMain(isLoggedIn, userName, isFirstMenuItemActive)
-  header.header-main
+mixin headerMain({isLoggedIn, userName, isFirstMenuItemActive, isHeaderOnPage})
+  header.header-main(class=`${isHeaderOnPage ? 'header-main--settled' : ''}`)
     .header-main__container
       .header-main__logo
         a.header-main__link(href='/mock-address/change-me')
