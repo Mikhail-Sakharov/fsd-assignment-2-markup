@@ -36,4 +36,4 @@ mixin pagination(pagesCount, activePage, totalPagesCount)
           button.pagination__page-button
             include arrow_forward.svg
     .pagination__label
-      span=`1 – ${pagesCount} из ${paginationLabelPagesCount} вариантов аренды`
+      span.pagination__text=`1 – ${pagesCount} из ${paginationLabelPagesCount} вариантов аренды`

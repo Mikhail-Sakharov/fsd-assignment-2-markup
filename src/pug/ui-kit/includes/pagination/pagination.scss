@@ -95,7 +95,11 @@
 
 .pagination__label {
   margin-top: 7px;
+  display: flex;
+  justify-content: center;
+}
 
+.pagination__text {
   @extend .pagination-font-styles;
   font-size: 14px;
   line-height: 24px;
