@@ -1,10 +1,15 @@
-mixin customCheckbox(title, name, isChecked, isDisabled)
+mixin customCheckbox(text, name, isChecked, isDisabled)
   .custom-checkbox
-    label
-      div(class=`${isDisabled ? 'custom-checkbox__input--disabled' : 'custom-checkbox__input'}`)
-        input(type='checkbox' name=name id=name checked=isChecked disabled=isDisabled)
-        div.custom-checkbox__input-border
-          div.custom-checkbox__checkmark-outer
-            div.custom-checkbox__checkmark-inner
-      .custom-checkbox__label
-        span.custom-checkbox__title=title
+    label.custom-checkbox__label
+      input.custom-checkbox__input(
+        class=`${isDisabled ? 'custom-checkbox__input--disabled' : ''}`
+        type='checkbox'
+        name=name
+        id=name
+        checked=isChecked
+        disabled=isDisabled
+      )
+      span.custom-checkbox__checkmark-square-border
+        span.custom-checkbox__checkmark-outer-item
+        span.custom-checkbox__checkmark-inner-item
+      span.custom-checkbox__text=text

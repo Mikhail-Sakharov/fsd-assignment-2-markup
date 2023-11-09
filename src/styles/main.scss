@@ -110,6 +110,13 @@
   gap: 40px;
 }
 
+.right-top-wrapper__item:has(.custom-checkbox) {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .right-top-wrapper__buttons-container {
   display: flex;
   flex-direction: column;
