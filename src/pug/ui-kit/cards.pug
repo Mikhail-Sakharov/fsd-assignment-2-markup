@@ -5,6 +5,7 @@ include cards/booking-card/booking-card
 include cards/log-in-card/log-in-card
 include cards/calendar/calendar
 include cards/room-card/room-card
+include includes/sprite/sprite
 
 doctype html
 html(lang="ru")
@@ -13,6 +14,7 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title=htmlWebpackPlugin.options.title
   body
+    +sprite()
     +header('#F4F4F6')
     main
       .cards

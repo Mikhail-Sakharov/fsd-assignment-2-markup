@@ -1,14 +1,18 @@
+include ../svg-icon/svg-icon
+
 mixin slider(imgUrl)
   .slider
     .slider__wrapper
       .slider__viewport
         .slider__slide
-          img(src=imgUrl, alt='room inside')
+          img.slider__img(src=imgUrl, alt='inside the room')
       .slider__controls
-        .slider__prev-button
-          .slider__left-arrow-icon
-        .slider__next-button
-          .slider__right-arrow-icon
+        button.slider__prev-button
+          span.slider__left-arrow-icon
+            +svgIcon({name: 'slider-left-arrow', width: 8, height: 13})
+        button.slider__next-button
+          span.slider__right-arrow-icon
+            +svgIcon({name: 'slider-right-arrow', width: 8, height: 13})
       .slider__controls-active
         .slider__slide-mark.slider__slide-mark--active
         .slider__slide-mark
