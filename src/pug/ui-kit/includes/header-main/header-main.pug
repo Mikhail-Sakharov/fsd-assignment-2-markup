@@ -20,7 +20,10 @@ mixin headerMain({isLoggedIn, userName, isFirstMenuItemActive, isHeaderOnPage})
             label.header-main__label
               span.header-main__text Услуги
               input.header-main__input(type='checkbox' name='menu-item-services')
-              span.header-main__menu-icon
+              span.header-main__expand-icon
+                +svgIcon({name: 'expand-more-light', width: 13, height: 8})
+              span.header-main__hide-icon
+                +svgIcon({name: 'hide-light', width: 12, height: 8})
           li.header-main__menu-item
             a.header-main__link(href='/mock-address/change-me')
               span.header-main__text Вакансии
@@ -31,7 +34,10 @@ mixin headerMain({isLoggedIn, userName, isFirstMenuItemActive, isHeaderOnPage})
             label.header-main__label
               span.header-main__text Соглашения
               input.header-main__input(type='checkbox' name='menu-item-agreements')
-              span.header-main__menu-icon
+              span.header-main__expand-icon
+                +svgIcon({name: 'expand-more-light', width: 13, height: 8})
+              span.header-main__hide-icon
+                +svgIcon({name: 'hide-light', width: 12, height: 8})
         .header-main__account
           if isLoggedIn && userName
             span.header-main__user-name=userName

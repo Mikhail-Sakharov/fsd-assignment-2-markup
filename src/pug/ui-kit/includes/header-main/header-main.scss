@@ -123,22 +123,32 @@
   @extend .visually-hidden;
 }
 
-.header-main__menu-icon {
-  width: 24px;
-  height: 21px;
-  background-image: url('./expand_more.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 .header-main__input {
-  &:checked {
-    + .header-main__menu-icon {
+  &:not(:checked) {
+    + .header-main__expand-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 24px;
       height: 21px;
-      background-image: url('./hide.svg');
-      background-repeat: no-repeat;
-      background-position: center;
+    }
+
+    ~ .header-main__hide-icon {
+      @extend .visually-hidden;
+    }
+  }
+
+  &:checked {
+    + .header-main__expand-icon {
+      @extend .visually-hidden;
+    }
+
+    ~ .header-main__hide-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 24px;
+      height: 21px;
     }
   }
 }
