@@ -5,7 +5,7 @@ mixin dropdown({title, label, name, items, isOpened, zIndex})
       span.dropdown__secondary-label=label
     input.dropdown__input(type='checkbox' name=name id=name checked=isOpened)
     label.dropdown__label(for=name)
-      .dropdown__display
+      span.dropdown__display
         - const outputs = items.filter((item) => item.value !== 0).map((itm) => `${itm.value} ${itm.title}`);
         - const formattedOutput = outputs.join(', ').length >= 20
         -   ? `${outputs.join(', ').slice(0, 21)}...`
