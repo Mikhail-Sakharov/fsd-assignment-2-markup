@@ -1,6 +1,9 @@
+include ../svg-icon/svg-icon
+
 mixin buttonIconContained(title, type)
   button.button-icon-contained(type=type)
     span.button-icon-contained__wrapper
       span.button-icon-contained__empty-block
       span.button-icon-contained__text=title
       span.button-icon-contained__icon
+        +svgIcon({name: 'arrow-forward-white', width: 18, height: 18})

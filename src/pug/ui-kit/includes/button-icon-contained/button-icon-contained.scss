@@ -39,11 +39,9 @@
 }
 
 .button-icon-contained__icon {
-  content: '';
-  display: inline-block;
   width: 44px;
   height: 44px;
-  background-image: url('./arrow_forward.svg');
-  background-repeat: no-repeat;
-  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

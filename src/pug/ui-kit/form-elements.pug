@@ -20,6 +20,7 @@ include includes/custom-text-field/custom-text-field
 include includes/custom-select/custom-select
 include includes/subscription-text-field/subscription-text-field
 include includes/pagination/pagination
+include includes/sprite/sprite
 
 - const checkboxListItems = [
 -   {
@@ -61,6 +62,7 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title=htmlWebpackPlugin.options.title
   body
+    +sprite()
     +header()
     main
       .form-elements-container
