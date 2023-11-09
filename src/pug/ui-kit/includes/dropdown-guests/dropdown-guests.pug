@@ -1,4 +1,5 @@
 include ../button-text/button-text
+include ../svg-icon/svg-icon
 
 mixin dropdownGuests(title, label, name, items, disabledIndex, isOpened)
   .dropdown-guests
@@ -25,7 +26,10 @@ mixin dropdownGuests(title, label, name, items, disabledIndex, isOpened)
         - }
         - const outputText = isOutputsEmpty ? 'Сколько гостей' : `${numberOfGuests} ${getFormattedText(numberOfGuests)}`
         span.dropdown-guests__output=outputText
-        span.dropdown-guests__icon
+        span.dropdown-guests__expand-icon
+          +svgIcon({name: 'expand-more-dark', width: 13, height: 8})
+        span.dropdown-guests__hide-icon
+          +svgIcon({name: 'hide', width: 12, height: 8})
     .dropdown-guests__list
       each item, i in items
         .dropdown-guests__list-item

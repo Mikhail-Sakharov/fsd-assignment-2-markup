@@ -14,7 +14,7 @@ mixin dropdown({title, label, name, items, isOpened, zIndex})
         -   : outputs.join(', ');
         span.dropdown__output=formattedOutput
         span.dropdown__expand-icon
-          +svgIcon({name: 'expand-more', width: 13, height: 8})
+          +svgIcon({name: 'expand-more-dark', width: 13, height: 8})
         span.dropdown__hide-icon
           +svgIcon({name: 'hide', width: 12, height: 8})
     .dropdown__list(style=`z-index: ${zIndex}`)
