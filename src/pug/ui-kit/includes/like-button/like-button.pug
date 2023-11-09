@@ -1,5 +1,9 @@
+include ../svg-icon/svg-icon
+
 mixin likeButton(value, isLiked)
-  - const status = isLiked ? 'is-liked' : '';
-  button.like-button(class=status)
+  button.like-button(class=`${isLiked ? 'like-button--liked' : ''}`)
+    span.like-button__icon--favorite
+      +svgIcon({name: 'favorite', width: 10, height: 8})
     span.like-button__icon
+      +svgIcon({name: 'favorite-border', width: 10, height: 8})
     span.like-button__value=value
