@@ -7,7 +7,7 @@ mixin dropdownGuests(title, label, name, items, disabledIndex, isOpened)
       span.dropdown-guests__secondary-label=label
     input.dropdown-guests__input(type='checkbox' name=name id=name checked=isOpened)
     label.dropdown-guests__label(for=name)
-      .dropdown-guests__display
+      span.dropdown-guests__display
         - const filteredOutputs = items.filter((item) => item.value !== 0)
         - const isOutputsEmpty = filteredOutputs.length === 0
         - const numberOfGuests = filteredOutputs.reduce((res, item) => res + item.value, 0)
