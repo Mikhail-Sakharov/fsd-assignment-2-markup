@@ -1,3 +1,5 @@
+include ../svg-icon/svg-icon
+
 mixin pagination(pagesCount, activePage, totalPagesCount)
   - const startPages = [1, 2, 3];
   - const endPages = [pagesCount - 2, pagesCount - 1, pagesCount];
@@ -7,7 +9,7 @@ mixin pagination(pagesCount, activePage, totalPagesCount)
       if activePage > 1
         li.pagination__page.pagination__page--prev
           button.pagination__page-button
-            include arrow_backward.svg
+            +svgIcon({name: 'arrow-backward-white', width: 18, height: 17})
       if activePage <= 3
         each page in startPages
           li.pagination__page(class=`${activePage === page ? 'pagination__page--current' : ''}`)
@@ -34,6 +36,6 @@ mixin pagination(pagesCount, activePage, totalPagesCount)
       if activePage < pagesCount
         li.pagination__page.pagination__page--next
           button.pagination__page-button
-            include arrow_forward.svg
+            +svgIcon({name: 'arrow-forward-white', width: 18, height: 18})
     .pagination__label
       span.pagination__text=`1 – ${pagesCount} из ${paginationLabelPagesCount} вариантов аренды`
