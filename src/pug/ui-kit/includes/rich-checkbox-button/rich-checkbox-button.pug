@@ -1,12 +1,17 @@
-mixin richCheckboxButton(title, description, name, isChecked)
+mixin richCheckboxButton(text, description, name, isChecked)
   .rich-checkbox-button
     label.rich-checkbox-button__label
-      .rich-checkbox-button__checkmark
-        input.rich-checkbox-button__input(type='checkbox' name=name id=name checked=isChecked)
-        div.rich-checkbox-button__checkmark-border
-          div.rich-checkbox-button__checkmark-outer
-            div.rich-checkbox-button__checkmark-inner
-      .rich-checkbox-button__title
-        span.rich-checkbox-button__text=title
+      input.rich-checkbox-button__input(
+        class=`${isDisabled ? 'rich-checkbox-button__input--disabled' : ''}`
+        type='checkbox'
+        name=name
+        id=name
+        checked=isChecked
+        disabled=isDisabled
+      )
+      span.rich-checkbox-button__checkmark-square-border
+        span.rich-checkbox-button__checkmark-outer-item
+        span.rich-checkbox-button__checkmark-inner-item
+      span.rich-checkbox-button__text=text
     .rich-checkbox-button__description
       span=description
