@@ -1,3 +1,5 @@
+include ../svg-icon/svg-icon
+
 mixin dropdown({title, label, name, items, isOpened, zIndex})
   .dropdown
     .dropdown__header
@@ -11,7 +13,10 @@ mixin dropdown({title, label, name, items, isOpened, zIndex})
         -   ? `${outputs.join(', ').slice(0, 21)}...`
         -   : outputs.join(', ');
         span.dropdown__output=formattedOutput
-        span.dropdown__icon
+        span.dropdown__expand-icon
+          +svgIcon({name: 'expand-more', width: 13, height: 8})
+        span.dropdown__hide-icon
+          +svgIcon({name: 'hide', width: 12, height: 8})
     .dropdown__list(style=`z-index: ${zIndex}`)
       each item in items
         .dropdown__list-item
