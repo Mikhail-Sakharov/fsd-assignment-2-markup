@@ -3,5 +3,15 @@ mixin rating(rating, name, isDisabled)
     - const values = [5, 4, 3, 2, 1]
     each value in values
       - const isChecked = value === rating
-      input(type='radio' name=name id=`${name}-${value}` value=value checked=isChecked disabled=isDisabled)
-      label(for=`${name}-${value}` style=`${isDisabled ? 'transition: none; transform: none; cursor: default' : ''}`)
+      input.rating__input(
+        type='radio'
+        name=name
+        id=`${name}-${value}`
+        value=value
+        checked=isChecked
+        disabled=isDisabled
+      )
+      label.rating__label(
+        for=`${name}-${value}`
+        style=`${isDisabled ? 'transition: none; transform: none; cursor: default' : ''}`
+      )
