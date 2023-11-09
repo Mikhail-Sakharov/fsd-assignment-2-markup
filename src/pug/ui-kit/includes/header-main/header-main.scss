@@ -29,12 +29,13 @@
 }
 
 .header-main__container {
-  width: 1160px;
+  max-width: 80.5%;
   height: 70px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
 }
 
 .header-main__logo {
@@ -95,6 +96,10 @@
   align-items: center;
   gap: 20px;
   list-style: none;
+
+  .header-main__menu-item {
+    flex-shrink: 0;
+  }
 }
 
 .header-main__label {
@@ -158,4 +163,16 @@
 .header-main__register-button {
   width: 196px;
   height: 34px;
+}
+
+@media (max-width: 1100px) {
+  .header-main__container {
+    margin-left: 20px;
+  }
+}
+
+@media (min-width: 1900px) {
+  .header-main__container {
+    max-width: 85%;
+  }
 }
