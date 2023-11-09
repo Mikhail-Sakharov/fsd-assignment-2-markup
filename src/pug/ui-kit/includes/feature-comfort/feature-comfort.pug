@@ -1,6 +1,10 @@
-.feature-comfort
-  .feature-comfort__wrapper
-    .feature-comfort__icon
-    .feature-comfort__text
-      span.feature-comfort__title Комфорт
-      span.feature-comfort__description Шумопоглощающие стены
+include ../svg-icon/svg-icon
+
+mixin featureComfort()
+  .feature-comfort
+    .feature-comfort__wrapper
+      .feature-comfort__icon
+        +svgIcon({name: 'feature-comfort', width: 40, height: 40})
+      .feature-comfort__text
+        span.feature-comfort__title Комфорт
+        span.feature-comfort__description Шумопоглощающие стены

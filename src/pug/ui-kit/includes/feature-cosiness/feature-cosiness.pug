@@ -1,6 +1,10 @@
-.feature-cosiness
-  .feature-cosiness__wrapper
-    .feature-cosiness__icon
-    .feature-cosiness__text
-      span.feature-cosiness__title Уют
-      span.feature-cosiness__description Номер оснащён камином
+include ../svg-icon/svg-icon
+
+mixin featureCosiness()
+  .feature-cosiness
+    .feature-cosiness__wrapper
+      .feature-cosiness__icon
+        +svgIcon({name: 'feature-cosiness', width: 34, height: 43})
+      .feature-cosiness__text
+        span.feature-cosiness__title Уют
+        span.feature-cosiness__description Номер оснащён камином

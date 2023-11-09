@@ -1,6 +1,10 @@
-.feature-convenience
-  .feature-convenience__wrapper
-    .feature-convenience__icon
-    .feature-convenience__text
-      span.feature-convenience__title Удобство
-      span.feature-convenience__description Окно в каждой из спален
+include ../svg-icon/svg-icon
+
+mixin featureConvenience()
+  .feature-convenience
+    .feature-convenience__wrapper
+      .feature-convenience__icon
+        +svgIcon({name: 'feature-convenience', width: 36, height: 38})
+      .feature-convenience__text
+        span.feature-convenience__title Удобство
+        span.feature-convenience__description Окно в каждой из спален

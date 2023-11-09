@@ -1,3 +1,10 @@
+.feature-comfort {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 86px;
+}
+
 .feature-comfort__wrapper {
   display: flex;
   justify-content: flex-start;
@@ -5,15 +12,8 @@
   gap: 10px;
 }
 
-.feature-comfort__icon {
-  width: 48px;
-  height: 48px;
-  background-image: url('./insert_emoticon.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 .feature-comfort__text {
+  margin-left: 4px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,7 +25,7 @@
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 1.5;
 }
 
 .feature-comfort__description {
@@ -34,5 +34,5 @@
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 2;
 }
