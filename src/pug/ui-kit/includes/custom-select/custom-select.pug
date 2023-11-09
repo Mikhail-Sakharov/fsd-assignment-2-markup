@@ -1,3 +1,5 @@
+include ../svg-icon/svg-icon
+
 mixin customSelect(label, text, ariaLabel)
   .custom-select
     label.custom-select__label
@@ -7,4 +9,4 @@ mixin customSelect(label, text, ariaLabel)
         button.custom-select__button(type='button' aria-label=ariaLabel)
           span.custom-select__text=text
           span.custom-select__icon
-            include expand_more.svg
+            +svgIcon({name: 'expand-more', width: 13, height: 8})
