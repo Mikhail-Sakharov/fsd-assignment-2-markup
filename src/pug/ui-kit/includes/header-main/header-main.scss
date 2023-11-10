@@ -175,6 +175,28 @@
   height: 34px;
 }
 
+@media (max-width: 920px) {
+  .header-main__nav,
+  .header-main__container,
+  .header-main__menu,
+  .header-main__account {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .header-main__container {
+    padding: 20px;
+  }
+
+  .header-main--settled {
+    position: relative;
+  }
+
+  .header-main__log-in-button {
+    width: 196px;
+  }
+}
+
 @media (max-width: 1100px) {
   .header-main__container {
     margin-left: 20px;

@@ -1,3 +1,14 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .landing-page__search-form {
   position: absolute;
   margin-top: 140px;
@@ -18,4 +29,64 @@
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
+}
+
+@media (max-width: 920px) {
+  .landing-page__search-form {
+    position: relative;
+    margin: 0;
+
+    .search-card {
+      width: 100%;
+      height: auto;
+      box-shadow: none;
+      border-inline: none;
+      border-radius: 0;
+    }
+
+    .search-card__dates-wrapper {
+      flex-direction: column;
+    }
+
+    + .main-page-slider {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .landing-page__main {
+    + .footer-main {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
+  }
+}
+
+@media (min-width: 1201px) {
+  .landing-page__main {
+    ~ .footer-mobile {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
+  }
 }
