@@ -1,7 +1,9 @@
+include ../svg-icon/svg-icon
+
 mixin subscriptionInput(name, placeholder)
   form.subscription-input(method='get')
     label.subscription-input__label
       input.subscription-input__input(type='text' name=name placeholder=placeholder)
     button.subscription-input__button(type='submit')
       span.subscription-input__icon
-        include arrow_forward.svg
+        +svgIcon({name: 'arrow-forward-gradient', width: 18, height: 18})
