@@ -23,9 +23,20 @@
 
 .slider__wrapper {
   &:not(:hover) {
-    .slider__controls {
+    .slider__controls:not(:has(:focus-visible)) {
       @extend .visually-hidden;
     }
+  }
+
+  .slider__controls:has(:focus-visible) {
+    display: flex;
+    justify-content: space-between;
+  
+    border-radius: 4px;
+    position: absolute;
+    margin-top: -156px;
+    width: 270px;
+    height: 151px;
   }
 
   &:hover {
@@ -51,14 +62,24 @@
   height: 100%;
   display: flex;
   align-items: center;
+
+  &:focus-visible {
+    outline: 3px solid #6bd0bf;
+  }
 }
 
-.slider__prev-button:hover {
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.00) 99.99%, rgba(255, 255, 255, 0.00) 100%);
+.slider__prev-button {
+  &:hover,
+  &:focus-visible {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.00) 99.99%, rgba(255, 255, 255, 0.00) 100%);
+  }
 }
 
-.slider__next-button:hover {
-  background: linear-gradient(270deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.00) 99.99%, rgba(255, 255, 255, 0.00) 100%);
+.slider__next-button {
+  &:hover,
+  &:focus-visible {
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.00) 99.99%, rgba(255, 255, 255, 0.00) 100%);
+  }
 }
 
 .slider__left-arrow-icon,
@@ -81,13 +102,13 @@
   gap: 4px;
 }
 
-.slider__slide-mark {
+.slider__dot-mark {
   width: 7px;
   height: 7px;
   border: 1px solid #FFFFFF;
   border-radius: 50%;
 }
 
-.slider__slide-mark--active {
+.slider__dot-mark--active {
   background-color: #FFFFFF;
 }
