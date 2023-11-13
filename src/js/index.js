@@ -71,3 +71,4 @@ import '../pug/ui-kit/includes/main-page-slider/landing-bg-3.jpg';
 import '../pug/pages/landing-page/landing-page';
 import '../pug/pages/search-room/search-room';
 import '../pug/pages/search-room-dropdown/search-room-dropdown';
+import '../pug/pages/search-room-expandable-checkbox-list/search-room-expandable-checkbox-list';
