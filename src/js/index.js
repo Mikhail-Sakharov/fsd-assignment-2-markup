@@ -52,6 +52,16 @@ import '../fonts/fonts.css';
 import '../pug/ui-kit/includes/review/image.jpg';
 import '../pug/ui-kit/includes/slider/1.jpg';
 import '../pug/ui-kit/includes/slider/2.jpg';
+import '../pug/ui-kit/includes/slider/3.jpg';
+import '../pug/ui-kit/includes/slider/4.jpg';
+import '../pug/ui-kit/includes/slider/5.jpg';
+import '../pug/ui-kit/includes/slider/6.jpg';
+import '../pug/ui-kit/includes/slider/7.jpg';
+import '../pug/ui-kit/includes/slider/8.jpg';
+import '../pug/ui-kit/includes/slider/9.jpg';
+import '../pug/ui-kit/includes/slider/10.jpg';
+import '../pug/ui-kit/includes/slider/11.jpg';
+import '../pug/ui-kit/includes/slider/12.jpg';
 import '../pug/ui-kit/includes/main-page-slider/landing-bg-1.jpg';
 import '../pug/ui-kit/includes/main-page-slider/landing-bg-2.jpg';
 import '../pug/ui-kit/includes/main-page-slider/landing-bg-3.jpg';
@@ -59,3 +69,4 @@ import '../pug/ui-kit/includes/main-page-slider/landing-bg-3.jpg';
 // импорты страниц
 
 import '../pug/pages/landing-page/landing-page';
+import '../pug/pages/search-room/search-room';

@@ -1,7 +1,7 @@
 include ../../includes/rating/rating
 include ../../includes/slider/slider
 
-mixin roomCard(imgUrl, roomNumber, isLux, rating, reviewsCount, ratingName)
+mixin roomCard({imgUrl, roomNumber, isLux, rating, reviewsCount, ratingName})
   .room-card
     .room-card__slider
       +slider(imgUrl)

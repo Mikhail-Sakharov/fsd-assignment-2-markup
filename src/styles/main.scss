@@ -276,9 +276,47 @@
   align-self: center;
 }
 
-@media (min-width: 1900px) {
-  .landing-page__slogan {
-    right: 200px;
-    bottom: -200px;
+.wrapper {
+  display: flex;
+	flex-direction: column;
+  justify-content: space-between;
+	min-height: 100vh;
+}
+
+.page-content {
+  flex: auto;
+}
+
+.container {
+  width: 1160px;
+}
+
+@media (max-width: 1200px) {
+  .wrapper {
+    .footer-main {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
+  }
+}
+
+@media (min-width: 1201px) {
+  .wrapper {
+    .footer-mobile {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
   }
 }

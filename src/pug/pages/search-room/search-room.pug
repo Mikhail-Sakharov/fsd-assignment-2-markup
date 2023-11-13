@@ -1,0 +1,200 @@
+include ../../ui-kit/includes/header-main/header-main
+include ../../ui-kit/includes/footer-main/footer-main
+include ../../ui-kit/includes/footer-mobile/footer-mobile
+include ../../ui-kit/includes/sprite/sprite
+include ../../ui-kit/includes/custom-select/custom-select
+include ../../ui-kit/includes/range-slider/range-slider
+include ../../ui-kit/includes/custom-checkbox/custom-checkbox
+include ../../ui-kit/includes/label-primary/label-primary
+include ../../ui-kit/includes/rich-checkbox-button-group/rich-checkbox-button-group
+include ../../ui-kit/includes/expandable-checkbox-list/expandable-checkbox-list
+include ../../ui-kit/cards/room-card/room-card
+include ../../ui-kit/includes/pagination/pagination
+
+- const checkboxListItems = [
+-   {
+-     title: 'Завтрак',
+-     name: 'breakfast',
+-     isChecked: false
+-   },
+-   {
+-     title: 'Письменный стол',
+-     name: 'desk',
+-     isChecked: true
+-   },
+-   {
+-     title: 'Стул для кормления',
+-     name: 'feeding-chair',
+-     isChecked: true
+-   },
+-   {
+-     title: 'Кроватка',
+-     name: 'crib',
+-     isChecked: true
+-   },
+-   {
+-     title: 'Телевизор',
+-     name: 'tv',
+-     isChecked: false
+-   },
+-   {
+-     title: 'Шампунь',
+-     name: 'shampoo',
+-     isChecked: false
+-   },
+- ];
+
+- const catalogItems = [
+-   {
+-     imgUrl: './assets/1.jpg',
+-     roomNumber: 888,
+-     isLux: false,
+-     rating: 5,
+-     reviewsCount: 145,
+-     ratingName: 'room-888'    
+-   },
+-   {
+-     imgUrl: './assets/2.jpg',
+-     roomNumber: 840,
+-     isLux: false,
+-     rating: 4,
+-     reviewsCount: 65,
+-     ratingName: 'room-840'
+-     },
+-   {
+-     imgUrl: './assets/3.jpg',
+-     roomNumber: 980,
+-     isLux: false,
+-     rating: 3,
+-     reviewsCount: 35,
+-     ratingName: 'room-980'
+-     },
+-   {
+-     imgUrl: './assets/4.jpg',
+-     roomNumber: 856,
+-     isLux: false,
+-     rating: 5,
+-     reviewsCount: 19,
+-     ratingName: 'room-856'
+-     },
+-   {
+-     imgUrl: './assets/5.jpg',
+-     roomNumber: 740,
+-     isLux: false,
+-     rating: 4,
+-     reviewsCount: 44,
+-     ratingName: 'room-740'
+-     },
+-   {
+-     imgUrl: './assets/6.jpg',
+-     roomNumber: 982,
+-     isLux: false,
+-     rating: 3,
+-     reviewsCount: 56,
+-     ratingName: 'room-982'
+-     },
+-   {
+-     imgUrl: './assets/7.jpg',
+-     roomNumber: 678,
+-     isLux: false,
+-     rating: 5,
+-     reviewsCount: 45,
+-     ratingName: 'room-678'
+-     },
+-   {
+-     imgUrl: './assets/8.jpg',
+-     roomNumber: 450,
+-     isLux: false,
+-     rating: 4,
+-     reviewsCount: 39,
+-     ratingName: 'room-450'
+-     },
+-   {
+-     imgUrl: './assets/9.jpg',
+-     roomNumber: 350,
+-     isLux: false,
+-     rating: 3,
+-     reviewsCount: 77,
+-     ratingName: 'room-350'
+-     },
+-   {
+-     imgUrl: './assets/10.jpg',
+-     roomNumber: 666,
+-     isLux: false,
+-     rating: 5,
+-     reviewsCount: 25,
+-     ratingName: 'room-666'
+-     },
+-   {
+-     imgUrl: './assets/11.jpg',
+-     roomNumber: 444,
+-     isLux: false,
+-     rating: 4,
+-     reviewsCount: 15,
+-     ratingName: 'room-444'
+-     },
+-   {
+-     imgUrl: './assets/12.jpg',
+-     roomNumber: 352,
+-     isLux: false,
+-     rating: 3,
+-     reviewsCount: 55,
+-     ratingName: 'room-352'
+-     }
+- ];
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title=htmlWebpackPlugin.options.title
+  body
+    +sprite()
+    .wrapper
+      +headerMain({
+        isLoggedIn: false,
+        userName: null,
+        isFirstMenuItemActive: false,
+        isHeaderOnPage: true
+      })
+      main.page-content
+        section.room-list
+          .container
+            .catalog
+              form.catalog-filter(method='POST')
+                fieldset.catalog-filter__block
+                  +customSelect('даты пребывания в отеле', '19 авг - 23 авг', 'Выберите даты')
+                fieldset.catalog-filter__block
+                  +customSelect('гости', '3 гостя, 1 младенец', 'Выберите количество гостей')
+                fieldset.catalog-filter__block
+                  +rangeSlider('диапазон цены', '5 000₽ - 10 000₽')
+                fieldset.catalog-filter__block
+                  legend.catalog-filter__block-title
+                    +labelPrimary('правила дома')
+                  .catalog-filter__features
+                    +customCheckbox('Можно курить', 'smoking-allowed')
+                    +customCheckbox('Можно с питомцами', 'pets-allowed', 'checked')
+                    +customCheckbox('Можно пригласить гостей (до 10 человек)', 'party-allowed', 'checked')
+                fieldset.catalog-filter__block
+                  +richCheckboxButtonGroup('доступность')
+                fieldset.catalog-filter__block
+                  +customSelect('удобства номера', '2 спальни, 2 кровати...', 'Выберите удобства')
+                fieldset.catalog-filter__block
+                  +expandableCheckboxList('дополнительные удобства', 'collapsed', checkboxListItems, false)
+              .catalog-cards
+                h1.catalog-cards__title Номера, которые мы для вас подобрали
+                .catalog-cards__list
+                  each catalogItem in catalogItems
+                    .catalog-cards__item
+                      +roomCard({
+                        imgUrl: catalogItem.imgUrl,
+                        roomNumber: catalogItem.roomNumber,
+                        isLux: catalogItem.isLux,
+                        rating: catalogItem.rating,
+                        reviewsCount: catalogItem.reviewsCount,
+                        ratingName: catalogItem.ratingName
+                      })
+                +pagination(15, 1, 120)
+      +footerMain()
+      +footerMobile()
