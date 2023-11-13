@@ -33,7 +33,21 @@ html(lang="ru")
             .cards__item
               +calendar()
             .cards__item
-              +roomCard('./assets/1.jpg', 888, true, 5, 145, 'room-888')
+              +roomCard({
+                imgUrl: './assets/1.jpg',
+                roomNumber: 888,
+                isLux: true,
+                rating: 5,
+                reviewsCount: 145,
+                ratingName: 'room-888'
+              })
             .cards__item
-              +roomCard('./assets/2.jpg', 840, false, 4, 65, 'room-840')
+              +roomCard({
+                imgUrl: './assets/2.jpg',
+                roomNumber: 840,
+                isLux: false,
+                rating: 4,
+                reviewsCount: 65,
+                ratingName: 'room-840'
+              })
         .cards__footer

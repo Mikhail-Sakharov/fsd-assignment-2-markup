@@ -3,6 +3,7 @@ include ../../ui-kit/includes/footer-main/footer-main
 include ../../ui-kit/includes/footer-mobile/footer-mobile
 include ../../ui-kit/includes/sprite/sprite
 include ../../ui-kit/includes/custom-select/custom-select
+include ../../ui-kit/includes/dropdown/dropdown
 include ../../ui-kit/includes/range-slider/range-slider
 include ../../ui-kit/includes/custom-checkbox/custom-checkbox
 include ../../ui-kit/includes/label-primary/label-primary
@@ -48,7 +49,7 @@ include ../../ui-kit/includes/pagination/pagination
 -   {
 -     imgUrl: './assets/1.jpg',
 -     roomNumber: 888,
--     isLux: false,
+-     isLux: true,
 -     rating: 5,
 -     reviewsCount: 145,
 -     ratingName: 'room-888'    
@@ -64,7 +65,7 @@ include ../../ui-kit/includes/pagination/pagination
 -   {
 -     imgUrl: './assets/3.jpg',
 -     roomNumber: 980,
--     isLux: false,
+-     isLux: true,
 -     rating: 3,
 -     reviewsCount: 35,
 -     ratingName: 'room-980'
@@ -160,7 +161,7 @@ html(lang="ru")
       })
       main.page-content
         section.room-list
-          .container
+          .room-list__container
             .catalog
               form.catalog-filter(method='POST')
                 fieldset.catalog-filter__block
@@ -169,6 +170,7 @@ html(lang="ru")
                   +customSelect('гости', '3 гостя, 1 младенец', 'Выберите количество гостей')
                 fieldset.catalog-filter__block
                   +rangeSlider('диапазон цены', '5 000₽ - 10 000₽')
+                  span.range-slider__text Стоимость за сутки пребывания в номере
                 fieldset.catalog-filter__block
                   legend.catalog-filter__block-title
                     +labelPrimary('правила дома')
@@ -179,7 +181,19 @@ html(lang="ru")
                 fieldset.catalog-filter__block
                   +richCheckboxButtonGroup('доступность')
                 fieldset.catalog-filter__block
-                  +customSelect('удобства номера', '2 спальни, 2 кровати...', 'Выберите удобства')
+                  - const roomItems = [
+                  -   {title: 'спальни', value: 2},
+                  -   {title: 'кровати', value: 2},
+                  -   {title: 'ванные комнаты', value: 0}
+                  - ];
+                  +dropdown({
+                    title: 'dropdown',
+                    label: 'default',
+                    name: 'room-dropdown-expanded',
+                    items: roomItems,
+                    isOpened: false,
+                    zIndex: 2
+                  })
                 fieldset.catalog-filter__block
                   +expandableCheckboxList('дополнительные удобства', 'collapsed', checkboxListItems, false)
               .catalog-cards
