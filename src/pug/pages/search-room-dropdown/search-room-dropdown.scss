@@ -1,0 +1,55 @@
+.room-list {
+  display: flex;
+  justify-content: center;
+}
+
+.catalog {
+  padding-top: 100px;
+  display: flex;
+  justify-content: space-between;
+
+  h1 {
+    color: #1F2041;
+    font-family: 'Montserrat';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+
+.catalog-filter {
+  min-width: 266px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.catalog-filter__block {
+  border-style: none;
+}
+
+.catalog-filter__features {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 261px;
+}
+
+.catalog-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .pagination {
+    align-self: center;
+    margin-top: 20px;
+  }
+}
+
+.catalog-cards__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 20px;
+  column-gap: 12px;
+}
