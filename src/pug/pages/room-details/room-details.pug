@@ -1,0 +1,33 @@
+include ../../ui-kit/includes/sprite/sprite
+include ../../ui-kit/includes/header-main/header-main
+include ../../ui-kit/includes/footer-main/footer-main
+include ../../ui-kit/includes/footer-mobile/footer-mobile
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title=htmlWebpackPlugin.options.title
+  body
+    +sprite()
+    .wrapper
+      +headerMain({
+        isLoggedIn: false,
+        userName: null,
+        isFirstMenuItemActive: false,
+        isHeaderOnPage: true
+      })
+      main.page-content
+        section.room-details__inside
+          h1.visually-hidden Фотографии номера
+          img.room-details__photo-first(src='./assets/room-details-1.jpg' alt='Интерьер номера')
+          img.room-details__photo-second(src='./assets/room-details-2.jpg' alt='Интерьер номера')
+          img.room-details__photo-third(src='./assets/room-details-3.jpg' alt='Интерьер номера')
+        section.room-details__info
+          h1.visually-hidden О номере
+          .room-details__about
+          .room-details__reviews
+          .room-details__rules
+      +footerMain()
+      +footerMobile()

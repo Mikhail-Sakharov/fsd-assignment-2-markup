@@ -65,8 +65,12 @@ import '../pug/ui-kit/includes/slider/12.jpg';
 import '../pug/ui-kit/includes/main-page-slider/landing-bg-1.jpg';
 import '../pug/ui-kit/includes/main-page-slider/landing-bg-2.jpg';
 import '../pug/ui-kit/includes/main-page-slider/landing-bg-3.jpg';
+import '../pug/pages/room-details/room-details-1.jpg';
+import '../pug/pages/room-details/room-details-2.jpg';
+import '../pug/pages/room-details/room-details-3.jpg';
 
 // импорты страниц
 
 import '../pug/pages/landing-page/landing-page';
 import '../pug/pages/search-room/search-room';
+import '../pug/pages/room-details/room-details';
