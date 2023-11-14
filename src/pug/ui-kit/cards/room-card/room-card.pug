@@ -17,6 +17,6 @@ mixin roomCard({imgUrl, roomNumber, isLux, rating, reviewsCount, ratingName})
           span.room-card__price-label в сутки
       .room-card__rating
         +rating(rating, ratingName, true)
-        .room-card__reviews-count
-          span=reviewsCount
-          span Отзывов
+        .room-card__reviews
+          span.room-card__reviews-count=reviewsCount
+          span.room-card__reviews-text Отзывов

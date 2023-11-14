@@ -41,11 +41,19 @@
 }
 
 .room-card__price,
-.room-card__reviews-count {
+.room-card__reviews {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+
+.room-card__price {
   gap: 5px;
+}
+
+.room-card__reviews {
+  margin-top: 2px;
+  gap: 4px;
 }
 
 .room-card__price {
@@ -53,21 +61,21 @@
 }
 
 .room-card__price-amount,
-.room-card__reviews-count span:first-child {
+.room-card__reviews-count {
   color: rgba(31, 32, 65, 0.50);
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
-  line-height: 18px;
+  line-height: 1.5;
 }
 
 .room-card__price-amount {
-  margin-top: 4px;
+  margin-top: 3px;
 }
 
 .room-card__price-label,
-.room-card__reviews-count span:last-child {
+.room-card__reviews-text {
   color: rgba(31, 32, 65, 0.50);
   font-family: 'Montserrat', Arial, sans-serif;
   font-style: normal;
@@ -80,12 +88,12 @@
   font-size: 12px;
 }
 
-.room-card__reviews-count span:last-child {
+.room-card__reviews-text {
   font-size: 14px;
 }
 
 .room-card__details {
-  padding: 15px 20px 16px 20px;
+  padding: 15px 20px 20px 20px;
 }
 
 .room-card__rating {
