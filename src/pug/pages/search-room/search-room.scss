@@ -12,7 +12,7 @@
   display: flex;
   justify-content: space-between;
 
-  h1 {
+  .catalog-cards__title {
     color: #1F2041;
     font-family: 'Montserrat';
     font-size: 24px;
@@ -94,4 +94,42 @@
   grid-template-columns: 1fr 1fr 1fr;
   row-gap: 20px;
   column-gap: 12px;
+}
+
+@media (max-width: 1200px) {
+  .catalog {
+    justify-content: center;
+    gap: 20px
+  }
+
+  .catalog-cards__list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 880px) {
+  .catalog-cards__list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .catalog {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px
+  }
+
+  .catalog-cards__list {
+    grid-template-columns: 1fr;
+  }
+
+  .catalog-cards {
+    align-items: center;
+  }
+
+  .catalog-cards__title {
+    text-align: center;
+  }
 }
