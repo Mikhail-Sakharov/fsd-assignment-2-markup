@@ -111,6 +111,14 @@
   .catalog-cards__list {
     grid-template-columns: 1fr;
   }
+
+  .catalog-cards {
+    align-items: center;
+  }
+
+  .catalog-cards__title {
+    text-align: center;
+  }
 }
 
 @media (max-width: 560px) {
