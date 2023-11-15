@@ -20,3 +20,134 @@
   height: 100%;
   grid-area: 2/2/3/3;
 }
+
+.room-details__container {
+  position: relative;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 68px 0 0 0;
+
+  .booking-card {
+    position: absolute;
+    top: 67px;
+    right: 0;
+  }
+}
+
+.room-details__about {
+  display: flex;
+  gap: 106px;
+}
+
+.room-details__feature-wrapper {
+  .feature-comfort {
+    margin-top: 3px;
+    margin-left: 4px;
+  }
+
+  .feature-convenience {
+    margin-top: 2px;
+    margin-left: 6px;
+  }
+
+  .feature-cosiness {
+    margin-top: 3px;
+    margin-left: 7px;
+  }
+}
+
+.room-details__feature-wrapper:not(:last-child) {
+  border-bottom: 1px solid rgba(31, 32, 65, 0.10);
+}
+
+.room-details__impressions {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.room-details__info-title,
+.room-details__impressions-title,
+.room-details__reviews-title,
+.room-details__rules-list-title,
+.room-details__cancellation-title {
+  color: #1F2041;
+  font-family: 'Montserrat';
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.room-details__reviews {
+  padding-top: 10px;
+  max-width: 712px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.room-details__header {
+  display: flex;
+  justify-content: space-between;
+
+  .room-details__reviews-count {
+    margin-right: 2px;
+    color: rgba(31, 32, 65, 0.50);
+    text-align: right;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.2;
+  }
+
+  .room-details__reviews-title {
+    margin-top: 3px;
+    margin-left: -1px;
+  }
+}
+
+.room-details__reviews-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+.room-details__rules {
+  margin-top: 30px;
+  max-width: 712px;
+  display: flex;
+  gap: 102px;
+}
+
+.room-details__rules-list {
+  max-width: 260px;
+}
+
+.room-details__rules-list-title {
+  margin-left: 20px;
+  margin-top: 2px;
+}
+
+.room-details__cancellation,
+.room-details__rules-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.room-details__cancellation {
+  margin-top: 3px;
+  max-width: 340px;
+}
+
+.room-details__cancellation-description {
+  color: rgba(31, 32, 65, 0.75);
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.71;
+}

@@ -32,6 +32,7 @@ import '../pug/ui-kit/includes/main-title/main-title';
 import '../pug/ui-kit/includes/slider/slider';
 import '../pug/ui-kit/includes/footer-main/footer-main';
 import '../pug/ui-kit/includes/footer-mobile/footer-mobile';
+import '../pug/ui-kit/includes/chart/chart';
 
 // импорты карточек
 

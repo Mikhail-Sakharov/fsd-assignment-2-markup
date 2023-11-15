@@ -2,12 +2,19 @@ include ../../ui-kit/includes/sprite/sprite
 include ../../ui-kit/includes/header-main/header-main
 include ../../ui-kit/includes/footer-main/footer-main
 include ../../ui-kit/includes/footer-mobile/footer-mobile
+include ../../ui-kit/includes/chart/chart
+include ../../ui-kit/includes/feature-comfort/feature-comfort
+include ../../ui-kit/includes/feature-convenience/feature-convenience
+include ../../ui-kit/includes/feature-cosiness/feature-cosiness
+include ../../ui-kit/cards/booking-card/booking-card
+include ../../ui-kit/includes/review/review
+include ../../ui-kit/includes/bullet-list/bullet-list
 
 doctype html
-html(lang="ru")
+html(lang='ru')
   head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
     title=htmlWebpackPlugin.options.title
   body
     +sprite()
@@ -24,10 +31,54 @@ html(lang="ru")
           img.room-details__photo-first(src='./assets/room-details-1.jpg' alt='Интерьер номера')
           img.room-details__photo-second(src='./assets/room-details-2.jpg' alt='Интерьер номера')
           img.room-details__photo-third(src='./assets/room-details-3.jpg' alt='Интерьер номера')
-        section.room-details__info
-          h1.visually-hidden О номере
-          .room-details__about
-          .room-details__reviews
-          .room-details__rules
+        .room-details__container
+          section.room-details__info
+            h1.visually-hidden О номере
+            .room-details__about
+              .room-details__info
+                h2.room-details__info-title Сведения о номере
+                .room-details__feature-wrapper
+                  +featureComfort()
+                .room-details__feature-wrapper
+                  +featureConvenience()
+                .room-details__feature-wrapper
+                  +featureCosiness()
+              .room-details__impressions
+                h2.room-details__impressions-title Впечатления от номера
+                +chart()
+            .room-details__reviews
+              header.room-details__header
+                h2.room-details__reviews-title Отзывы посетителей номера
+                span.room-details__reviews-count 2 отзыва
+              ul.room-details__reviews-list
+                li.room-details__reviews-item
+                  +review({
+                    userName: 'Михаил Сахаров',
+                    text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+                    dateTimeStamp: '5 дней назад',
+                    likesCount: '12',
+                    isLiked: true
+                  })
+                li.room-details__reviews-item
+                  +review({
+                    userName: 'Михаил Сахаров',
+                    text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент',
+                    dateTimeStamp: 'Неделю назад',
+                    likesCount: '2',
+                    isLiked: false
+                  })
+            .room-details__rules
+              .room-details__rules-list
+                h2.room-details__rules-list-title Правила
+                - const bulletListItems = [
+                -   'Нельзя с питомцами',
+                -   'Без вечеринок и мероприятий',
+                -   'Время прибытия — после 13:00, а выезд до 12:00'
+                - ]
+                +bulletList(bulletListItems)
+              .room-details__cancellation
+                h2.room-details__cancellation-title Отмена
+                p.room-details__cancellation-description Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+          +bookingCard()
       +footerMain()
       +footerMobile()
