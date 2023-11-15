@@ -1,0 +1,80 @@
+.chart {
+  position: relative;
+  display: flex;
+  gap: 30px;
+}
+
+.chart__unit {
+  fill: none;
+  stroke-width: 4;
+}
+
+.chart__display {
+  position: absolute;
+  top: 35px;
+  left: 29px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.chart__legend {
+  align-self: flex-end;
+}
+
+.chart__votes {
+  color: #BC9CFF;
+  text-align: center;
+  font-family: 'Montserrat';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.chart__text {
+  color: #BC9CFF;
+  text-align: center;
+  font-family: 'Montserrat';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.chart__caption-list {
+  list-style: none;
+  margin-bottom: -2px;
+}
+
+.chart__caption-item {
+  color: rgba(31, 32, 65, 0.75);
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.72;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+    border-radius: 50%;
+  }
+
+  &:nth-child(1)::before {
+    background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+  }
+  &:nth-child(2)::before {
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  }
+  &:nth-child(3)::before {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  }
+  &:nth-child(4)::before {
+    background: linear-gradient(180deg, #909090 0%, #3D4975 100%);
+  }
+}

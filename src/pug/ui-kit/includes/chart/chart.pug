@@ -1,0 +1,30 @@
+mixin chart()
+  .chart
+    svg.visually-hidden
+      linearGradient(id='chart-color-excellent')
+        stop(offset='0%' stop-color='#FFE39C')
+        stop(offset='100%' stop-color='#FFBA9C')
+      linearGradient(id='chart-color-fine')
+        stop(offset='0%' stop-color='#6FCF97')
+        stop(offset='100%' stop-color='#66D2EA')
+      linearGradient(id='chart-color-satisfactorily')
+        stop(offset='0%' stop-color='#BC9CFF')
+        stop(offset='100%' stop-color='#8BA4F9')
+      linearGradient(id='chart-color-disappointed')
+        stop(offset='0%' stop-color='#919191')
+        stop(offset='100%' stop-color='#3D4975')
+    svg.chart__container(width='120' height='120')
+      // 365 вся окружность (stroke-dasharray: <длина дуги> <длина пробела>)
+      circle.chart__unit(r='58px' cx='50%' cy='50%' stroke='url(#chart-color-fine)' stroke-dasharray='89 275' stroke-dashoffset='-1')
+      circle.chart__unit(r='58px' cx='50%' cy='50%' stroke='url(#chart-color-excellent)' stroke-dasharray='180 185' stroke-dashoffset='-92')
+      circle.chart__unit(r='58px' cx='50%' cy='50%' stroke='url(#chart-color-satisfactorily)' stroke-dasharray='89 275' stroke-dashoffset='-274')
+      // circle.unit(r='5.8px' cx='50%' cy='50%' stroke='url(#chart-color-disappointed)')
+    .chart__display
+      span.chart__votes 260
+      span.chart__text голосов
+    .chart__legend
+      ul.chart__caption-list
+        li.chart__caption-item Великолепно
+        li.chart__caption-item Хорошо
+        li.chart__caption-item Удовлетворительно
+        li.chart__caption-item Разочарован
