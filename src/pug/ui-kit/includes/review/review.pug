@@ -1,14 +1,15 @@
 include ../like-button/like-button
 
-.review
-  .review__wrapper
-    .review__header
-      .review__avatar
-        img(src='./assets/image.jpg', alt='user-avatar')
-      .review__header-text
-        span.review__user-name Михаил Сахаров
-        span.review__date 5 дней назад
-    .review__body
-      .review__like-button
-        +likeButton('12', true)
-      p.review__comment Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
+mixin review({userName, text, dateTimeStamp, likesCount, isLiked})
+  .review
+    .review__wrapper
+      .review__header
+        .review__avatar
+          img(src='./assets/image.jpg', alt='user-avatar')
+        .review__header-text
+          span.review__user-name=userName
+          span.review__date=dateTimeStamp
+      .review__body
+        .review__like-button
+          +likeButton(likesCount, isLiked)
+        p.review__comment=text

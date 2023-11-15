@@ -23,6 +23,7 @@ include includes/pagination/pagination
 include includes/feature-comfort/feature-comfort
 include includes/feature-convenience/feature-convenience
 include includes/feature-cosiness/feature-cosiness
+include includes/review/review
 include includes/sprite/sprite
 
 - const checkboxListItems = [
@@ -210,5 +211,11 @@ html(lang="ru")
                   +labelPrimary('bullet list')
                   +bulletList(bulletListItems)
           .right-bottom-wrapper__inner-wrapper
-            include includes/review/review
+            +review({
+              userName: 'Михаил Сахаров',
+              text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+              dateTimeStamp: '5 дней назад',
+              likesCount: '12',
+              isLiked: true
+            })
       .form-elements-footer
