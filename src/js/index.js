@@ -75,3 +75,4 @@ import '../pug/pages/room-details/room-details-3.jpg';
 import '../pug/pages/landing-page/landing-page';
 import '../pug/pages/search-room/search-room';
 import '../pug/pages/room-details/room-details';
+import '../pug/pages/registration/registration';
