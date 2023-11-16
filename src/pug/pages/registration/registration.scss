@@ -3,8 +3,58 @@
 
   .register-card {
     position: absolute;
-    top: 90px;
+    top: 150px;
     left: calc(50% - 187px);
     z-index: 1;
+  }
+}
+
+@media (max-width: 1440px) {
+  .registration__form {
+    .register-card {
+      top: 90px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .registration__form {
+    .register-card {
+      top: 70px;
+    }
+  }
+}
+
+@media (max-width: 920px) {
+  .registration__main {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+
+    .registration-sign-in-slider {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
+
+    .registration__form {
+      .register-card {
+        position: relative;
+        top: 0;
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .registration__form {
+    .register-card {
+      border-radius: 0;
+      border: none;
+    }
   }
 }

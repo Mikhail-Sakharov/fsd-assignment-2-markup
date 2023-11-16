@@ -48,12 +48,18 @@
     transform: translateX(100%);
     animation-timing-function: ease;
   }
- }
+}
 
- @media (max-width: 1440px) {
+@media (max-width: 1440px) {
   .registration-sign-in-slider {
     overflow: hidden;
     height: 754px;
     position: relative;
   }
- }
+}
+
+@media (max-width: 1200px) {
+  .registration-sign-in-slider {
+    height: 715px;
+  }
+}
