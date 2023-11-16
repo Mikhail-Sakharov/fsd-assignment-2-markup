@@ -79,3 +79,4 @@ import '../pug/pages/landing-page/landing-page';
 import '../pug/pages/search-room/search-room';
 import '../pug/pages/room-details/room-details';
 import '../pug/pages/registration/registration';
+import '../pug/pages/sign-in/sign-in';
