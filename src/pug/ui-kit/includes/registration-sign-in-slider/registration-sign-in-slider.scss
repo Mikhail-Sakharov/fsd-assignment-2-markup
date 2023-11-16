@@ -49,3 +49,11 @@
     animation-timing-function: ease;
   }
  }
+
+ @media (max-width: 1440px) {
+  .registration-sign-in-slider {
+    overflow: hidden;
+    height: 754px;
+    position: relative;
+  }
+ }

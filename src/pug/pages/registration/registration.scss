@@ -1,0 +1,10 @@
+.registration__form {
+  position: relative;
+
+  .register-card {
+    position: absolute;
+    top: 90px;
+    left: calc(50% - 187px);
+    z-index: 1;
+  }
+}

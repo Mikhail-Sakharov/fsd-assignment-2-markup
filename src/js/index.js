@@ -33,6 +33,7 @@ import '../pug/ui-kit/includes/slider/slider';
 import '../pug/ui-kit/includes/footer-main/footer-main';
 import '../pug/ui-kit/includes/footer-mobile/footer-mobile';
 import '../pug/ui-kit/includes/chart/chart';
+import '../pug/ui-kit/includes/registration-sign-in-slider/registration-sign-in-slider';
 
 // импорты карточек
 
@@ -66,6 +67,8 @@ import '../pug/ui-kit/includes/slider/12.jpg';
 import '../pug/ui-kit/includes/main-page-slider/landing-bg-1.jpg';
 import '../pug/ui-kit/includes/main-page-slider/landing-bg-2.jpg';
 import '../pug/ui-kit/includes/main-page-slider/landing-bg-3.jpg';
+import '../pug/ui-kit/includes/registration-sign-in-slider/reg-sign-in-1.jpg';
+import '../pug/ui-kit/includes/registration-sign-in-slider/reg-sign-in-2.jpg';
 import '../pug/pages/room-details/room-details-1.jpg';
 import '../pug/pages/room-details/room-details-2.jpg';
 import '../pug/pages/room-details/room-details-3.jpg';

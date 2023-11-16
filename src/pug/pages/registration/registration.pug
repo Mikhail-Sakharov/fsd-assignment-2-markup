@@ -3,6 +3,9 @@ include ../../ui-kit/includes/header-main/header-main
 include ../../ui-kit/includes/footer-main/footer-main
 include ../../ui-kit/includes/footer-mobile/footer-mobile
 
+include ../../ui-kit/includes/registration-sign-in-slider/registration-sign-in-slider
+include ../../ui-kit/cards/register-card/register-card
+
 doctype html
 html(lang='ru')
   head
@@ -18,6 +21,9 @@ html(lang='ru')
         isFirstMenuItemActive: false,
         isHeaderOnPage: true
       })
-      main.page-content
+      main.registration__main
+        section.registration__form
+          +registerCard()
+        +registrationSignInSlider()
       +footerMain()
       +footerMobile()
