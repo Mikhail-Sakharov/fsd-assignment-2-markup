@@ -1,12 +1,13 @@
 include ../svg-icon/svg-icon
 
-mixin customSelect(label, text, ariaLabel)
+mixin customSelect({label, text, ariaLabel})
   .custom-select
     label.custom-select__label
       span.custom-select__header
-        span.custom-text-field__label-primary=label
+        span.custom-text-field__title=label
       span.custom-select__wrapper
         button.custom-select__button(type='button' aria-label=ariaLabel)
-          span.custom-select__text=text
-          span.custom-select__icon
-            +svgIcon({name: 'expand-more-light', width: 13, height: 8})
+          span.custom-select__display
+            span.custom-select__text=text
+            span.custom-select__icon
+              +svgIcon({name: 'expand-more-light', width: 13, height: 8})

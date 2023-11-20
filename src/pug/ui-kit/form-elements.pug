@@ -92,7 +92,11 @@ html(lang="ru")
               isHovered: true
             })
           .left-top-wrapper-item
-            +customSelect('Dropdown', 'Сколько гостей', 'Выберите количество гостей')
+            +customSelect({
+              label: 'Dropdown',
+              text: 'Сколько гостей',
+              ariaLabel: 'Выберите количество гостей'
+            })
           .left-top-wrapper-item--large
             +customTextField({
               type: 'text',
@@ -106,12 +110,24 @@ html(lang="ru")
           .left-top-wrapper-item--large
             .flex-inner-wrapper
               .left-top-wrapper-item__inner-item
-                +customSelect('Date dropdown', 'ДД.ММ.ГГГГ', 'Выберите дату')
+                +customSelect({
+                  label: 'Date dropdown',
+                  text: 'ДД.ММ.ГГГГ',
+                  ariaLabel: 'Выберите дату'
+                })
               .left-top-wrapper-item__inner-item
-                +customSelect('Date dropdown', '30.08.2023', 'Выберите дату')
+                +customSelect({
+                  label: 'Date dropdown',
+                  text: '30.08.2023',
+                  ariaLabel: 'Выберите дату'
+                })
           .left-top-wrapper-item--large
             .left-top-wrapper-item__inner-wrapper--short
-              +customSelect('Filter date dropdown', '19 авг - 23 авг', 'Выберите даты')
+              +customSelect({
+                label: 'Filter date dropdown',
+                text: '19 авг - 23 авг',
+                ariaLabel: 'Выберите даты'
+              })
           .left-top-wrapper-item--large
             .left-top-wrapper-item__inner-wrapper--short
               +labelPrimary('subscription text field')

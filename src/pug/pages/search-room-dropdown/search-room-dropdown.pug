@@ -165,9 +165,17 @@ html(lang="ru")
             .catalog
               form.catalog-filter(method='POST')
                 fieldset.catalog-filter__block
-                  +customSelect('даты пребывания в отеле', '19 авг - 23 авг', 'Выберите даты')
+                  +customSelect({
+                    label: 'даты пребывания в отеле',
+                    text: '19 авг - 23 авг',
+                    ariaLabel: 'Выберите даты'
+                  })
                 fieldset.catalog-filter__block
-                  +customSelect('гости', '3 гостя, 1 младенец', 'Выберите количество гостей')
+                  +customSelect({
+                    label: 'гости',
+                    text: '3 гостя, 1 младенец',
+                    ariaLabel: 'Выберите количество гостей'
+                  })
                 fieldset.catalog-filter__block
                   +rangeSlider('диапазон цены', '5 000₽ - 10 000₽')
                   span.range-slider__text Стоимость за сутки пребывания в номере

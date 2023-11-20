@@ -9,10 +9,22 @@ mixin searchCard()
         +mainTitle('Найдём номера под ваши пожелания')
       .search-card__dates-wrapper
         .search-card__check-in-date
-          +customSelect('прибытие', 'ДД.ММ.ГГГГ', 'Выберите дату')
+          +customSelect({
+            label: 'прибытие',
+            text: 'ДД.ММ.ГГГГ',
+            ariaLabel: 'Выберите дату'
+          })
         .search-card__check-out-date
-          +customSelect('выезд', 'ДД.ММ.ГГГГ', 'Выберите дату')
+          +customSelect({
+            label: 'выезд',
+            text: 'ДД.ММ.ГГГГ',
+            ariaLabel: 'Выберите дату'
+          })
       .search-card__guests-input-wrapper
-        +customSelect('гости', 'Сколько гостей', 'Выберите количество гостей')
+        +customSelect({
+            label: 'гости',
+            text: 'Сколько гостей',
+            ariaLabel: 'Выберите количество гостей'
+          })
       .search-card__search-button
         +buttonIconContained('подобрать номер', 'submit')
