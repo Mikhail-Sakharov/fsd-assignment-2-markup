@@ -23,8 +23,8 @@
 
 .button-icon-contained__empty-block {
   display: inline-block;
-  width: 44px;
-  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
 }
 
 .button-icon-contained__text {
@@ -32,15 +32,15 @@
   font-style: normal;
   font-weight: 700;
   font-size: 12px;
-  line-height: 15px;
+  line-height: 1.25;
   text-transform: uppercase;
   color: #FFFFFF;
   align-self: center;
 }
 
 .button-icon-contained__icon {
-  width: 44px;
-  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
   display: flex;
   justify-content: center;
   align-items: center;
