@@ -222,6 +222,10 @@
   justify-content: space-between;
 }
 
+.right-bottom-wrapper__dropdown-guests-wrapper {
+  min-width: 320px;
+}
+
 .dropdown-guests:first-child .dropdown-guests__clear-button {
   display: none;
 }
