@@ -9,6 +9,12 @@
   overflow: hidden;
 }
 
+.expandable-checkbox-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
 .expandable-checkbox-list__input {
   @extend .visually-hidden;
 
@@ -83,8 +89,6 @@
   color: #1F2041;
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 12px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
   text-transform: uppercase;
 }

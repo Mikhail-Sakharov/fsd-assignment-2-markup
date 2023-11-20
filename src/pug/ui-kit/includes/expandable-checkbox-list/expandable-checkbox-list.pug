@@ -1,7 +1,7 @@
 include ../custom-checkbox/custom-checkbox
 include ../svg-icon/svg-icon
 
-mixin expandableCheckboxList(title, name, items, isOpened)
+mixin expandableCheckboxList({title, name, items, isOpened})
   .expandable-checkbox-list
     input.expandable-checkbox-list__input(
       type='checkbox'
@@ -18,4 +18,9 @@ mixin expandableCheckboxList(title, name, items, isOpened)
           +svgIcon({name: 'hide-light', width: 12, height: 8})
     .expandable-checkbox-list__list
       each item in items
-        +customCheckbox(item.title, `expandable-checkbox-list-${name}-${item.name}`, item.isChecked)
+        +customCheckbox({
+          text: item.title,
+          name: `expandable-checkbox-list-${name}-${item.name}`,
+          isChecked: item.isChecked,
+          isDisabled: false
+        })
