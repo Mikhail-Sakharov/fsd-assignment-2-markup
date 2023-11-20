@@ -237,6 +237,10 @@ html(lang="ru")
                         reviewsCount: catalogItem.reviewsCount,
                         ratingName: catalogItem.ratingName
                       })
-                +pagination(15, 1, 120)
+                +pagination({
+                  pagesCount: 15,
+                  activePage: 1,
+                  totalPagesCount: 120
+                })
       +footerMain()
       +footerMobile()

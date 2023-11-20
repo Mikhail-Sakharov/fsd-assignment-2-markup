@@ -1,6 +1,6 @@
 include ../svg-icon/svg-icon
 
-mixin pagination(pagesCount, activePage, totalPagesCount)
+mixin pagination({pagesCount, activePage, totalPagesCount})
   - const startPages = [1, 2, 3];
   - const endPages = [pagesCount - 2, pagesCount - 1, pagesCount];
   - const paginationLabelPagesCount = totalPagesCount <= 100 ? totalPagesCount : '100+';
