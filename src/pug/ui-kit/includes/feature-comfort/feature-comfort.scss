@@ -12,8 +12,11 @@
   gap: 10px;
 }
 
+.feature-comfort__icon {
+  margin-right: 4px;
+}
+
 .feature-comfort__text {
-  margin-left: 4px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,7 +26,6 @@
   color: rgba(31, 32, 65, 0.75);
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 14px;
-  font-style: normal;
   font-weight: 700;
   line-height: 1.5;
 }
@@ -32,7 +34,6 @@
   color: rgba(31, 32, 65, 0.75);
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 14px;
-  font-style: normal;
   font-weight: 400;
   line-height: 2;
 }
