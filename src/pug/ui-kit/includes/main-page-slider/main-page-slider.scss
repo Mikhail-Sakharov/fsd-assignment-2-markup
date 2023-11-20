@@ -60,7 +60,7 @@
 
 .main-page-slider__slogan {
   position: absolute;
-  width: 297px;
+  max-width: 297px;
   right: 134px;
   bottom: 21px;
 
@@ -68,8 +68,7 @@
   text-align: right;
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 14px;
-  font-style: normal;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 1.71;
   z-index: 1;
 }
