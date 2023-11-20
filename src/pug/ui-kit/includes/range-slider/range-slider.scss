@@ -1,6 +1,6 @@
 .range-slider {
-  width: 266px;
-  height: 47px;
+  min-width: 266px;
+
   &:has(:focus-visible) {
     outline: 3px solid #6bd0bf;
     border-radius: 4px;
@@ -10,16 +10,14 @@
 .range-slider__header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 23px;
+  margin-bottom: 20px;
 }
 
 .range-slider__title {
   color: #1F2041;
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 12px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
   text-transform: uppercase;
 }
 
@@ -28,14 +26,13 @@
   text-align: right;
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 12px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
   text-transform: uppercase;
 }
 
 .range-slider__slider {
   cursor: pointer;
+  margin-bottom: 9px;
 }
 
 /* Functional styling;

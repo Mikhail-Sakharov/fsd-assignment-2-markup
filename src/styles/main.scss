@@ -119,6 +119,10 @@
   flex-direction: column;
   justify-content: flex-start;
   gap: 40px;
+
+  .right-top-wrapper__item:first-child {
+    width: 266px;
+  }
 }
 
 .right-top-wrapper__item:has(.custom-checkbox) {
