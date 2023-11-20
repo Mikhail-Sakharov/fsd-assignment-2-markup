@@ -207,7 +207,11 @@ html(lang="ru")
               +richCheckboxButtonGroup('Rich Checkbox Buttons')
               .right-bottom-wrapper__bullet-list
                 .right-bottom-wrapper__bullet-list--inner
-                  - const bulletListItems = ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']
+                  - const bulletListItems = [
+                  -   'Нельзя с питомцами',
+                  -   'Без вечеринок и мероприятий',
+                  -   'Время прибытия — после 13:00, а выезд до 12:00'
+                  - ];
                   +labelPrimary('bullet list')
                   +bulletList(bulletListItems)
           .right-bottom-wrapper__inner-wrapper

@@ -2,33 +2,32 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
 
-.bullet-list__list li {
-  list-style: none;
-}
+  .bullet-list__item {
+    list-style: none;
+    display: flex;
 
-.bullet-list__item {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 10px;
-}
+    &::before {
+      content: '';
+      display: inline-block;
+      margin-right: 10px;
+      margin-top: 7px;
+      width: 10px;
+      height: 10px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: rgba(31, 32, 65, 0.25);
+    }
 
-.bullet-list__icon {
-  margin-top: 8px;
-  width: 10px;
-  height: 10px;
-  flex-shrink: 0;
-  border-radius: 50%;
-  background: rgba(31, 32, 65, 0.25);
-}
-
-.bullet-list__label {
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  color: rgba(31, 32, 65, 0.75);
+    .bullet-list__text {
+      display: inline-block;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.71;
+      vertical-align: middle;
+      color: rgba(31, 32, 65, 0.75);
+    }
+  }
 }
