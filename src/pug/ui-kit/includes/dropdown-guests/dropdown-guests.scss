@@ -12,6 +12,7 @@
 .dropdown-guests {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .dropdown-guests__header {
@@ -24,20 +25,15 @@
   color:#1F2041;
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 12px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
   text-transform: uppercase;
 }
 
 .dropdown-guests__secondary-label {
   color: rgba(31, 32, 65, 0.50);
-  text-align: right;
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 12px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
   text-transform: uppercase;
 }
 
@@ -86,12 +82,12 @@
         display: flex;
         flex-direction: column;
         gap: 7px;
-        width: 320px;
         background-color: #FFFFFF;
       
         position: absolute;
-        margin-top: 64px;
-        padding: 7px;
+        top: 64px;
+        width: 100%;
+        padding: 6px 7px 12px;
       
         border-left: 1px solid rgba(31, 32, 65, 0.25);
         border-bottom: 1px solid rgba(31, 32, 65, 0.25);
@@ -124,8 +120,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 320px;
+  width: 100%;
   height: 44px;
+  padding-left: 14px;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px 4px 0 0;
 }
@@ -134,29 +131,31 @@
   color: rgba(31, 32, 65, 0.75);
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 14px;
-  font-style: normal;
   font-weight: 400;
-  line-height: 24px;
-
-  margin-left: 16px;
+  line-height: 1.71;
 }
 
 .dropdown-guests__list-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-left: 7px;
+
+  .dropdown-guests__primary-label {
+    max-width: 150px;
+  }
 }
 
 .dropdown-guests__list-item:last-child {
-  margin-top: 17px;
-  margin-bottom: 4px;
+  margin-top: 12px;
+  // margin-bottom: 6px;
 }
 
 .dropdown-guests__controls {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 92px;
+  gap: 12px;
 
   button {
     &:focus-visible {
@@ -180,7 +179,7 @@
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 22px;
+  line-height: 1.22;
   color: rgba(31, 32, 65, 0.25);
 }
 
