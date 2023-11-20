@@ -175,9 +175,24 @@ html(lang="ru")
                   legend.catalog-filter__block-title
                     +labelPrimary('правила дома')
                   .catalog-filter__features
-                    +customCheckbox('Можно курить', 'smoking-allowed')
-                    +customCheckbox('Можно с питомцами', 'pets-allowed', 'checked')
-                    +customCheckbox('Можно пригласить гостей (до 10 человек)', 'party-allowed', 'checked')
+                    +customCheckbox({
+                      text: 'Можно курить',
+                      name: 'smoking-allowed',
+                      isChecked: false,
+                      isDisabled: false
+                    })
+                    +customCheckbox({
+                      text: 'Можно с питомцами',
+                      name: 'pets-allowed',
+                      isChecked: 'checked',
+                      isDisabled: false
+                    })
+                    +customCheckbox({
+                      text: 'Можно пригласить гостей (до 10 человек)',
+                      name: 'party-allowed',
+                      isChecked: 'checked',
+                      isDisabled: false
+                    })
                 fieldset.catalog-filter__block
                   +richCheckboxButtonGroup('доступность')
                 fieldset.catalog-filter__block
@@ -195,7 +210,12 @@ html(lang="ru")
                     zIndex: 2
                   })
                 fieldset.catalog-filter__block
-                  +expandableCheckboxList('дополнительные удобства', 'collapsed', checkboxListItems, false)
+                  +expandableCheckboxList({
+                    title: 'дополнительные удобства',
+                    name: 'expandable-checkbox-list-collapsed',
+                    items: checkboxListItems,
+                    isOpened: false
+                  })
               .catalog-cards
                 h1.catalog-cards__title Номера, которые мы для вас подобрали
                 .catalog-cards__list

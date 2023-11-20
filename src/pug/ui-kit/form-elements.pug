@@ -120,9 +120,24 @@ html(lang="ru")
           .right-top-wrapper__left-side
             .right-top-wrapper__item
               +labelPrimary('Checkbox Buttons')
-              +customCheckbox('Можно курить', 'smoking-allowed')
-              +customCheckbox('Можно с питомцами', 'pets-allowed', 'checked')
-              +customCheckbox('Можно пригласить гостей (до 10 человек)', 'party-allowed', 'checked')
+              +customCheckbox({
+                text: 'Можно курить',
+                name: 'smoking-allowed',
+                isChecked: false,
+                isDisabled: false
+              })
+              +customCheckbox({
+                text: 'Можно с питомцами',
+                name: 'pets-allowed',
+                isChecked: 'checked',
+                isDisabled: false
+              })
+              +customCheckbox({
+                text: 'Можно пригласить гостей (до 10 человек)',
+                name: 'party-allowed',
+                isChecked: 'checked',
+                isDisabled: false
+              })
             .right-top-wrapper__item
               +labelPrimary('Radio Buttons')
               +customRadio({
@@ -191,8 +206,18 @@ html(lang="ru")
             })
           .left-bottom-wrapper__inner-wrapper
             .left-bottom-wrapper__checkbox-list-wrapper
-              +expandableCheckboxList('expandable checkbox list', 'collapsed', checkboxListItems, false)
-              +expandableCheckboxList('expandable checkbox list', 'expanded', checkboxListItems, true)
+              +expandableCheckboxList({
+                title: 'expandable checkbox list',
+                name: 'expandable-checkbox-list-collapsed',
+                items: checkboxListItems,
+                isOpened: false
+              })
+              +expandableCheckboxList({
+                title: 'expandable checkbox list',
+                name: 'expandable-checkbox-list-expanded',
+                items: checkboxListItems,
+                isOpened: true
+              })
             .left-bottom-wrapper__features-wrapper
               .left-bottom-wrapper__features-item
                 +featureComfort()
