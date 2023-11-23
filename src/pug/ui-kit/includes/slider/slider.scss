@@ -9,19 +9,9 @@
   overflow: hidden;
 }
 
-.slider__viewport {
-  border-radius: 4px;
-  width: 270px;
-  overflow-x: hidden;
-}
-
-.slider__img {
-  width: 270px;
-  height: 151px;
-  object-fit: cover;
-}
-
 .slider__wrapper {
+  position: relative;
+
   &:not(:hover) {
     .slider__controls:not(:has(:focus-visible)) {
       @extend .visually-hidden;
@@ -29,28 +19,40 @@
   }
 
   .slider__controls:has(:focus-visible) {
-    display: flex;
-    justify-content: space-between;
-  
-    border-radius: 4px;
     position: absolute;
-    margin-top: -156px;
-    width: 270px;
-    height: 151px;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;    
   }
 
   &:hover {
     .slider__controls {
-      display: flex;
-      justify-content: space-between;
-    
-      border-radius: 4px;
       position: absolute;
-      margin-top: -156px;
-      width: 270px;
-      height: 151px;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;    
     }
   }
+}
+
+.slider__viewport {
+  border-radius: 4px 4px 0 0;
+  max-width: 270px;
+  max-height: 151px;
+  overflow: hidden;
+}
+
+.slider__slide {
+  min-width: 270px;
+  min-height: 151px;
+}
+
+.slider__img {
+  width: 100%;
 }
 
 .slider__prev-button,
@@ -58,7 +60,6 @@
   cursor: pointer;
   background-color: transparent;
   border-style: none;
-  border-radius: 4px;
   height: 100%;
   display: flex;
   align-items: center;
@@ -69,6 +70,8 @@
 }
 
 .slider__prev-button {
+  border-radius: 4px 0 0 0;
+
   &:hover,
   &:focus-visible {
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.00) 99.99%, rgba(255, 255, 255, 0.00) 100%);
@@ -76,6 +79,8 @@
 }
 
 .slider__next-button {
+  border-radius: 0 4px 0 0;
+
   &:hover,
   &:focus-visible {
     background: linear-gradient(270deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.00) 99.99%, rgba(255, 255, 255, 0.00) 100%);
@@ -92,10 +97,10 @@
   z-index: 1000;
 }
 
-.slider__controls-active {
+.slider__dot-marks {
   position: absolute;
-  margin-top: -27px;
-  margin-left: 213px;
+  top: 129px;
+  left: 214px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
