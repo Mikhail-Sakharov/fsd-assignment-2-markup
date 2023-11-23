@@ -1,8 +1,15 @@
 .room-card {
-  max-width: 270px;
   border-radius: 4px;
   background: #FFFFFF;
   filter: drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.05));
+}
+
+.room-card__details {
+  padding: 20px;
+}
+
+.room-card__header {
+  margin-bottom: 10px;
 }
 
 .room-card__header,
@@ -16,18 +23,14 @@
   color: #1F2041;
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 14px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
 }
 
 .room-card__room-number {
   color: #1F2041;
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 19px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
 }
 
 .room-card__room-type {
@@ -35,9 +38,7 @@
   color: #BC9CFF;
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 12px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
   text-transform: uppercase;
 }
 
@@ -57,35 +58,28 @@
   gap: 4px;
 }
 
-.room-card__price {
-  margin-right: -2px;
-}
-
 .room-card__price-amount,
 .room-card__reviews-count {
   color: rgba(31, 32, 65, 0.50);
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 14px;
-  font-style: normal;
   font-weight: 700;
   line-height: 1.5;
 }
 
-.room-card__price-amount {
-  margin-top: 3px;
+.room-card__price {
+  margin-right: -2px;
+  padding-top: 3px;
 }
 
 .room-card__price-label,
 .room-card__reviews-text {
   color: rgba(31, 32, 65, 0.50);
   font-family: 'Montserrat', Arial, sans-serif;
-  font-style: normal;
   font-weight: 400;
-  line-height: 18px;
 }
 
 .room-card__price-label {
-  margin-top: 3px;
   font-size: 12px;
 }
 
@@ -93,12 +87,7 @@
   font-size: 14px;
 }
 
-.room-card__details {
-  padding: 15px 20px 20px 20px;
-}
-
 .room-card__rating {
-  margin-top: 10px;
   padding-top: 8px;
   border-top: 1px solid rgba(31, 32, 65, 0.10);
 }
