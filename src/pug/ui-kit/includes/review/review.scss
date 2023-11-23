@@ -1,3 +1,10 @@
+.review__font-styles {
+  color: rgba(31, 32, 65, 0.75);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
 .review__wrapper {
   display: flex;
   flex-direction: column;
@@ -18,7 +25,7 @@
   align-items: center;
 }
 
-.review__avatar img {
+.review__img {
   object-fit: cover;
   width: 48px;
   height: 48px;
@@ -34,21 +41,13 @@
 }
 
 .review__user-name {
-  color: rgba(31, 32, 65, 0.75);
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 14px;
-  font-style: normal;
+  @extend .review__font-styles;
   font-weight: 700;
-  line-height: 24px;
 }
 
 .review__date {
-  color: rgba(31, 32, 65, 0.75);
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 14px;
-  font-style: normal;
+  @extend .review__font-styles;
   font-weight: 400;
-  line-height: 24px;
 }
 
 .review__body {
@@ -66,10 +65,6 @@
 }
 
 .review__comment {
-  color: rgba(31, 32, 65, 0.75);
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 14px;
-  font-style: normal;
+  @extend .review__font-styles;
   font-weight: 400;
-  line-height: 24px;
 }
