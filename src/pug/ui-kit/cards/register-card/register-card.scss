@@ -1,5 +1,4 @@
 .register-card {
-  width: 380px;
   padding: 40px 30px 30px 30px;
   display: flex;
   flex-direction: column;
@@ -26,11 +25,20 @@
   gap: 10px;
 }
 
+.register-card__user-first-name,
+.register-card__user-last-name,
+.register-card__birth-date,
+.register-card__email,
+.register-card__password {
+  min-width: 320px;
+}
+
 .register-card__credentials-block {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 5px;
+  margin-bottom: 3px;
 
   .label-primary {
     margin: 0;
@@ -44,12 +52,7 @@
   flex-direction: column;
   justify-content: flex-start;
   gap: 10px;
-}
-
-.register-card__special-offer {
-  .toggle {
-    margin-top: 3px;
-  }
+  margin-bottom: 3px;
 }
 
 .register-card__register-button {
