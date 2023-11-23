@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 12px;
   height: 44px;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
@@ -13,7 +14,7 @@
 }
 
 .subscription-input__label {
-  vertical-align: middle;
+  flex: auto;
 }
 
 .subscription-input__input {
