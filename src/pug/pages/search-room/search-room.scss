@@ -24,14 +24,13 @@
   min-width: 266px;
   display: flex;
   flex-direction: column;
-  // gap: 30px;
 }
 
 .catalog-filter__block {
   border-style: none;
 
   &:first-child {
-    margin-bottom: 22px;
+    margin-bottom: 20px;
   }
 
   &:nth-child(2) {
@@ -51,7 +50,7 @@
   }
 
   &:nth-child(5) {
-    margin-bottom: 31px;
+    margin-bottom: 27px;
   }
 
   &:nth-child(6) {
