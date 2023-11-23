@@ -52,14 +52,12 @@
 
 @media (max-width: 1440px) {
   .registration-sign-in-slider {
-    overflow: hidden;
-    height: 754px;
-    position: relative;
+    max-height: 754px;
   }
 }
 
 @media (max-width: 1200px) {
   .registration-sign-in-slider {
-    height: 715px;
+    max-height: 715px;
   }
 }
