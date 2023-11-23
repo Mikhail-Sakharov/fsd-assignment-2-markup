@@ -2,6 +2,6 @@ import './search-room.scss';
 
 const customSelectButtonElement = document
   .querySelector('.room-list__container')
-  .querySelector('.custom-select__button');
+  ?.querySelector('.custom-select__button');
 
-customSelectButtonElement.focus();
+customSelectButtonElement?.focus();
