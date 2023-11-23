@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 20px;
+  padding: 20px 19px 20px;
 
   border-radius: 4px;
   background: #FFFFFF;
@@ -21,9 +21,7 @@
   text-align: center;
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 19px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
 }
 
 .calendar__left-arrow {
@@ -48,15 +46,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 30px;/*  */
 
   color: #BC9CFF;
   text-align: center;
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 12px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
 }
 
 .calendar__weekday,
@@ -72,6 +68,7 @@
 .calendar__days {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 20px;
 }
 
 .calendar__day {
@@ -82,9 +79,7 @@
   text-align: center;
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 12px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
 
   &:focus-visible {
     outline: 3px solid #6bd0bf;
@@ -96,9 +91,7 @@
   text-align: center;
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 12px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 
 .calendar__day--current {
@@ -106,9 +99,7 @@
   color: #FFF;
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 12px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
 }
 
 .calendar__day--current ~ .calendar__day:not(.calendar__day--start):not(.calendar__day--finish):hover {
@@ -118,10 +109,9 @@
 .calendar__day--start,
 .calendar__day--finish {
   font-family: 'Montserrat', Arial, sans-serif;
-  font-style: normal;
   font-weight: 700;
   font-size: 12px;
-  line-height: 15px;
+  line-height: 1.25;
   color: #FFFFFF;
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   z-index: 1;
@@ -159,5 +149,4 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
 }
