@@ -72,7 +72,10 @@ mixin registerCard()
             isHovered: false
           })
         .register-card__special-offer
-          +toggle('Получать спецпредложения', 'toggle')
+          +toggle({
+            title: 'Получать спецпредложения',
+            name: 'toggle'
+          })
       .register-card__register-button
         +buttonIconContained('зарегистрироваться', 'submit')
     .register-card__log-in

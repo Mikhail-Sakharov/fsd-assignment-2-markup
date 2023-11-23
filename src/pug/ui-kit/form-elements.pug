@@ -163,8 +163,15 @@ html(lang="ru")
               })
             .right-top-wrapper__item
               +labelPrimary('Toggle')
-              +toggle('Получать спецпредложения', 'toggle', 'checked')
-              +toggle('Получать спецпредложения', 'toggle')
+              +toggle({
+                title: 'Получать спецпредложения',
+                name: 'toggle',
+                status: 'checked'
+              })
+              +toggle({
+                title: 'Получать спецпредложения',
+                name: 'toggle'
+              })
             .right-top-wrapper__item
               +labelPrimary('like button')
               .like-buttons-container

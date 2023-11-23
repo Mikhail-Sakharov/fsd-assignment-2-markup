@@ -1,4 +1,4 @@
-mixin toggle(title, name, status)
+mixin toggle({title, name, status})
   .toggle
     label.toggle__label
       input.toggle__input(type='checkbox' name=name checked=status)
