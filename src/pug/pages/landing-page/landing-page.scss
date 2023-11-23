@@ -9,10 +9,14 @@
   overflow: hidden;
 }
 
+.landing-page__main {
+  position: relative;
+}
+
 .landing-page__search-form {
   position: absolute;
-  margin-top: 140px;
-  margin-left: 140px;
+  top: 139px;
+  left: 139px;
   z-index: 1;
 }
 
