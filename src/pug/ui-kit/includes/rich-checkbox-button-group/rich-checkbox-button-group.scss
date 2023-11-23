@@ -4,10 +4,6 @@
   gap: 10px;
 }
 
-.rich-checkbox-button-group__item:first-child {
-  width: 221px;
-}
-
-.rich-checkbox-button-group__item:last-child {
-  width: 260px;
+.rich-checkbox-button-group__item {
+  max-width: 260px;
 }
