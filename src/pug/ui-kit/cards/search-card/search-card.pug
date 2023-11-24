@@ -1,8 +1,13 @@
 include ../../includes/main-title/main-title
 include ../../includes/custom-select/custom-select
 include ../../includes/button-icon-contained/button-icon-contained
+include ../../includes/dropdown-guests/dropdown-guests
 
-mixin searchCard()
+- const guestsItems2 = [
+-   {title: 'взрослые', value: 2}, {title: 'дети', value: 1}, {title: 'младенцы', value: 0}
+- ];
+
+mixin searchCard(isDropdownGuestsOpened)
   .search-card
     form.search-card__form(method='get')
       .search-card__title
@@ -21,7 +26,17 @@ mixin searchCard()
             ariaLabel: 'Выберите дату'
           })
       .search-card__guests-input-wrapper
-        +customSelect({
+        if isDropdownGuestsOpened
+          +dropdownGuests({
+            title: 'dropdown',
+            label: '',
+            name: 'guests-dropdown-2',
+            items: guestsItems2,
+            disabledIndex: 2,
+            isOpened: true
+          })
+        else
+          +customSelect({
             label: 'гости',
             text: 'Сколько гостей',
             ariaLabel: 'Выберите количество гостей'
