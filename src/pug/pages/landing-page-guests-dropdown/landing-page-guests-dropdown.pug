@@ -1,0 +1,29 @@
+include ../../ui-kit/includes/header-main/header-main
+include ../../ui-kit/cards/search-card/search-card
+include ../../ui-kit/includes/main-page-slider/main-page-slider
+include ../../ui-kit/includes/footer-main/footer-main
+include ../../ui-kit/includes/footer-mobile/footer-mobile
+include ../../ui-kit/includes/sprite/sprite
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="keywords", content="")
+    meta(name="description", content="")
+    title=htmlWebpackPlugin.options.title
+  body
+    +sprite()
+    +headerMain({
+      isLoggedIn: false,
+      userName: null,
+      isFirstMenuItemActive: false,
+      isHeaderOnPage: true
+    })
+    main.landing-page__main
+      section.landing-page__search-form
+        +searchCard(true)
+      +mainPageSlider()
+    +footerMain()
+    +footerMobile()
