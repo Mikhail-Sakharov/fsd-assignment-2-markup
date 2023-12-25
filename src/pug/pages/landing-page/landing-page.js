@@ -1,6 +1,6 @@
 import './landing-page.scss';
 import '../../ui-kit/includes/main-page-slider/main-page-slider';
-import {createSMGDatePicker, CalendarMode, Localization} from 'smg-date-picker';
+import {CalendarMode, Localization, SMGDatePicker} from 'smg-date-picker';
 import 'smg-date-picker/dist/style.css';
 
 const searchFormElement = document.querySelector('.landing-page__search-form');
@@ -12,13 +12,15 @@ const secondOutputElement = anchorElement?.querySelector('.search-card__check-ou
 focusedCustomSelectElement?.focus();
 
 if (anchorElement && firstOutputElement && secondOutputElement) {
-  createSMGDatePicker({
-    anchorElement,
-    firstOutputElement,
-    secondOutputElement,
+  const datePicker = new SMGDatePicker({
+    anchorElement: anchorElement,
+    firstOutputElement: firstOutputElement,
+    secondOutputElement: secondOutputElement,
     mode: CalendarMode.Range,
     localization: Localization.Ru
   });
+
+  datePicker.create();
 }
 
 searchFormElement?.addEventListener('submit', (evt) => evt.preventDefault());
